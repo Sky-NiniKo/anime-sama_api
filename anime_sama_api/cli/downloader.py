@@ -83,7 +83,7 @@ def download(
     task = download_progress.tasks[me]
 
     full_path = (
-        path / episode.serie_name / episode.season_name / episode.name
+        path / episode.serie_name / episode.season_name / episode.file_name
     ).expanduser()
 
     def hook(data: dict) -> None:

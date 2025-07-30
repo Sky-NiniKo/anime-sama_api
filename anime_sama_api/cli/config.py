@@ -81,9 +81,9 @@ for index, lang in enumerate(config_dict["prefer_languages"]):
         config_dict["prefer_languages"][index] = "VOSTFR"
         lang = "VOSTFR"
 
-    assert lang in lang2ids, (
-        f"{lang} is not a valid languages for prefer_languages\nOnly the following are acceptable: {list(lang2ids.keys())}"
-    )
+    assert (
+        lang in lang2ids
+    ), f"{lang} is not a valid languages for prefer_languages\nOnly the following are acceptable: {list(lang2ids.keys())}"
 
 # Convert type
 config_dict["download_path"] = (

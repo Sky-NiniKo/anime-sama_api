@@ -30,6 +30,7 @@ async def async_main() -> None:
     with spinner(f"Getting season list for [blue]{catalogue.name}"):
         seasons = await catalogue.seasons()
     season = select_one(seasons)
+    
 
     with spinner(f"Getting episode list for [blue]{season.name}"):
         episodes = await season.episodes()

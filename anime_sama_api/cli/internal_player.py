@@ -12,6 +12,7 @@ from ..episode import Episode
 
 def open_silent_process(command: list[str]) -> subprocess.Popen[bytes]:
     try:
+
         if os.name in ("nt", "dos"):
             return subprocess.Popen(command)
         else:
