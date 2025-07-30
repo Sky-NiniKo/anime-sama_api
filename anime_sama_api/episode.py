@@ -87,16 +87,20 @@ class Languages(dict[LangId, Players]):
                     )
 
 
-@dataclass(frozen=True)
+@dataclass
 class Episode:
     languages: Languages
-    serie_name: str = ""
+    raw_serie_name: str = ""  # Nom avec année depuis get_name_with_year()
     season_name: str = ""
     _name: str = ""
     index: int = 1
 
     @property
-    def name(self) -> str:
+    def serie_name(self):
+        return self.raw_serie_name  # Utilise directement le nom complet avec année
+
+    @property
+    def name(self):
         return self._name.strip()
 
     @property
@@ -118,7 +122,16 @@ class Episode:
     def short_name(self) -> str:
         return f"{self.serie_name} S{self.season_number:02}E{self.index:02}"
 
-    def __str__(self) -> str:
+    @property
+    def file_name(self) -> str:
+        return f"{self.serie_name} - {self.season_name} - Episode {self.index:02}"
+
+    @property
+    def folder_name(self) -> str:
+        """Nom du dossier incluant l'annee de l'anime"""
+        return self.serie_name  # Contient déjà l'année grâce à get_name_with_year()
+
+    def __str__(self):
         return self.fancy_name
 
     def consume_player(

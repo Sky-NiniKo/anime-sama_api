@@ -1,5 +1,5 @@
 import re
-from typing import Any, TypeVar, cast, get_args
+from typing import Any, Literal, TypeVar, cast, get_args
 from itertools import zip_longest
 from collections.abc import Callable, Generator, Iterable, Sequence
 

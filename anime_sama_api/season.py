@@ -179,7 +179,7 @@ class Season:
                     curr_done += pos + 1
                     break
             else:
-                fusion.append((name_new, Languages({page.lang_id: players})))  # type: ignore
+                fusion.append((name_new, Languages({page.lang_id: players})))
         fusion.extend(current[curr_done:])
         return fusion
 
@@ -200,14 +200,14 @@ class Season:
         episodes: list[tuple[str, Languages]] = reduce(
             self._extend_episodes, zip(pages, episodes_names, players_list), []
         )
-
+        
         return [
             Episode(
-                languages,
-                self.serie_name,
-                self.name,
-                name,
-                index,
+                languages=languages,
+                raw_serie_name=self.serie_name,  # Utilise le nom avec l'ann�e
+                season_name=self.name,
+                _name=name,
+                index=index,
             )
             for index, (name, languages) in enumerate(episodes, start=1)
         ]
