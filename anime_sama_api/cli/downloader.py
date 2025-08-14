@@ -132,7 +132,12 @@ def download(
                     case "retry":
                         if retry_time >= max_retry_time:
                             break
-
+                        # Sometimes the player is valid, but the video has been deleted by the host.
+                        # The problem in this case is that it doesn't return an exception.
+                        # We assume that if, after 3 retries, the percentage still doesn't progress,
+                        # then we will switch to another player.
+                        if retry_time >= 3 and task.percentage == 0:
+                            break
                         logger.warning(
                             f"{episode.name} interrupted. Retrying in {retry_time}s."
                         )
