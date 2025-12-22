@@ -1,7 +1,7 @@
 This project is archive. I do not have the time to work on it anymore. I may make some small fixes if a breaking issue arises. 
 
 # Anime-Sama API
-An API for anime-sama.fr, also provides a CLI to download videos.
+An API for anime-sama.eu, also provides a CLI to download videos.
 
 I have implemented all the features I care about. This project is now in maintenance mode.
 

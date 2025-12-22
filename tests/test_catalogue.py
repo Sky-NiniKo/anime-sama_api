@@ -14,11 +14,12 @@ async def test_seasons():
 
 @pytest.mark.asyncio
 async def test_avancement():
-    assert await catalogue_data.one_piece.advancement() == "Aucune donnée."
-    assert await catalogue_data.gumball.advancement() == "Aucune donnée."
     assert (
-        await catalogue_data.mha.advancement() == "La saison 8 sortira en octobre 2025"
+        await catalogue_data.one_piece.advancement()
+        == "La Saga 12 (Elbaph) est prévue pour le 5 avril 2026."
     )
+    assert await catalogue_data.gumball.advancement() == "Aucune donnée."
+    assert await catalogue_data.mha.advancement() == "Aucune donnée."
 
 
 @pytest.mark.asyncio
@@ -30,5 +31,5 @@ async def test_correspondance():
     assert await catalogue_data.gumball.correspondence() == "Aucune donnée."
     assert (
         await catalogue_data.mha.correspondence()
-        == "Saison 7 Épisode 21 -> Chapitre 399"
+        == "Saison 8 Épisode 2 -> Chapitre 403"
     )

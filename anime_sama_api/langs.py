@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     from .top_level import AnimeSama
 
-    SCRIPT_VIDEO_URL = "https://anime-sama.fr/js/contenu/script_videos.js"
+    SCRIPT_VIDEO_URL = "https://anime-sama.eu/js/contenu/script_videos.js"
     page = httpx.get(SCRIPT_VIDEO_URL).text
     langs = {}
 
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     pprint(langs)
 
     async def main() -> None:
-        async for catalogue in AnimeSama("https://anime-sama.fr/").catalogues_iter():
+        async for catalogue in AnimeSama("https://anime-sama.eu/").catalogues_iter():
             if await catalogue.seasons():
                 break
         else:

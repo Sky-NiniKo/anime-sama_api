@@ -124,7 +124,7 @@ class Season:
                 case "creerListe":
                     if len(args) < 2:
                         # Only seen on Dragon Ball GT (Film), Junji Ito Collection (Saison 1) and Orange (Film)
-                        # Surely a small oversight in anime-sama.fr
+                        # Surely a small oversight in anime-sama.eu
                         # So it is undefined but do nothing is generaly the good reaction
                         continue
 

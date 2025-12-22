@@ -6,13 +6,13 @@ from anime_sama_api import AnimeSama
 
 
 async def main():
-    anime_sama = AnimeSama("https://anime-sama.fr/")
+    anime_sama = AnimeSama("https://anime-sama.eu/")
     new_releases = await anime_sama.new_episodes()
 
     print(
         f'<rss version="2.0">\n<channel>\n'
-        f"<title>anime-sama.fr new episodes</title>\n"
-        f"<link>https://anime-sama.fr/</link>\n"
+        f"<title>anime-sama.eu new episodes</title>\n"
+        f"<link>https://anime-sama.eu/</link>\n"
         f"<lastBuildDate>{datetime.now(timezone.utc).isoformat(timespec='seconds')}</lastBuildDate>\n"
     )
 
