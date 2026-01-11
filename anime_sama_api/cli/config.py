@@ -35,6 +35,7 @@ class Config:
     format_sort: str
     internal_player_command: list[str]
     url: str
+    provider_url: str
     players_config: PlayersConfig
     concurrent_downloads: dict[str, int]
 

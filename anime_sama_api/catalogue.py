@@ -56,7 +56,7 @@ class Catalogue:
 
         response = await self.client.get(self.url)
 
-        if not response.is_success:
+        if response.is_error:
             self._page = ""
         else:
             self._page = response.text

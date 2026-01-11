@@ -50,9 +50,9 @@ if __name__ == "__main__":
 
     import httpx
 
-    from .top_level import AnimeSama
+    from anime_sama_api.top_level import AnimeSama
 
-    SCRIPT_VIDEO_URL = "https://anime-sama.eu/js/contenu/script_videos.js"
+    SCRIPT_VIDEO_URL = "https://anime-sama.si/js/contenu/script_videos.js"
     page = httpx.get(SCRIPT_VIDEO_URL).text
     langs = {}
 
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     pprint(langs)
 
     async def main() -> None:
-        async for catalogue in AnimeSama("https://anime-sama.eu/").catalogues_iter():
+        async for catalogue in AnimeSama("https://anime-sama.si/").catalogues_iter():
             if await catalogue.seasons():
                 break
         else:
@@ -71,8 +71,7 @@ if __name__ == "__main__":
 
         vostfr_url = (await catalogue.seasons())[0].url + "vostfr/"
         response = await catalogue.client.get(vostfr_url)
-        if not response.is_success:
-            raise
+        response.raise_for_status()
         print(set(re.findall(r"src=\".+flag_(.+?)\.png\"", response.text)))
 
     asyncio.run(main())

@@ -87,7 +87,14 @@ def _get_mal_listing(serie: Catalogue) -> None | Any:
                         continue
 
                     return anime
+
                 if name in title or title in name:
+                    if len(anime_genres) == 0:
+                        if len(serie.genres) != 0:
+                            continue
+                        else:
+                            return anime
+
                     # Because this condition is not a guarantee, we do an additionnal screenning base on corresponding genres
                     not_corresponding_genres = [
                         genre

@@ -18,6 +18,22 @@ from .catalogue import Catalogue, Category
 logger = logging.getLogger(__name__)
 
 
+async def find_site_url(
+    client: AsyncClient | None = None, provider_url="https://anime-sama.pw/"
+) -> str | None:
+    client = client or AsyncClient()
+
+    response = await client.get(provider_url)
+
+    if response.is_error:
+        return None
+
+    match = re.search(r"href=\"(.+?)\">Accéder à Anime-Sama", response.text)
+
+    if match:
+        return match.group(1) + "/"
+
+
 @dataclass(frozen=True)
 class EpisodeRelease:
     page_url: str
@@ -43,7 +59,7 @@ class AnimeSama:
     async def _get_homepage_section(self, section_name: str, how_many: int = 1) -> str:
         homepage = await self.client.get(self.site_url)
 
-        if not homepage.is_success:
+        if homepage.is_error:
             return ""
 
         sections = homepage.text.split("<!--")
@@ -147,9 +163,9 @@ class AnimeSama:
         pages_regex = re.findall(r"page=(\d+)", response.text)
 
         if not pages_regex:
-            return []
-
-        last_page = int(pages_regex[-1])
+            last_page = 1
+        else:
+            last_page = int(pages_regex[-1])
 
         responses = [response] + await asyncio.gather(
             *(
@@ -160,7 +176,7 @@ class AnimeSama:
 
         catalogues = []
         for response in responses:
-            if not response.is_success:
+            if response.is_error:
                 continue
 
             catalogues += list(self._yield_catalogues_from(response.text))
@@ -187,7 +203,7 @@ class AnimeSama:
                 f"{self.site_url}catalogue/?search={query}&page={number}"
             )
 
-            if not response.is_success:
+            if response.is_error:
                 continue
 
             for catalogue in self._yield_catalogues_from(response.text):

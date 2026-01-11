@@ -40,7 +40,7 @@ class Season:
             page_url = self.url + lang_id + "/"
             response = await self.client.get(page_url)
 
-            if not response.is_success:
+            if response.is_error:
                 return SeasonLangPage(lang_id=lang_id)
 
             html = response.text
@@ -51,7 +51,7 @@ class Season:
 
             episodes_js = await self.client.get(page_url + match_url.group(0))
 
-            if not episodes_js.is_success:
+            if episodes_js.is_error:
                 return SeasonLangPage(lang_id=lang_id)
 
             return SeasonLangPage(
@@ -124,7 +124,7 @@ class Season:
                 case "creerListe":
                     if len(args) < 2:
                         # Only seen on Dragon Ball GT (Film), Junji Ito Collection (Saison 1) and Orange (Film)
-                        # Surely a small oversight in anime-sama.eu
+                        # Surely a small oversight in anime-sama
                         # So it is undefined but do nothing is generaly the good reaction
                         continue
 

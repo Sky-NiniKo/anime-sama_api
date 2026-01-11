@@ -1,4 +1,4 @@
-from .top_level import AnimeSama
+from .top_level import AnimeSama, find_site_url
 from .catalogue import Catalogue
 from .season import Season
 from .episode import Episode, Languages, Players
@@ -38,6 +38,7 @@ __all__ = [
     "download",
     "multi_download",
     "main",
+    "find_site_url",
 ]
 
 """__locals = locals()

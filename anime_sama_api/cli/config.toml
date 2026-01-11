@@ -21,7 +21,8 @@ format_sort = ""
 internal_player_command = "mpv"
 
 # url of anime-sama (You shouldn't touch that)
-url = "https://anime-sama.eu/"
+url = ""
+provider_url = "https://anime-sama.pw/"
 
 [concurrent_downloads]
 # how many fragment of a video to download at once

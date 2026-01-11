@@ -1,6 +1,8 @@
 import asyncio
 import logging
+from urllib.error import URLError
 
+from httpx import AsyncClient
 from rich import get_console
 from rich.logging import RichHandler
 from rich.status import Status
@@ -10,7 +12,7 @@ from .config import config
 from .episode_extra_info import convert_with_extra_info
 from .utils import safe_input, select_one, select_range
 
-from ..top_level import AnimeSama
+from ..top_level import AnimeSama, find_site_url
 
 console = get_console()
 console._highlight = False
@@ -24,8 +26,14 @@ def spinner(text: str) -> Status:
 async def async_main() -> None:
     query = safe_input("Anime name: \033[0;34m", str)
 
+    client = AsyncClient()
+    url = config.url or await find_site_url(client, config.provider_url)
+
+    if url is None:
+        raise URLError("Failed to get AnimeSama url")
+
     with spinner(f"Searching for [blue]{query}"):
-        catalogues = await AnimeSama(config.url).search(query)
+        catalogues = await AnimeSama(url, client).search(query)
     catalogue = select_one(catalogues)
 
     with spinner(f"Getting season list for [blue]{catalogue.name}"):

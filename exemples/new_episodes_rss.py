@@ -2,17 +2,22 @@ import asyncio
 from html import escape
 from datetime import datetime, timezone
 
-from anime_sama_api import AnimeSama
+from anime_sama_api import AnimeSama, find_site_url
 
 
 async def main():
-    anime_sama = AnimeSama("https://anime-sama.eu/")
+    url = await find_site_url()
+
+    if url is None:
+        raise
+
+    anime_sama = AnimeSama(url)
     new_releases = await anime_sama.new_episodes()
 
     print(
         f'<rss version="2.0">\n<channel>\n'
-        f"<title>anime-sama.eu new episodes</title>\n"
-        f"<link>https://anime-sama.eu/</link>\n"
+        f"<title>{url} new episodes</title>\n"
+        f"<link>{url}/</link>\n"
         f"<lastBuildDate>{datetime.now(timezone.utc).isoformat(timespec='seconds')}</lastBuildDate>\n"
     )
 
