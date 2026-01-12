@@ -26,3 +26,5 @@
 - [ ] MAL sync
 - [ ] Play from download
 - [ ] Discord presence
+
+- [ ] Seven deadly sins S1 EP 26 "Episode 26 interrupted (ERROR: unable to download video data: HTTP Error 416: Requested Range Not Satisfiable). Retrying in 256s."
