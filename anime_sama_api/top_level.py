@@ -1,19 +1,18 @@
 import asyncio
-from collections.abc import AsyncIterator, Generator
-from html import unescape
-from dataclasses import dataclass
 import logging
 import re
+from collections.abc import AsyncIterator, Generator
+from dataclasses import dataclass
+from html import unescape
 from typing import Any, cast
 
 from httpx import AsyncClient
 
-from .episode import Episode
-from .season import Season
-from .langs import Lang, flags
-from .utils import filter_literal, is_Literal
 from .catalogue import Catalogue, Category
-
+from .episode import Episode
+from .langs import Lang, flags
+from .season import Season
+from .utils import filter_literal, is_Literal
 
 logger = logging.getLogger(__name__)
 

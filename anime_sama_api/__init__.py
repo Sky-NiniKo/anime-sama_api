@@ -1,8 +1,8 @@
-from .top_level import AnimeSama, find_site_url
 from .catalogue import Catalogue
-from .season import Season
 from .episode import Episode, Languages, Players
-from .langs import Lang, LangId, lang2ids, id2lang, flags
+from .langs import Lang, LangId, flags, id2lang, lang2ids
+from .season import Season
+from .top_level import AnimeSama, find_site_url
 
 try:
     from .cli.__main__ import main

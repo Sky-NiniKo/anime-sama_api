@@ -1,13 +1,12 @@
-from collections.abc import Sequence
 import re
+from collections.abc import Sequence
 from typing import Any, Literal, cast
 
 from httpx import AsyncClient
 
-from .utils import remove_some_js_comments
+from .langs import Lang, flags
 from .season import Season
-from .langs import flags, Lang
-
+from .utils import remove_some_js_comments
 
 # Oversight from anime-sama that we should handle
 # 'Animes' instead of 'Anime' seen in Cyberpunk: Edgerunners and Valkyrie Apocalypse

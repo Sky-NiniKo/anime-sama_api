@@ -1,4 +1,4 @@
-from ..episode import Episode
+from anime_sama_api.episode import Episode
 
 
 class EpisodesManager:

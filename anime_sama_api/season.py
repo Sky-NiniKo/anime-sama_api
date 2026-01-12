@@ -1,15 +1,15 @@
+import asyncio
+import re
 from ast import literal_eval
 from dataclasses import dataclass, replace
 from functools import reduce
-import re
-import asyncio
 from typing import Any, cast, get_args
 
 from httpx import AsyncClient
 
-from .langs import LangId, lang2ids, flagid2lang
-from .episode import Episode, Players, Languages
-from .utils import remove_some_js_comments, zip_varlen, split_and_strip
+from .episode import Episode, Languages, Players
+from .langs import LangId, flagid2lang, lang2ids
+from .utils import remove_some_js_comments, split_and_strip, zip_varlen
 
 
 @dataclass

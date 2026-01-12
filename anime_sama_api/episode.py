@@ -1,11 +1,11 @@
-from collections.abc import Generator, Sequence
-import re
 import logging
+import re
+from collections.abc import Generator, Sequence
 from dataclasses import dataclass
 from typing import Any
 from urllib.parse import urlparse
 
-from .langs import flags, Lang, LangId, id2lang, lang2ids
+from .langs import Lang, LangId, flags, id2lang, lang2ids
 
 logger = logging.getLogger(__name__)
 

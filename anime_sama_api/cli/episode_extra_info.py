@@ -7,9 +7,9 @@ from typing import Any
 
 import httpx
 
-from ..episode import Episode
-from ..catalogue import Catalogue
-from .utils import normalize
+from anime_sama_api.catalogue import Catalogue
+from anime_sama_api.cli.utils import normalize
+from anime_sama_api.episode import Episode
 
 
 @dataclass(frozen=True)
@@ -68,12 +68,20 @@ def _get_mal_listing(serie: Catalogue) -> None | Any:
     for name in [serie.name] + list(serie.alternative_names):
         i = 0
         while True:
-            response = httpx.get(f"https://api.jikan.moe/v4/anime?q={name}&limit=5")
+            try:
+                response = httpx.get(
+                    f"https://api.jikan.moe/v4/anime?q={name}&limit=5", timeout=10
+                )
+            except httpx.HTTPError:
+                return None
+
             i += 1
             if response.status_code != 429 or i > 9:
                 break
 
-        response.raise_for_status()
+        if response.status_code != 200:
+            return None
+
         animes = response.json().get("data", [])
 
         for anime in animes:

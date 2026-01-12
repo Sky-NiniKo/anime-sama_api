@@ -1,35 +1,33 @@
+import logging
 import random
 import time
-import logging
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import cast
 from urllib.parse import urlparse
 
-import httpx
-from yt_dlp import YoutubeDL
-from yt_dlp.utils import DownloadError
 from rich import get_console
-from rich.live import Live
 from rich.console import Group
-from rich.table import Column
+from rich.live import Live
 from rich.progress import (
     BarColumn,
+    MofNCompleteColumn,
     Progress,
+    ProgressColumn,
+    TaskID,
     TextColumn,
     TimeRemainingColumn,
-    TransferSpeedColumn,
-    MofNCompleteColumn,
-    TaskID,
     TotalFileSizeColumn,
-    ProgressColumn,
+    TransferSpeedColumn,
 )
+from rich.table import Column
+from yt_dlp import YoutubeDL
+from yt_dlp.utils import DownloadError
 
-from .episode_extra_info import EpisodeWithExtraInfo
-from .error_handeling import YDL_log_filter, reaction_to
-from ..langs import Lang
-from .config import PlayersConfig, config
-
+from anime_sama_api.langs import Lang
+from anime_sama_api.cli.config import PlayersConfig, config
+from anime_sama_api.cli.episode_extra_info import EpisodeWithExtraInfo
+from anime_sama_api.cli.error_handeling import YDL_log_filter, reaction_to
 
 logger = logging.getLogger(__name__)
 logger.addFilter(YDL_log_filter)
@@ -69,13 +67,18 @@ def download(
     episode: EpisodeWithExtraInfo,
     path: Path,
     episode_path: str = "{episode}",
-    prefer_languages: list[Lang] = ["VOSTFR"],
-    players_config: PlayersConfig = PlayersConfig([], []),
+    prefer_languages: list[Lang] | None = None,
+    players_config: PlayersConfig | None = None,
     concurrent_fragment_downloads: int = 3,
     max_retry_time: int = 1024,
-    format: str = "",
+    video_format: str = "",
     format_sort: str = "",
 ) -> None:
+    if prefer_languages is None:
+        prefer_languages = ["VOSTFR"]
+    if players_config is None:
+        players_config = PlayersConfig([], [])
+
     if not any(episode.warpped.languages.values()):
         logger.error("No player available")
         return
@@ -83,7 +86,7 @@ def download(
     me = download_progress.add_task(
         "download", episode_name=episode.warpped.name, site="", total=None
     )
-    task = download_progress.tasks[me]
+    task = next(t for t in download_progress.tasks if t.id == me)
 
     full_path = (
         path
@@ -108,7 +111,7 @@ def download(
         "concurrent_fragment_downloads": concurrent_fragment_downloads,
         "progress_hooks": [hook],
         "logger": logger,
-        "format": format,
+        "format": video_format,
         "format_sort": format_sort.split(","),
     }
 
@@ -120,17 +123,6 @@ def download(
         download_progress.update(me, site=urlparse(player).hostname)
 
         while True:
-            # Check if the video is not accessible through vidmoly
-            try:
-                if (
-                    player.startswith("https://vidmoly.")
-                    and "Please wait"  # Note "Please wait" appear in all the player page
-                    not in httpx.get(player, headers={"User-Agent": ""}).text
-                ):
-                    break
-            except httpx.ConnectError:
-                break
-
             try:
                 with YoutubeDL(option) as ydl:  # type: ignore
                     error_code = cast(int, ydl.download([player]))
@@ -139,20 +131,14 @@ def download(
                         sucess = True
                     else:
                         logger.fatal(
-                            f"The download encountered an error code {error_code}. Please report this to the developer with URL: {player}",
+                            "The download encountered an error code %s. Please report this to the developer with URL: %s",
+                            error_code,
+                            player,
                         )
 
                     break
 
             except DownloadError as exception:
-                # yt-dlp thinks vidmoly is unsupported but it just need wait
-                if (
-                    player.startswith("https://vidmoly.")
-                    and exception.msg is not None
-                    and "Unsupported URL: https://vidmoly.net/" in exception.msg
-                ):
-                    exception.msg = "Waiting for vidmoly"
-
                 match reaction_to(exception.msg):
                     case "continue":
                         break
@@ -162,7 +148,10 @@ def download(
                             break
 
                         logger.warning(
-                            f"{episode.warpped.name} interrupted. Retrying in {retry_time}s."
+                            "%s interrupted (%s). Retrying in %ss.",
+                            episode.warpped.name,
+                            exception.msg,
+                            retry_time,
                         )
                         # random is used to spread the resume time and so mitigate deadlock when multiple downloads resume at the same time
                         time.sleep(retry_time * random.uniform(0.8, 1.2))
@@ -190,13 +179,20 @@ def multi_download(
     episodes: list[EpisodeWithExtraInfo],
     path: Path,
     episode_path: str = "{episode}",
-    concurrent_downloads: dict[str, int] = {},
-    prefer_languages: list[Lang] = ["VOSTFR"],
-    players_config: PlayersConfig = PlayersConfig([], []),
+    concurrent_downloads: dict[str, int] | None = None,
+    prefer_languages: list[Lang] | None = None,
+    players_config: PlayersConfig | None = None,
     max_retry_time: int = 1024,
-    format: str = "",
+    video_format: str = "",
     format_sort: str = "",
 ) -> None:
+    if concurrent_downloads is None:
+        concurrent_downloads = {}
+    if prefer_languages is None:
+        prefer_languages = ["VOSTFR"]
+    if players_config is None:
+        players_config = PlayersConfig([], [])
+
     """
     Not sure if you can use this function multiple times
     """
@@ -215,6 +211,6 @@ def multi_download(
                     players_config,
                     concurrent_downloads.get("fragment", 1),
                     max_retry_time,
-                    format,
+                    video_format,
                     format_sort,
                 )

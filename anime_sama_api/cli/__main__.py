@@ -7,12 +7,11 @@ from rich import get_console
 from rich.logging import RichHandler
 from rich.status import Status
 
-from . import downloader, internal_player
-from .config import config
-from .episode_extra_info import convert_with_extra_info
-from .utils import safe_input, select_one, select_range
-
-from ..top_level import AnimeSama, find_site_url
+from anime_sama_api.cli import downloader, internal_player
+from anime_sama_api.cli.config import config
+from anime_sama_api.cli.episode_extra_info import convert_with_extra_info
+from anime_sama_api.cli.utils import safe_input, select_one, select_range
+from anime_sama_api.top_level import AnimeSama, find_site_url
 
 console = get_console()
 console._highlight = False
@@ -37,16 +36,27 @@ async def async_main() -> None:
     catalogue = select_one(catalogues)
 
     with spinner(f"Getting season list for [blue]{catalogue.name}"):
-        seasons = await catalogue.seasons()
-    season = select_one(seasons)
+        seasons_list = await catalogue.seasons()
 
-    with spinner(f"Getting episode list for [blue]{season.name}"):
-        episodes = await season.episodes()
+    selected_seasons = select_range(seasons_list, msg="Choose season(s)")
 
-    console.print(f"\n[cyan bold underline]{season.serie_name} - {season.name}")
-    selected_episodes = select_range(
-        episodes, msg="Choose episode(s)", print_choices=True
-    )
+    if len(selected_seasons) > 1:
+        # Multi-season automatic download
+        selected_episodes = []
+        for s in selected_seasons:
+            with spinner(f"Getting episode list for [blue]{s.name}"):
+                episodes = await s.episodes()
+                selected_episodes.extend(episodes)
+    else:
+        # Single season behavior (manual episode selection)
+        season = selected_seasons[0]
+        with spinner(f"Getting episode list for [blue]{season.name}"):
+            episodes = await season.episodes()
+
+        console.print(f"\n[cyan bold underline]{season.serie_name} - {season.name}")
+        selected_episodes = select_range(
+            episodes, msg="Choose episode(s)", print_choices=True
+        )
 
     if config.download:
         downloader.multi_download(

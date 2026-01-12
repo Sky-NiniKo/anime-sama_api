@@ -1,7 +1,7 @@
 import re
-from typing import Any, TypeVar, cast, get_args
-from itertools import zip_longest
 from collections.abc import Callable, Generator, Iterable, Sequence
+from itertools import zip_longest
+from typing import Any, TypeVar, cast, get_args
 
 T = TypeVar("T")
 
@@ -43,6 +43,9 @@ def is_Literal(
     callback_when_false(value)
     return False
 
+# def is_Literal(value: Any, Lit: Any) -> bool:
+#     return value in get_args(Lit)
+
 
 def filter_literal(
     iterable: Iterable[Any],
@@ -50,3 +53,6 @@ def filter_literal(
     callback_when_false: Callable[[Any], None] = lambda _: None,
 ) -> Generator[T]:
     return (value for value in iterable if is_Literal(value, Lit, callback_when_false))
+
+# def filter_literal(iterable: Iterable[Any], Lit: T) -> Generator[T, None, None]:
+#     return (value for value in iterable if is_Literal(value, Lit))
