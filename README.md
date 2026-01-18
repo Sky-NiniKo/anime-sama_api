@@ -19,7 +19,10 @@ anime-sama
 ```
 
 ## Configuration
-You can customize the config at `~/.config/anime-sama_cli/config.toml` for macOS/Linux and at `%USER%/AppData/Local/anime-sama_cli/config.toml` for Windows.
+You can customize the config at :
+- Linux: `~/.config/anime-sama_cli/config.toml`
+- Windows: `%USER%/AppData/Local/anime-sama_cli/config.toml`
+- macOS: `~/Library/Application Support/anime-sama_api/config.toml`
 
 # For developers
 ## Requirements
