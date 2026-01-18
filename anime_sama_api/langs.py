@@ -1,6 +1,5 @@
 from typing import Literal
 
-
 Lang = Literal["VASTFR", "VCN", "VF", "VJSTFR", "VKR", "VQC", "VOSTFR"]
 LangId = Literal["va", "vcn", "vf", "vf1", "vf2", "vj", "vkr", "vqc", "vostfr"]
 FlagId = Literal["cn", "qc", "en", "pal", "kr", "fr", "jp"]
@@ -44,8 +43,8 @@ for language, language_ids in lang2ids.items():
 
 
 if __name__ == "__main__":
-    import re
     import asyncio
+    import re
     from pprint import pprint
 
     import httpx

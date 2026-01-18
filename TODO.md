@@ -1,19 +1,19 @@
-- [X] Search
-- [X] Download
-- [X] Play
-- [X] Name Episode
-- [X] All language
-- [X] Order Episode
-- [X] Separate backend
-- [X] Fallback on other players
-- [X] Retry players
-- [X] Config
+- [x] Search
+- [x] Download
+- [x] Play
+- [x] Name Episode
+- [x] All language
+- [x] Order Episode
+- [x] Separate backend
+- [x] Fallback on other players
+- [x] Retry players
+- [x] Config
 - [ ] Tests (ie: search that doesn't exist)
-- [X] Make a package
+- [x] Make a package
 - [ ] Implement all NotImplemented
-- [ ] Auto detect download folder and config folder, see https://stackoverflow.com/questions/35851281/python-finding-the-users-downloads-folder and appdirs (pypi)
+- [x] Auto detect download folder and config folder, see https://stackoverflow.com/questions/35851281/python-finding-the-users-downloads-folder and appdirs (pypi)
 - [ ] Add new {} for episode_path
-- [ ] Select a range of seasons to download
+- [x] Select a range of seasons to download
 - [ ] Take args in cli
 - [ ] Cache players link for offline use
 - [ ] Nix?
@@ -26,3 +26,5 @@
 - [ ] MAL sync
 - [ ] Play from download
 - [ ] Discord presence
+
+- [ ] Seven deadly sins S1 EP 26 "Episode 26 interrupted (ERROR: unable to download video data: HTTP Error 416: Requested Range Not Satisfiable). Retrying in 256s."

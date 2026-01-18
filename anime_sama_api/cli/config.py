@@ -1,26 +1,26 @@
-# TODO: Code hard to read / violent error, need refactor
-
+# TODO: Allway hard to read but I can't find a better way to do it
 import logging
-from pathlib import Path
-from dataclasses import dataclass
-import os
 import sys
+from dataclasses import dataclass, field
+from pathlib import Path
 
-from ..langs import Lang, lang2ids
+# import platformdirs for config_dir and download_dir
+from platformdirs import user_config_dir, user_downloads_dir
+
+from anime_sama_api.langs import Lang, lang2ids
 
 if sys.version_info >= (3, 11):
     import tomllib
 else:
     import tomli as tomllib
 
-
 logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
 class PlayersConfig:
-    prefers: list[str]
-    bans: list[str]
+    prefers: list[str] = field(default_factory=list)
+    bans: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -40,71 +40,80 @@ class Config:
     concurrent_downloads: dict[str, int]
 
 
-# Load default config
-exemple_config = Path(__file__).parent / "config.toml"
-if not exemple_config.exists():
-    raise FileNotFoundError(
-        "There is an issues with the installation of the package.\nThe exemple config cannot be found."
-    )
-with open(exemple_config, "rb") as file:
-    default_config = tomllib.load(file)
+def load_config() -> Config:
+    # 1. Load default config from the package
+    default_config_file = Path(__file__).parent / "config.toml"
+    if not default_config_file.exists():
+        raise FileNotFoundError(
+            f"The default config.toml could not be found at {default_config_file}"
+        )
+
+    with open(default_config_file, "rb") as f:
+        config_dict = tomllib.load(f)
+
+    # 2. Determine user config path
+    # Order of priority:
+    # - current directory (./config.toml)
+    # - system config directory (e.g. ~/AppData/Local/anime-sama_api/config.toml)
+    local_config = Path("config.toml")
+    system_config_dir = Path(user_config_dir("anime-sama_api", appauthor=False))
+    system_config_file = system_config_dir / "config.toml"
+
+    user_config_data = {}
+    if local_config.exists():
+        with open(local_config, "rb") as f:
+            user_config_data = tomllib.load(f)
+    elif system_config_file.exists():
+        with open(system_config_file, "rb") as f:
+            user_config_data = tomllib.load(f)
+    else:
+        # Recreate default config if not found anywhere
+        from shutil import copy
+
+        system_config_dir.mkdir(parents=True, exist_ok=True)
+        copy(default_config_file, system_config_file)
+        logger.info("Default config created at %s", system_config_file)
+
+    # 3. Merge configs (user values override defaults)
+    config_dict.update(user_config_data)
+
+    # 4. Backward compatibility and data cleaning
+    # Languages conversion
+    new_langs: list[Lang] = []
+    for lang in config_dict.get("prefer_languages", []):
+        if lang == "VO":
+            lang = "VOSTFR"
+        if lang in lang2ids:
+            new_langs.append(lang)
+        else:
+            logger.warning("'%s' is not a valid language, ignoring it.", lang)
+    config_dict["prefer_languages"] = new_langs
+
+    # Path detection and expansion
+    raw_path = config_dict.get("download_path")
+    if not raw_path:
+        # Default to system Downloads / Anime-Sama if not specified
+        config_dict["download_path"] = Path(user_downloads_dir()) / "Anime-Sama"
+    else:
+        config_dict["download_path"] = Path(raw_path).expanduser()
+
+    # Internal player command string to list
+    player_cmd = config_dict.get("internal_player_command")
+    if isinstance(player_cmd, str):
+        config_dict["internal_player_command"] = player_cmd.split()
+    elif player_cmd is None:
+        config_dict["internal_player_command"] = []
+
+    # Players config mapping
+    players_data = config_dict.pop("players_hostname", {})
+    if "players" in config_dict:  # Old key removal
+        del config_dict["players"]
+    config_dict["players_config"] = PlayersConfig(**players_data)
+
+    # Ensure all required keys are present for Config dataclass
+    # (Checking against keys in Config.__annotations__ if necessary)
+    return Config(**config_dict)
 
 
-# Load user config
-possible_path_str = ["."]
-possible_path_str.append(
-    "~/AppData/Local/anime-sama_api" if os.name == "nt" else "~/.config/anime-sama_cli"
-)
-possible_path = [Path(path).expanduser() for path in possible_path_str]
-del possible_path_str
-
-user_config = {}
-for path in possible_path:
-    config_file = path / "config.toml"
-    if config_file.is_file():
-        with open(config_file, "rb") as config_file_reader:
-            user_config = tomllib.load(config_file_reader)
-            break
-else:
-    from shutil import copy
-
-    possible_path[1].mkdir(parents=True, exist_ok=True)
-    copy(exemple_config, possible_path[1])
-    logger.info("Default config created at %s", possible_path[1])
-del possible_path
-
-# Update the default values by values set by the user
-config_dict = default_config | user_config
-
-# Check if value respect the type
-for index, lang in enumerate(config_dict["prefer_languages"]):
-    # Backward compatibility
-    if lang == "VO":
-        config_dict["prefer_languages"][index] = "VOSTFR"
-        lang = "VOSTFR"
-
-    assert lang in lang2ids, (
-        f"{lang} is not a valid languages for prefer_languages\nOnly the following are acceptable: {list(lang2ids.keys())}"
-    )
-
-# Convert type
-config_dict["download_path"] = (
-    Path(config_dict["download_path"])
-    if config_dict.get("download_path") is not None
-    else ""
-)
-config_dict["internal_player_command"] = (
-    config_dict["internal_player_command"].split()
-    if config_dict.get("internal_player_command") is not None
-    else ""
-)
-config_dict["players_config"] = (
-    PlayersConfig(**config_dict["players_hostname"])
-    if config_dict.get("players_hostname") is not None
-    else PlayersConfig([], [])
-)
-del config_dict["players_hostname"]
-if config_dict.get("players"):  # Backward compatibility
-    del config_dict["players"]
-config = Config(**config_dict)
-del config_dict
+# Exported config instance
+config = load_config()

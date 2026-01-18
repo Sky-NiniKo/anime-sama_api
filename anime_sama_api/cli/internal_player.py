@@ -1,13 +1,13 @@
 import os
-import sys
 import subprocess
+import sys
 from pathlib import Path
 
 from rich import print
 
-from ..langs import Lang
-from .config import config
-from ..episode import Episode
+from anime_sama_api.cli.config import config
+from anime_sama_api.episode import Episode
+from anime_sama_api.langs import Lang
 
 
 def open_silent_process(command: list[str]) -> subprocess.Popen[bytes]:
