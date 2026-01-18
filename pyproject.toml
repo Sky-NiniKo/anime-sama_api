@@ -29,6 +29,7 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "httpx>=0.28.1",
+    "httpcore>=1.0.8",
 ]
 
 [project.scripts]

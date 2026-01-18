@@ -27,7 +27,8 @@ async def find_site_url(
     if response.is_error:
         return None
 
-    match = re.search(r"href=\"(.+?)\">Accéder à Anime-Sama", response.text)
+    # * Sometimes need to check for the great word "anime-sama" in lowercase or uppercase but if add re.IGNORECASE it will work
+    match = re.search(r"href=\"(.+?)\">Accéder à Anime-Sama", response.text, re.IGNORECASE)
 
     if match:
         return match.group(1) + "/"
