@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "anime-sama_api"
-version = "0.2.2-2"
+version = "0.2.2-3"
 description = "Api for anime-sama"
 authors = [
     {name = "NiniKo", email = "pcninik@gmail.com"}
@@ -47,7 +47,7 @@ cli = [
 
 [dependency-groups]
 dev = [
-    "ruff>=0.14.11",
+    "ruff>=0.14.13",
     "mypy>=1.19.1",
     "pytest>=9.0.2",
     "pytest-asyncio>=1.3.0",

@@ -118,3 +118,19 @@ def _get_mal_listing(serie: Catalogue) -> None | Any:
                         return anime
 
     return None
+
+
+if __name__ == "__main__":
+    import asyncio
+    from anime_sama_api import find_site_url, AnimeSama
+
+    async def main():
+        url = await find_site_url()
+
+        if url is None:
+            raise
+
+        async for catalogue in AnimeSama(url).catalogues_iter():
+            print(catalogue.name, get_serie_release_date(catalogue))
+
+    asyncio.run(main())
