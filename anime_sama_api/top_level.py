@@ -28,10 +28,19 @@ async def find_site_url(
         return None
 
     # * Sometimes need to check for the great word "anime-sama" in lowercase or uppercase but if add re.IGNORECASE it will work
-    match = re.search(r"href=\"(.+?)\">Accéder à Anime-Sama", response.text, re.IGNORECASE)
+    match = re.search(
+        r"href=\"(.+?)\">Accéder à Anime-Sama", response.text, re.IGNORECASE
+    )
+
+    # TODO : Ajouter un suive de redirection d'url au match au cas ou le site n'est pas a jour et redirige vers une autre url, puis garder l'url finale
 
     if match:
-        return match.group(1) + "/"
+        url = match.group(1) + "/"
+        # Follow redirects
+        response = await client.get(url, follow_redirects=True)
+        final_url = str(response.url) + "/" if response.url else url
+        print(f"Final URL: {final_url}")
+        return final_url
 
 
 @dataclass(frozen=True)
