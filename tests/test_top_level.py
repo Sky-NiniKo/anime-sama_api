@@ -4,7 +4,7 @@ from anime_sama_api.top_level import AnimeSama
 from .data import catalogue_data
 
 pytest_plugins = ("pytest_asyncio",)
-anime_sama = AnimeSama(site_url="https://anime-sama.si/")
+anime_sama = AnimeSama(site_url="https://anime-sama.tv/")
 
 
 @pytest.mark.asyncio(loop_scope="session")
