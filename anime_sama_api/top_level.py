@@ -32,7 +32,7 @@ async def find_site_url(
         r"href=\"(.+?)\">Accéder à Anime-Sama", response.text, re.IGNORECASE
     )
 
-    # TODO : Ajouter un suive de redirection d'url au match au cas ou le site n'est pas a jour et redirige vers une autre url, puis garder l'url finale
+    # * Ajouter un suive de redirection d'url au match au cas ou le site n'est pas a jour et redirige vers une autre url, puis garder l'url finale
 
     if match:
         url = match.group(1) + "/"
