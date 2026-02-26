@@ -94,7 +94,7 @@ class Season:
     ) -> list[str]:
         functions = re.findall(
             r"resetListe\(\); *[\n\r]+\t*(.*?)}",
-            page.html,
+            remove_some_js_comments(page.html),
             re.DOTALL,
         )[-1]
         functions_list = split_and_strip(functions, (";", "\n"))[:-1]

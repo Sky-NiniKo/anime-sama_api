@@ -35,12 +35,12 @@ async def find_site_url(
     # * Ajouter un suive de redirection d'url au match au cas ou le site n'est pas a jour et redirige vers une autre url, puis garder l'url finale
 
     if match:
-        url = match.group(1) + "/"
-        # Follow redirects
-        response = await client.get(url, follow_redirects=True)
-        final_url = str(response.url) + "/" if response.url else url
-        print(f"Final URL: {final_url}")
-        return final_url
+        redirected = await client.get(match.group(1), follow_redirects=False)
+        return (
+            redirected.headers["location"] + "/"
+            if redirected.has_redirect_location
+            else match.group(1)
+        )
 
 
 @dataclass(frozen=True)
