@@ -27,10 +27,15 @@ async def find_site_url(
     if response.is_error:
         return None
 
-    match = re.search(r"href=\"(.+?)\">Accéder à anime-sama", response.text)
+    match = re.search(r"href=\"(.+?)\">Accéder à Anime-Sama", response.text)
 
     if match:
-        return match.group(1) + "/"
+        redirected = await client.get(match.group(1), follow_redirects=False)
+        return (
+            redirected.headers["location"] + "/"
+            if redirected.has_redirect_location
+            else match.group(1)
+        )
 
 
 @dataclass(frozen=True)
