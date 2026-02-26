@@ -16,7 +16,7 @@ def test_download():
                     vf=Players(),
                     vostfr=Players(
                         [
-                            "https://s22.anime-sama.si/s2/",
+                            "https://s22.anime-sama.tv/s2/",
                         ]
                     ),
                 ),
