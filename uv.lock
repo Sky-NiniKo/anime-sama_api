@@ -4,7 +4,7 @@ requires-python = ">=3.10"
 
 [[package]]
 name = "anime-sama-api"
-version = "0.2.2.post4"
+version = "0.2.2.post5"
 source = { editable = "." }
 dependencies = [
     { name = "httpx" },
