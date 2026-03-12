@@ -115,6 +115,9 @@ class Season:
             if args_sting:
                 # Warning literal_eval: Can crash
                 args = literal_eval(node_or_string=args_sting + ",")
+                if type(args) is not tuple:
+                    continue
+                args = cast(tuple, args)
             else:
                 args = ()
 

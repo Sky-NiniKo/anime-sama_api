@@ -1,7 +1,7 @@
 import re
 import sys
 from collections.abc import Callable
-from typing import Any, TypeVar, cast
+from typing import Any, TypeVar
 
 from rich import print as print_func
 
@@ -82,7 +82,7 @@ def select_range(
                     ints[0] = 1
                 if ints[1] is None:
                     ints[1] = len(choices)
-                ints_set.update(range(cast(int, ints[0]), cast(int, ints[1]) + 1))
+                ints_set.update(range(ints[0], ints[1] + 1))
             else:
                 raise ValueError
 
