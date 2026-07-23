@@ -24,10 +24,10 @@ from rich.table import Column
 from yt_dlp import YoutubeDL
 from yt_dlp.utils import DownloadError
 
-from anime_sama_api.langs import Lang
 from anime_sama_api.cli.config import PlayersConfig, config
-from anime_sama_api.cli.episode_extra_info import EpisodeWithExtraInfo
 from anime_sama_api.cli.error_handeling import YDL_log_filter, reaction_to
+from anime_sama_api.episode import Episode
+from anime_sama_api.langs import Lang
 
 logger = logging.getLogger(__name__)
 logger.addFilter(YDL_log_filter)
@@ -64,7 +64,7 @@ progress = Group(total_progress, download_progress)
 
 
 def download(
-    episode: EpisodeWithExtraInfo,
+    episode: Episode,
     path: Path,
     episode_path: str = "{episode}",
     prefer_languages: list[Lang] | None = None,
@@ -73,28 +73,29 @@ def download(
     max_retry_time: int = 1024,
     video_format: str = "",
     format_sort: str = "",
+    ep_year: int | None = None,
 ) -> None:
     if prefer_languages is None:
         prefer_languages = ["VOSTFR"]
     if players_config is None:
         players_config = PlayersConfig([], [])
 
-    if not any(episode.warpped.languages.values()):
+    if not any(episode.languages.values()):
         logger.error("No player available")
         return
 
     me = download_progress.add_task(
-        "download", episode_name=episode.warpped.name, site="", total=None
+        "download", episode_name=episode.name, site="", total=None
     )
     task = next(t for t in download_progress.tasks if t.id == me)
 
     full_path = (
         path
         / episode_path.format(
-            serie=episode.warpped.serie_name,
-            season=episode.warpped.season_name,
-            episode=episode.warpped.name,
-            release_year_parentheses=episode.release_year_parentheses(),
+            serie=episode.serie_name,
+            season=episode.season_name,
+            episode=episode.name,
+            release_year_parentheses="" if ep_year is None else f" {ep_year}",
         )
     ).expanduser()
 
@@ -115,7 +116,7 @@ def download(
         "format_sort": format_sort.split(","),
     }
 
-    for player in episode.warpped.consume_player(
+    for player in episode.consume_player(
         prefer_languages, players_config.prefers, players_config.bans
     ):
         retry_time = 1
@@ -149,7 +150,7 @@ def download(
 
                         logger.warning(
                             "%s interrupted (%s). Retrying in %ss.",
-                            episode.warpped.name,
+                            episode.name,
                             exception.msg,
                             retry_time,
                         )
@@ -176,7 +177,7 @@ def download(
 
 
 def multi_download(
-    episodes: list[EpisodeWithExtraInfo],
+    episodes: list[Episode],
     path: Path,
     episode_path: str = "{episode}",
     concurrent_downloads: dict[str, int] | None = None,
@@ -185,6 +186,7 @@ def multi_download(
     max_retry_time: int = 1024,
     video_format: str = "",
     format_sort: str = "",
+    eps_years: list[int | None] | None = None,
 ) -> None:
     if concurrent_downloads is None:
         concurrent_downloads = {}
@@ -192,6 +194,12 @@ def multi_download(
         prefer_languages = ["VOSTFR"]
     if players_config is None:
         players_config = PlayersConfig([], [])
+
+    # Ensure eps_years len
+    if eps_years is None:
+        eps_years = []
+    eps_years += [None] * (len(episodes) - len(eps_years))
+    eps_years = eps_years[: len(episodes)]
 
     """
     Not sure if you can use this function multiple times
@@ -201,7 +209,7 @@ def multi_download(
         with ThreadPoolExecutor(
             max_workers=concurrent_downloads.get("video", 1)
         ) as executor:
-            for episode in episodes:
+            for episode, ep_year in zip(episodes, eps_years):
                 executor.submit(
                     download,
                     episode,

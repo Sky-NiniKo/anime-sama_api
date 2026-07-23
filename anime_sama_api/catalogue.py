@@ -1,6 +1,7 @@
+import logging
 import re
 from collections.abc import Sequence
-from typing import Any, Literal, cast
+from typing import Any, Literal, cast, get_args
 
 from httpx import AsyncClient
 
@@ -12,7 +13,10 @@ from .utils import remove_some_js_comments
 # 'Animes' instead of 'Anime' seen in Cyberpunk: Edgerunners and Valkyrie Apocalypse
 # 'Autre' instead of 'Autres' seen in Hazbin Hotel
 # 'Scans' is in the language section for Watamote (harder to handle)
-Category = Literal["Anime", "Scans", "Film", "Autres"]
+Type = Literal["Anime", "Scans", "Film", "Autres"]
+State = Literal["En cours"]
+
+logger = logging.getLogger(__name__)
 
 
 class Catalogue:
@@ -22,7 +26,7 @@ class Catalogue:
         name: str = "",
         alternative_names: Sequence[str] | None = None,
         genres: Sequence[str] | None = None,
-        categories: set[Category] | None = None,
+        types: set[Type] | None = None,
         languages: set[Lang] | None = None,
         image_url: str = "",
         client: AsyncClient | None = None,
@@ -31,8 +35,8 @@ class Catalogue:
             alternative_names = []
         if genres is None:
             genres = []
-        if categories is None:
-            categories = set()
+        if types is None:
+            types = set()
         if languages is None:
             languages = set()
 
@@ -45,7 +49,7 @@ class Catalogue:
         self._page: str | None = None
         self.alternative_names = alternative_names
         self.genres = genres
-        self.categories = categories
+        self.types = types
         self.languages = languages
         self.image_url = image_url
 
@@ -81,8 +85,98 @@ class Catalogue:
 
         return seasons
 
-    async def advancement(self) -> str:
+    async def news(self) -> str:
         search = cast(list[str], re.findall(r"Actualité.+?>(.+?)<", await self.page()))
+
+        if not search:
+            return ""
+
+        return search[0]
+
+    async def state(self) -> str:
+        search = cast(
+            list[str],
+            re.findall(
+                r"État[^i]*?info-val\">(.+?)<",
+                await self.page(),
+            ),
+        )
+
+        if not search:
+            return ""
+
+        if search[0] in get_args(State):
+            return search[0]
+
+        logger.warning(
+            f"Error while parsing '{search[0]}'. \nPlease report this to the developer with URL: {self.url}"
+        )
+        return ""
+
+    async def year(self) -> int | None:
+        search = cast(
+            list[str],
+            re.findall(
+                r"Année[^i]*?info-val\">(.+?)<",
+                await self.page(),
+            ),
+        )
+
+        if not search or not search[0].isdigit():
+            return
+
+        return int(search[0])
+
+    async def episode_count(self) -> int | None:
+        search = cast(
+            list[str],
+            re.findall(
+                r"Épisodes[^i]*?info-val\">(.+?)<",
+                await self.page(),
+            ),
+        )
+
+        if not search or not search[0].isdigit():
+            return
+
+        return int(search[0])
+
+    async def chapter_count(self) -> int | None:
+        search = cast(
+            list[str],
+            re.findall(
+                r"Chapitres[^i]*?info-val\">(.+?)<",
+                await self.page(),
+            ),
+        )
+
+        if not search or not search[0].isdigit():
+            return
+
+        return int(search[0])
+
+    async def creator(self) -> str:
+        search = cast(
+            list[str],
+            re.findall(
+                r"Créateur[^i]*?info-val\">(.+?)<",
+                await self.page(),
+            ),
+        )
+
+        if not search:
+            return ""
+
+        return search[0]
+
+    async def studio(self) -> str:
+        search = cast(
+            list[str],
+            re.findall(
+                r"Studio[^d]*?display:block\">(.+?)<",
+                await self.page(),
+            ),
+        )
 
         if not search:
             return ""
@@ -91,7 +185,11 @@ class Catalogue:
 
     async def correspondence(self) -> str:
         search = cast(
-            list[str], re.findall(r"Correspondance.+?>(.+?)<", await self.page())
+            list[str],
+            re.findall(
+                r"Correspondance[\W\w]*?\">(.+?)<",
+                await self.page(),
+            ),
         )
 
         if not search:
@@ -100,8 +198,10 @@ class Catalogue:
         return search[0]
 
     async def synopsis(self) -> str:
+        page_without_comments = remove_some_js_comments(string=await self.page())
+
         search = cast(
-            list[str], re.findall(r"Synopsis[\W\w]+?>(.+)<", await self.page())
+            list[str], re.findall(r"Synopsis[\W\w]+?>(.+)<", page_without_comments)
         )
 
         if not search:
@@ -120,19 +220,19 @@ class Catalogue:
 
     @property
     def is_anime(self) -> bool:
-        return "Anime" in self.categories
+        return "Anime" in self.types
 
     @property
     def is_manga(self) -> bool:
-        return "Scans" in self.categories
+        return "Scans" in self.types
 
     @property
     def is_film(self) -> bool:
-        return "Film" in self.categories
+        return "Film" in self.types
 
     @property
     def is_other(self) -> bool:
-        return "Autres" in self.categories
+        return "Autres" in self.types
 
     @property
     def fancy_name(self) -> str:

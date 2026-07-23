@@ -392,11 +392,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833475",
                 "https://sendvid.com/embed/2hdo87a9",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-csy0omlcpi0f.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-gk7hii7zhej5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826171",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-gk7hii7zhej5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826171",
             ],
@@ -413,11 +416,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833476",
                 "https://sendvid.com/embed/yaiqq2a4",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-vs9v38yso5fq.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-hd4ot35jx74b.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826173",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-hd4ot35jx74b.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826173",
             ],
@@ -434,11 +440,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833479",
                 "https://sendvid.com/embed/8tttfzn4",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-ikgy58afbdve.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-wyg38sy2jyem.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826174",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-wyg38sy2jyem.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826174",
             ],
@@ -455,11 +464,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833480",
                 "https://sendvid.com/embed/885pztjs",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-nly2qw7nrmzl.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-in2rfflkohvb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4702767",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-in2rfflkohvb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4702767",
             ],
@@ -476,11 +488,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833481",
                 "https://sendvid.com/embed/0iaf1uyd",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-60phmtfdkb1r.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-uqjprtlalgqr.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826213",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-uqjprtlalgqr.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826213",
             ],
@@ -497,11 +512,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833483",
                 "https://sendvid.com/embed/emo4x0sp",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-xqgkz3b4atzp.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-c9kg4104y5b0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826215",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-c9kg4104y5b0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826215",
             ],
@@ -518,11 +536,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729232",
                 "https://sendvid.com/embed/0ypokypf",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-gu4iher5hp5i.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-f0qgty6adbe8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826216",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-f0qgty6adbe8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826216",
             ],
@@ -539,11 +560,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833487",
                 "https://sendvid.com/embed/v71365yw",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-h85dr9jzrbwf.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-s497934imdn3.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826217",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-s497934imdn3.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826217",
             ],
@@ -560,11 +584,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729225",
                 "https://sendvid.com/embed/zaf2b2fv",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-8mjo1qzad8qi.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-4n3xctw38ck0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826220",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-4n3xctw38ck0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826220",
             ],
@@ -581,11 +608,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833489",
                 "https://sendvid.com/embed/41wgsycn",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-njx17mo3iqgy.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-lmxbyxdas9t5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826222",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-lmxbyxdas9t5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826222",
             ],
@@ -602,11 +632,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833490",
                 "https://sendvid.com/embed/exfarq2i",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-n85xv3cb2jgn.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-05emx3uufv66.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826224",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-05emx3uufv66.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826224",
             ],
@@ -623,11 +656,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833492",
                 "https://sendvid.com/embed/uk58f6h4",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-cbsvwjwyv26c.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-8s1tmnqtxt6t.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826226",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-8s1tmnqtxt6t.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826226",
             ],
@@ -644,11 +680,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833493",
                 "https://sendvid.com/embed/kxvya1cu",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-mv88wqbdpqpi.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-5skra2vqd1l6.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826227",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-5skra2vqd1l6.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826227",
             ],
@@ -665,11 +704,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729234",
                 "https://sendvid.com/embed/rhoil31n",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-2ebmqr7e0lvi.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-zyoxlt4ub0qm.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826228",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-zyoxlt4ub0qm.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826228",
             ],
@@ -686,11 +728,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833499",
                 "https://sendvid.com/embed/2mo1stx7",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-kqq45q2wcqpr.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-m9ufjqs91k3g.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826230",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-m9ufjqs91k3g.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826230",
             ],
@@ -707,11 +752,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729236",
                 "https://sendvid.com/embed/i104tvy3",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-rw4u8kl3c346.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-nf5o72fi194m.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826231",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-nf5o72fi194m.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826231",
             ],
@@ -728,11 +776,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729238",
                 "https://sendvid.com/embed/p8o5huoa",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-g637wndyrgbb.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-7imnv2xf1qd8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826233",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-7imnv2xf1qd8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826233",
             ],
@@ -749,11 +800,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833500",
                 "https://sendvid.com/embed/glvp07ho",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-juxchyi2bgzn.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-xq8jxq3m0kog.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826234",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-xq8jxq3m0kog.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826234",
             ],
@@ -770,11 +824,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833501",
                 "https://sendvid.com/embed/1qb0nqyh",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-s2eujik4nc7r.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-pa5f15oi6q7c.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826235",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-pa5f15oi6q7c.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826235",
             ],
@@ -791,11 +848,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833505",
                 "https://sendvid.com/embed/6kopv1rf",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-xkc1v37xf2cl.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-5lefsqh3w1me.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826236",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-5lefsqh3w1me.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826236",
             ],
@@ -812,11 +872,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833507",
                 "https://sendvid.com/embed/zh71edel",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-pq5cik44w5ih.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-rwc5u5hvsd4f.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826237",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-rwc5u5hvsd4f.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826237",
             ],
@@ -833,11 +896,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833512",
                 "https://sendvid.com/embed/03ocbi94",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-m3vkdyd2ffla.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-4dgk0ymjbtzb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826239",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-4dgk0ymjbtzb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826239",
             ],
@@ -854,11 +920,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833513",
                 "https://sendvid.com/embed/b8z7m5g2",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-rqo930gk5u2a.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-l9e1hkvn5tdo.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826240",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-l9e1hkvn5tdo.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826240",
             ],
@@ -875,11 +944,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833515",
                 "https://sendvid.com/embed/rstvc4k9",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-enc6zer6loel.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-s0xuswwvwchl.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826243",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-s0xuswwvwchl.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826243",
             ],
@@ -896,11 +968,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729239",
                 "https://sendvid.com/embed/8s3hc9vz",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-i0babcddn7ro.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-d0vemgbozlow.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826244",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-d0vemgbozlow.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826244",
             ],
@@ -917,11 +992,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729240",
                 "https://sendvid.com/embed/wtcr6dl8",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-tnpc6ah49wi1.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-avf0ovneivpe.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826245",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-avf0ovneivpe.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826245",
             ],
@@ -938,11 +1016,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833520",
                 "https://sendvid.com/embed/92s9mrs4",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-tkeil28kjb6v.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-btkp6x2rejhb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826247",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-btkp6x2rejhb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826247",
             ],
@@ -959,11 +1040,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833522",
                 "https://sendvid.com/embed/u452gpyf",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-urowa8b58bfb.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-h4osgl1qg81r.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826248",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-h4osgl1qg81r.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826248",
             ],
@@ -980,11 +1064,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833524",
                 "https://sendvid.com/embed/p6wx9s35",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-sgpmiop2vz11.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-rdl0tphn32jj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826249",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-rdl0tphn32jj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826249",
             ],
@@ -1001,11 +1088,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833527",
                 "https://sendvid.com/embed/i54fh9tn",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-5bg07pgy5yk6.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-2z42fsojx42l.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826251",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-2z42fsojx42l.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826251",
             ],
@@ -1022,11 +1112,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833530",
                 "https://sendvid.com/embed/rrecz5cb",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-7lsdrhtxhz4g.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-cwiruw6k8wnq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826252",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-cwiruw6k8wnq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826252",
             ],
@@ -1043,11 +1136,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833531",
                 "https://sendvid.com/embed/1n3onwog",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-m0byevyd851u.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-2o4y5gxj7jxi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826253",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-2o4y5gxj7jxi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826253",
             ],
@@ -1064,11 +1160,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833534",
                 "https://sendvid.com/embed/804d01b2",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-sozcpo2iv47i.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-xaspn4aas0pi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826255",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-xaspn4aas0pi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826255",
             ],
@@ -1085,11 +1184,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729249",
                 "https://sendvid.com/embed/6v1ry9p8",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-1emmb2er5e6r.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-spkzjno0yksg.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826256",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-spkzjno0yksg.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826256",
             ],
@@ -1106,11 +1208,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729250",
                 "https://sendvid.com/embed/w0msq1m0",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-rzn63iwwtnxf.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-ctvrlxsrtko7.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826257",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-ctvrlxsrtko7.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826257",
             ],
@@ -1127,11 +1232,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729241",
                 "https://sendvid.com/embed/l9r4137m",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-cfmi6odu5jqh.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-bew6mahdmzdc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826258",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-bew6mahdmzdc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826258",
             ],
@@ -1148,11 +1256,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833536",
                 "https://sendvid.com/embed/oqodtkxs",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-8ng0d94cc6cv.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-nwm1zet92uq8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826260",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-nwm1zet92uq8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826260",
             ],
@@ -1169,11 +1280,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833538",
                 "https://sendvid.com/embed/0u5lmhj1",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-26sht37krf4f.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-cf15tba8xy55.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826262",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-cf15tba8xy55.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826262",
             ],
@@ -1190,11 +1304,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833541",
                 "https://sendvid.com/embed/og0ad5yv",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-7j92cvfapyix.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-8ujzqoqn2dbj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826264",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-8ujzqoqn2dbj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826264",
             ],
@@ -1211,11 +1328,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833544",
                 "https://sendvid.com/embed/9ffgxxcw",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-nucepvb77mq3.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-v70ohgq1t9k4.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826267",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-v70ohgq1t9k4.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826267",
             ],
@@ -1232,11 +1352,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833545",
                 "https://sendvid.com/embed/awkbqzow",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-2fcln2a5fjna.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-ghovbolbp5hu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826268",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-ghovbolbp5hu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826268",
             ],
@@ -1253,11 +1376,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833548",
                 "https://sendvid.com/embed/h9feowts",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-35kdzb8kxst6.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-m7ig1virv4ts.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826270",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-m7ig1virv4ts.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826270",
             ],
@@ -1274,11 +1400,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4833552",
                 "https://sendvid.com/embed/govsf4ul",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-mgwnv19f68y2.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-13xmir23xyta.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826273",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-13xmir23xyta.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826273",
             ],
@@ -1295,11 +1424,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729242",
                 "https://sendvid.com/embed/xa32eiml",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-7o7d94hft9of.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-hjjr54khswdb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826276",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-hjjr54khswdb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826276",
             ],
@@ -1316,11 +1448,14 @@ one_piece_season1 = [
                 "https://video.sibnet.ru/shell.php?videoid=4729244",
                 "https://sendvid.com/embed/osyplnwx",
             ],
-            "vostfr": [
+            "vf2": [
+                "https://vidmoly.biz/embed-at95leebow9n.html",
+            ],
+            "vj": [
                 "https://vidmoly.net/embed-cdcdc04uvjcc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826278",
             ],
-            "vj": [
+            "vostfr": [
                 "https://vidmoly.net/embed-cdcdc04uvjcc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826278",
             ],

@@ -3,12 +3,13 @@ from anime_sama_api.season import Season
 one_piece = (
     [
         Season(f"https://anime-sama.to/catalogue/one-piece/saison{i}/")
-        for i in range(1, 12)
+        for i in range(1, 13)
     ]
     + [
         Season("https://anime-sama.to/catalogue/one-piece/film/"),
         Season("https://anime-sama.to/catalogue/one-piece/oav/"),
         Season("https://anime-sama.to/catalogue/one-piece/saison1hs/"),
+        Season("https://anime-sama.to/catalogue/one-piece/saison2hs/"),
         Season("https://anime-sama.to/catalogue/one-piece/kai/"),
     ]
     + [

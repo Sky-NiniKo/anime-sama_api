@@ -9,7 +9,6 @@ from rich.status import Status
 
 from anime_sama_api.cli import downloader, internal_player
 from anime_sama_api.cli.config import config
-from anime_sama_api.cli.episode_extra_info import convert_with_extra_info
 from anime_sama_api.cli.utils import safe_input, select_one, select_range
 from anime_sama_api.top_level import AnimeSama, find_site_url
 
@@ -60,10 +59,7 @@ async def async_main() -> None:
 
     if config.download:
         downloader.multi_download(
-            [
-                convert_with_extra_info(episode, catalogue)
-                for episode in selected_episodes
-            ],
+            selected_episodes,
             config.download_path,
             config.episode_path,
             config.concurrent_downloads,
@@ -72,6 +68,7 @@ async def async_main() -> None:
             config.max_retry_time,
             config.format,
             config.format_sort,
+            [await catalogue.year()] * len(selected_episodes),
         )
     else:
         command = internal_player.play_episode(

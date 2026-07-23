@@ -3,14 +3,15 @@ import logging
 import re
 from collections.abc import AsyncIterator, Generator
 from dataclasses import dataclass
+from datetime import datetime
 from html import unescape
 from typing import Any, cast
 
 from httpx import AsyncClient
 
-from .catalogue import Catalogue, Category
+from .catalogue import Catalogue, Type
 from .episode import Episode
-from .langs import Lang, flags
+from .langs import Lang, flagid2lang, flags
 from .season import Season
 from .utils import filter_literal, is_Literal
 
@@ -44,16 +45,17 @@ class EpisodeRelease:
     page_url: str
     image_url: str
     serie_name: str
-    categories: tuple[Category]
+    types: tuple[Type]
     language: Lang
-    descriptive: str
+    episode_name: str
+    timestamp: datetime
 
     def get_real_episodes(self) -> list[Episode]:
         raise NotImplementedError
 
     @property
     def fancy_name(self) -> str:
-        return f"{self.serie_name} - {self.descriptive} {flags.get(self.language, '')}"
+        return f"{self.serie_name} - {self.episode_name} {flags.get(self.language, '')}"
 
 
 class AnimeSama:
@@ -78,7 +80,7 @@ class AnimeSama:
     def _yield_catalogues_from(self, html: str) -> Generator[Catalogue]:
         text_without_script = re.sub(r"<script[\W\w]+?</script>", "", html)
         for match in re.finditer(
-            rf"href=\"({self.site_url}catalogue/.+)\"[\W\w]+?src=\"(.+?)\"[\W\w]+?<h2.+?>(.*)\n?<[\W\w]+?<p.+?>(.*)\n?<[\W\w]+?<p.+?>(.*)\n?<[\W\w]+?<p.+?>(.*)\n?<[\W\w]+?<p.+?>(.*)\n?<",
+            rf"href=\"({self.site_url}catalogue/.+)\"[\W\w]+?src=\"(.+?)\"[\W\w]+?<h2.+?>(.*)\n?<[\W\w]+?<p.+?>(.*)\n?<[\W\w]+?<div class=\"genre-tags\">([\W\w]*?)</div[\W\w]+?<p.+?>(.*)\n?<[\W\w]+?<div class=\"lang-flags\">([\W\w]*?)</div",
             text_without_script,
         ):
             (
@@ -87,30 +89,30 @@ class AnimeSama:
                 name,
                 alternative_names_str,
                 genres_str,
-                categories_str,
-                languages_str,
+                types_str,
+                flags_str,
             ) = (unescape(item) for item in match.groups())
 
             alternative_names = (
                 alternative_names_str.split(", ") if alternative_names_str else []
             )
-            if " - " in genres_str:
-                genres = genres_str.split(" - ")
-            else:
-                genres = genres_str.split(", ") if genres_str else []
-            categories = categories_str.split(", ") if categories_str else []
-            languages = languages_str.split(", ") if languages_str else []
+
+            genres = re.findall(r">(.+?)<", genres_str)
+            types = types_str.split(", ") if types_str else []
+            flags = re.findall(r"title=\"(.+?)\"", flags_str)
 
             def not_in_literal(value: Any) -> None:
                 logger.warning(
                     f"Error while parsing '{value}'. \nPlease report this to the developer with URL: {url}"
                 )
 
-            categories_checked = cast(
-                set[Category], set(filter_literal(categories, Category, not_in_literal))
+            types_checked = cast(
+                set[Type], set(filter_literal(types, Type, not_in_literal))
             )
-            languages_checked = cast(
-                set[Lang], set(filter_literal(languages, Lang, not_in_literal))
+            languages = set(
+                flagid2lang[flag.lower()]
+                for flag in flags
+                if flag.lower() in flagid2lang
             )
 
             yield Catalogue(
@@ -118,46 +120,51 @@ class AnimeSama:
                 name=name,
                 alternative_names=alternative_names,
                 genres=genres,
-                categories=categories_checked,
-                languages=languages_checked,
+                types=types_checked,
+                languages=languages,
                 image_url=image_url,
                 client=self.client,
             )
 
     def _yield_release_episodes_from(self, html: str) -> Generator[EpisodeRelease]:
         for match in re.finditer(
-            rf"href=\"({self.site_url}catalogue/.+)\"[\W\w]+?src=\"(.+?)\"[\W\w]+?>(.*)\n?<[\W\w]+?>(.*)\n?<[\W\w]+?>(.*)\n?<[\W\w]+?>(.*)\n?<",
+            r"href=\"/(catalogue\/.+)\"[\W\w]+?src=\"(.+?)\"[\W\w]+?>.*\n?<[\W\w]+?>.*\n?<[\W\w]+?>(.*)\n?<[\W\w]+?>.*\n?<[\W\w]+?\">([\W\w]*?)\n?</[\W\w]+?>(.*)\n?<[\W\w]+?>.*\n?<[\W\w]+?>(.*)\n?<[\W\w]+?>(.*)\n?<",
             html,
         ):
             (
                 season_url,
                 image_url,
+                types,
+                language_str,
                 serie_name,
-                categories,
-                language,
-                descriptive,
+                episode_name,
+                timestamp,
             ) = match.groups()
-            categories = categories.split(", ") if categories else ["Anime"]
-            language = language.strip() if language else "VOSTFR"
+            season_url = self.site_url + season_url
+
+            types = types.split(", ") if types else ["Anime"]
 
             def not_in_literal(value: Any) -> None:
                 logger.warning(
                     f"Error while parsing '{value}'. \nPlease report this to the developer with URL: {season_url} (from homepage)"
                 )
 
-            categories_checked = cast(
-                tuple[Category],
-                tuple(filter_literal(categories, Category, not_in_literal)),
+            types_checked = cast(
+                tuple[Type],
+                tuple(filter_literal(types, Type, not_in_literal)),
             )
+
+            language = re.findall(r"title=\"(.+?)\"", language_str)[0]
             is_Literal(language, Lang, not_in_literal)
 
             yield EpisodeRelease(
                 page_url=season_url,
                 image_url=image_url,
                 serie_name=serie_name,
-                categories=categories_checked,
-                language=cast(Lang, language),
-                descriptive=descriptive,
+                types=types_checked,
+                language=language,
+                episode_name=episode_name,
+                timestamp=datetime.strptime(timestamp, "%d/%m/%Y %H:%M"),
             )
 
     async def search(self, query: str) -> list[Catalogue]:
@@ -231,7 +238,7 @@ class AnimeSama:
         """
         section = await self._get_homepage_section("ajouts animes", 4)
         release_episodes = list(self._yield_release_episodes_from(section))
-        return list(reversed(release_episodes))
+        return release_episodes[::-1]
 
     """async def new_scans(self) -> list[Scan]:
         raise NotImplementedError"""

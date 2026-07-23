@@ -1,6 +1,6 @@
 import asyncio
-from html import escape
 from datetime import datetime, timezone
+from html import escape
 
 from anime_sama_api import AnimeSama, find_site_url
 
