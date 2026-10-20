@@ -105,6 +105,9 @@ def load_config() -> Config:
         del config_dict["players"]
     config_dict["players_config"] = PlayersConfig(**players_data)
 
+    # Spelling
+    config_dict["episode_path"] = config_dict["episode_path"].replace("{serie}", "{series}")
+
     # Ensure all required keys are present for Config dataclass
     # (Checking against keys in Config.__annotations__ if necessary)
     return Config(**config_dict)

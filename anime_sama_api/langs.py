@@ -55,8 +55,8 @@ if __name__ == "__main__":
     page = httpx.get(SCRIPT_VIDEO_URL).text
     langs = {}
 
-    matchs = re.findall(r"if\((.+)\){langue = \"(.+)\";}", page)
-    for match in matchs:
+    matches = re.findall(r"if\((.+)\){langue = \"(.+)\";}", page)
+    for match in matches:
         langs[match[1]] = match[0].split('"')[1::2]
 
     pprint(langs)
