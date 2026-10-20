@@ -1,15 +1,22 @@
 import asyncio
+import logging
 import re
 from ast import literal_eval
 from dataclasses import dataclass, replace
 from functools import reduce
-from typing import Any, cast, get_args
+from typing import get_args
 
 from httpx import AsyncClient
 
 from .episode import Episode, Languages, Players
 from .langs import LangId, flagid2lang, lang2ids
 from .utils import remove_some_js_comments, split_and_strip, zip_varlen
+
+logger = logging.getLogger(__name__)
+
+
+class EpisodeDataUnavailableError(RuntimeError):
+    pass
 
 
 @dataclass
@@ -24,14 +31,14 @@ class Season:
         self,
         url: str,
         name: str = "",
-        serie_name: str = "",
+        series_name: str = "",
         client: AsyncClient | None = None,
     ) -> None:
         self.url = url
         self.site_url = "/".join(url.split("/")[:3]) + "/"
 
         self.name = name or url.split("/")[-2]
-        self.serie_name = serie_name or url.split("/")[-3]
+        self.series_name = series_name or url.split("/")[-3]
 
         self.client = client or AsyncClient()
 
@@ -49,7 +56,10 @@ class Season:
             if not match_url:
                 return SeasonLangPage(lang_id=lang_id)
 
-            episodes_js = await self.client.get(page_url + match_url.group(0))
+            episodes_js = await self.client.get(
+                page_url + match_url.group(0),
+                headers={"Referer": page_url},
+            )
 
             if episodes_js.is_error:
                 return SeasonLangPage(lang_id=lang_id)
@@ -62,17 +72,26 @@ class Season:
             *(process_page(lang_id) for lang_id in get_args(LangId))
         )
         pages_dict = {page.lang_id: page for page in pages}
-        if pages_dict["vostfr"].html:
-            flag_id_vo = re.findall(
-                r"src=\".+flag_(.+?)\.png\".*?[\n\t]*<p.*?>VO</p>",
-                remove_some_js_comments(pages_dict["vostfr"].html),
-            )[0]
 
-            for lang_id in lang2ids[flagid2lang[flag_id_vo]]:
-                if not pages_dict[lang_id].html:
-                    pages_dict[lang_id] = replace(pages_dict["vostfr"])  # replace=copy
-                    pages_dict[lang_id].lang_id = lang_id
-                    break
+        if pages_dict["vostfr"].html:
+            vostfr_html = remove_some_js_comments(pages_dict["vostfr"].html)
+
+            flag_matches = re.findall(
+                r"src=\"[^\"]*flag_([^\"]+?)\.png\".*?<span[^>]*>\s*VOSTFR\s*</span>",
+                vostfr_html,
+                re.DOTALL | re.IGNORECASE,
+            )
+
+            if flag_matches:
+                flag_id_vo = flag_matches[0]
+
+                for lang_id in lang2ids[flagid2lang[flag_id_vo]]:
+                    if not pages_dict[lang_id].html:
+                        pages_dict[lang_id] = replace(
+                            pages_dict["vostfr"]
+                        )  # replace=copy
+                        pages_dict[lang_id].lang_id = lang_id
+                        break
 
         return [value for value in pages_dict.values() if value.html]
 
@@ -83,7 +102,7 @@ class Season:
         )
         players_list = sorted(players_list, key=lambda tuple: tuple[0])
         players_list_links = (
-            cast(list[str], re.findall(r"'(.+?)'", player))
+            re.findall(r"'(.+?)'", player)
             for _, player in players_list
         )
 
@@ -96,7 +115,13 @@ class Season:
             r"resetListe\(\); *[\n\r]+\t*(.*?)}",
             remove_some_js_comments(page.html),
             re.DOTALL,
-        )[-1]
+        )
+        if not functions:
+            raise EpisodeDataUnavailableError(
+                f"Could not find episode names for {self.series_name} - {self.name} "
+                f"({self.url + page.lang_id}/)."
+            )
+        functions = functions[-1]
         functions_list = split_and_strip(functions, (";", "\n"))[:-1]
 
         def padding(n: int) -> str:
@@ -117,7 +142,6 @@ class Season:
                 args = literal_eval(node_or_string=args_sting + ",")
                 if type(args) is not tuple:
                     continue
-                args = cast(tuple, args)
             else:
                 args = ()
 
@@ -128,7 +152,7 @@ class Season:
                     if len(args) < 2:
                         # Only seen on Dragon Ball GT (Film), Junji Ito Collection (Saison 1) and Orange (Film)
                         # Surely a small oversight in anime-sama
-                        # So it is undefined but do nothing is generaly the good reaction
+                        # So it is undefined but do nothing is generally the good reaction
                         continue
 
                     episodes_name += episode_name_range(int(args[0]), int(args[1]) + 1)
@@ -182,7 +206,7 @@ class Season:
                     curr_done += pos + 1
                     break
             else:
-                fusion.append((name_new, Languages({page.lang_id: players})))  # type: ignore
+                fusion.append((name_new, Languages({page.lang_id: players})))
         fusion.extend(current[curr_done:])
         return fusion
 
@@ -207,7 +231,7 @@ class Season:
         return [
             Episode(
                 languages,
-                self.serie_name,
+                self.series_name,
                 self.name,
                 name,
                 index,
@@ -216,12 +240,12 @@ class Season:
         ]
 
     def __repr__(self) -> str:
-        return f"Season({self.name!r}, {self.serie_name!r})"
+        return f"Season({self.name!r}, {self.series_name!r})"
 
     def __str__(self) -> str:
         return self.name
 
-    def __eq__(self, value: Any) -> bool:
+    def __eq__(self, value: object) -> bool:
         if not isinstance(value, Season):
             return False
         return self.url == value.url

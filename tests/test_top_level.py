@@ -21,4 +21,4 @@ async def test_all_catalogues():
         if catalogue_data.gumball == catalogue:
             break
     else:
-        assert 1 == 0
+        assert False

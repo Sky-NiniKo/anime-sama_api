@@ -62,11 +62,11 @@ if __name__ == "__main__":
     pprint(langs)
 
     async def main() -> None:
-        async for catalogue in AnimeSama("https://anime-sama.si/").catalogues_iter():
+        async for catalogue in AnimeSama("https://anime-sama.to/").catalogues_iter():
             if await catalogue.seasons():
                 break
         else:
-            raise
+            raise RuntimeError
 
         vostfr_url = (await catalogue.seasons())[0].url + "vostfr/"
         response = await catalogue.client.get(vostfr_url)

@@ -4,8 +4,8 @@ prefer_languages = ["VOSTFR"]
 
 # Where to put the downloads
 download_path = "~/Downloads/Anime-Sama"
-# How to organize the downloads (you can use {serie} {season} {episode} {release_year_parentheses})
-episode_path = "{serie}/{season}/{episode}"
+# How to organize the downloads (you can use {series} {season} {episode} {release_year_parentheses})
+episode_path = "{series}/{season}/{episode}"
 
 # If it downloads or plays the selected episodes
 download = true
@@ -13,7 +13,7 @@ show_players = false
 max_retry_time = 1024
 
 # See https://github.com/yt-dlp/yt-dlp#format-selection
-# For exemple, if you want the lowest size, put "+size,+br,+res,+fps" in format_sort
+# For example, if you want the lowest size, put "+size,+br,+res,+fps" in format_sort
 format = "all"
 format_sort = ""
 

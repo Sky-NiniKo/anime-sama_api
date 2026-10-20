@@ -21,12 +21,11 @@ classifiers = [
     "Topic :: System :: Archiving",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "httpx>=0.28.1",
 ]
@@ -39,23 +38,25 @@ Repository = "https://github.com/Sky-NiniKo/anime-sama_api/"
 
 [project.optional-dependencies]
 cli = [
-    "platformdirs>=4.11.0",
+    "platformdirs>=4.13.5",
     "rich>=15.0.0",
-    "tomli>=2.4.1 ; python_full_version < '3.11'",
-    "yt-dlp>=2026.7.4",
+    "yt-dlp>=2026.8.19",
 ]
 
 [dependency-groups]
 dev = [
-    "ruff>=0.15.22",
-    "mypy>=2.3.0",
+    "ruff>=0.17.1",
+    "mypy>=2.4.0",
     "pytest>=9.1.1",
     "pytest-asyncio>=1.4.0",
     "pytest-cov>=7.1.0",
     "yt-dlp-types>=0.0.18",
-    "ty>=0.0.63",
+    "ty>=0.0.90",
 ]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "module"
+
+[tool.ty.src]
+exclude = ["tests/data"]

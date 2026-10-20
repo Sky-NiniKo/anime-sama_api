@@ -5,7 +5,7 @@ from anime_sama_api.episode import Episode, Languages, Players
 
 
 def test_multi_download():
-    multi_download([Episode({})], Path())
+    multi_download([Episode(Languages())], Path())
 
 
 def test_download():

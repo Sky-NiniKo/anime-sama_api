@@ -53,15 +53,13 @@ def YDL_log_filter(record: LogRecord) -> bool:
 
     match record.levelname:
         case "WARNING":
-            if any(
-                msg in record.msg
+            return all(
+                msg not in record.msg
                 for msg in (
                     "Falling back on generic information extractor",
                     "Live HLS streams are not supported by the native downloader.",
                 )
-            ):
-                return False
-            return True
+            )
         case "ERROR":
             return not is_error_handle(record.msg)
         case _:

@@ -19,26 +19,26 @@ except ImportError:
 
         sys.exit(1)
 
-    download = multi_download = main  # type: ignore
+    download = multi_download = main
 
 
 # __package__ = "anime-sama_api"
 __all__ = [
     "AnimeSama",
     "Catalogue",
-    "Season",
-    "Players",
-    "Languages",
     "Episode",
     "Lang",
     "LangId",
-    "lang2ids",
-    "id2lang",
-    "flags",
+    "Languages",
+    "Players",
+    "Season",
     "download",
-    "multi_download",
-    "main",
     "find_site_url",
+    "flags",
+    "id2lang",
+    "lang2ids",
+    "main",
+    "multi_download",
 ]
 
 """__locals = locals()

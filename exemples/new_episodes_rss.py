@@ -1,5 +1,5 @@
 import asyncio
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html import escape
 
 from anime_sama_api import AnimeSama, find_site_url
@@ -9,7 +9,7 @@ async def main():
     url = await find_site_url()
 
     if url is None:
-        raise
+        raise RuntimeError
 
     anime_sama = AnimeSama(url)
     new_releases = await anime_sama.new_episodes()
@@ -18,13 +18,13 @@ async def main():
         f'<rss version="2.0">\n<channel>\n'
         f"<title>{url} new episodes</title>\n"
         f"<link>{url}/</link>\n"
-        f"<lastBuildDate>{datetime.now(timezone.utc).isoformat(timespec='seconds')}</lastBuildDate>\n"
+        f"<lastBuildDate>{datetime.now(UTC).isoformat(timespec='seconds')}</lastBuildDate>\n"
     )
 
     for release in reversed(new_releases):
         print(
             f"<item>\n"
-            f"<title>New release for {escape(release.serie_name)}</title>\n"
+            f"<title>New release for {escape(release.series_name)}</title>\n"
             f"<description>{escape(release.fancy_name)}</description>\n"
             f"<link>{release.page_url}</link>\n"
             f'<guid isPermaLink="false">{release.__hash__()}</guid>\n'

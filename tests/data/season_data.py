@@ -29,5 +29,4 @@ mha = [
     for i in range(1, 9)
 ] + [
     Season("https://anime-sama.to/catalogue/my-hero-academia/film/"),
-    Season("https://anime-sama.to/catalogue/my-hero-academia/oav/"),
 ]

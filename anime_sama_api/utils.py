@@ -1,5 +1,7 @@
+import functools
+import operator
 import re
-from collections.abc import Callable, Generator, Iterable, Sequence
+from collections.abc import Callable, Generator, Iterable
 from itertools import zip_longest
 from typing import Any, TypeVar, cast, get_args
 
@@ -8,7 +10,7 @@ T = TypeVar("T")
 
 # By Mike Müller (https://stackoverflow.com/a/38059462)
 def zip_varlen(
-    *iterables: Sequence[Iterable[T]], sentinel: object = object()
+    *iterables: Iterable[T], sentinel: object = object()
 ) -> list[list[T]]:
     return cast(
         list[list[T]],
@@ -25,7 +27,7 @@ def split_and_strip(string: str, delimiters: Iterable[str] | str) -> list[str]:
 
     string_list = [string]
     for delimiter in delimiters:
-        string_list = sum((part.split(delimiter) for part in string_list), [])
+        string_list = functools.reduce(operator.iadd, (part.split(delimiter) for part in string_list), [])
     return [part.strip() for part in string_list]
 
 
@@ -43,6 +45,7 @@ def is_Literal(
     callback_when_false(value)
     return False
 
+
 # def is_Literal(value: Any, Lit: Any) -> bool:
 #     return value in get_args(Lit)
 
@@ -53,6 +56,7 @@ def filter_literal(
     callback_when_false: Callable[[Any], None] = lambda _: None,
 ) -> Generator[T]:
     return (value for value in iterable if is_Literal(value, Lit, callback_when_false))
+
 
 # def filter_literal(iterable: Iterable[Any], Lit: T) -> Generator[T, None, None]:
 #     return (value for value in iterable if is_Literal(value, Lit))

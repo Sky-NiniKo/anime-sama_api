@@ -1,4 +1,4 @@
-from anime_sama_api.utils import remove_some_js_comments, zip_varlen, split_and_strip
+from anime_sama_api.utils import remove_some_js_comments, split_and_strip, zip_varlen
 
 
 def test_zip_varlen():

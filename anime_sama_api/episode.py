@@ -12,14 +12,12 @@ logger = logging.getLogger(__name__)
 
 class Players(list[str]):
     def __init__(self, *args: Sequence[Any], **kwargs: dict[Any, Any]):
-        ret = super().__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.swapPlayers()  # seem to exist on all pages but that could be false, to be sure check script_videos.js
 
         # Autofix old links
         for index, _ in enumerate(self):
             self[index] = self[index].replace("vidmoly.to", "vidmoly.net")
-
-        return ret
 
     def swapPlayers(self) -> None:
         if len(self) < 2:
@@ -49,7 +47,7 @@ class Players(list[str]):
 
 
 class Languages(dict[LangId, Players]):
-    def __init__(self, *args: Sequence[Any], **kargs: dict[Any, Any]) -> None:
+    def __init__(self, *args: dict[LangId, Players], **kargs: Players) -> None:
         super().__init__(*args, **kargs)
         if not self:
             logger.warning("No player available for %s", self)
@@ -90,7 +88,7 @@ class Languages(dict[LangId, Players]):
 @dataclass(frozen=True)
 class Episode:
     languages: Languages
-    serie_name: str = ""
+    series_name: str = ""
     season_name: str = ""
     _name: str = ""
     index: int = 1
@@ -116,7 +114,7 @@ class Episode:
 
     @property
     def short_name(self) -> str:
-        return f"{self.serie_name} S{self.season_number:02}E{self.index:02}"
+        return f"{self.series_name} S{self.season_number:02}E{self.index:02}"
 
     def __str__(self) -> str:
         return self.fancy_name

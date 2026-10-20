@@ -7,7 +7,7 @@ I have implemented all the features I care about. This project is now in mainten
 
 # Installation
 Requirements:
-- Python 3.10 or higher
+- Python 3.11 or higher
 
 You can simply install it with (note that you can use tools like pipx to isolate the installation):
 ```bash

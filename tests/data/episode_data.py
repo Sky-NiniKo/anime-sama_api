@@ -4,23 +4,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-1j1tjy3qqbs7.html",
+                "https://ansembed.net/embed-1j1tjy3qqbs7.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833453",
                 "https://sendvid.com/embed/fhsscqix",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-na2vrsevfe89.html",
+                "https://ansembed.net/embed-na2vrsevfe89.html",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-ze0dv8b88jpo.html",
+                "https://ansembed.net/embed-ze0dv8b88jpo.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826196",
             ],
             "vj": [
-                "https://vidmoly.net/embed-ze0dv8b88jpo.html",
+                "https://ansembed.net/embed-ze0dv8b88jpo.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826196",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 1 ",
         index=1,
@@ -28,23 +28,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ddi56a5cvwy8.html",
+                "https://ansembed.net/embed-ddi56a5cvwy8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833454",
                 "https://sendvid.com/embed/zde8esi4",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-lk2xdgokif2m.html",
+                "https://ansembed.net/embed-lk2xdgokif2m.html",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-tax5nszvx0e2.html",
+                "https://ansembed.net/embed-tax5nszvx0e2.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826200",
             ],
             "vj": [
-                "https://vidmoly.net/embed-tax5nszvx0e2.html",
+                "https://ansembed.net/embed-tax5nszvx0e2.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826200",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 2 ",
         index=2,
@@ -52,23 +52,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-zho0z6jni6ff.html",
+                "https://ansembed.net/embed-zho0z6jni6ff.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833455",
                 "https://sendvid.com/embed/vtexyvn7",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-419fc94unyj5.html",
+                "https://ansembed.net/embed-419fc94unyj5.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-fl3lyt250ill.html",
+                "https://ansembed.net/embed-fl3lyt250ill.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826204",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-fl3lyt250ill.html",
+                "https://ansembed.net/embed-fl3lyt250ill.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826204",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 3 ",
         index=3,
@@ -76,23 +76,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-hzyudlvgtn7p.html",
+                "https://ansembed.net/embed-hzyudlvgtn7p.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833456",
                 "https://sendvid.com/embed/akargs6z",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-4yyvj5q6hdc2.html",
+                "https://ansembed.net/embed-4yyvj5q6hdc2.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-y4b1qcot5818.html",
+                "https://ansembed.net/embed-y4b1qcot5818.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826207",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-y4b1qcot5818.html",
+                "https://ansembed.net/embed-y4b1qcot5818.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826207",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 4 ",
         index=4,
@@ -100,23 +100,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-lwgygcdnlye8.html",
+                "https://ansembed.net/embed-lwgygcdnlye8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833458",
                 "https://sendvid.com/embed/vp1j53jm",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-7jd7buplo4ik.html",
+                "https://ansembed.net/embed-7jd7buplo4ik.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-5cvwmdjfesxm.html",
+                "https://ansembed.net/embed-5cvwmdjfesxm.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826209",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-5cvwmdjfesxm.html",
+                "https://ansembed.net/embed-5cvwmdjfesxm.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826209",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 5 ",
         index=5,
@@ -124,23 +124,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-0vcbifulegxt.html",
+                "https://ansembed.net/embed-0vcbifulegxt.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833459",
                 "https://sendvid.com/embed/67ap4ov5",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-01oon5t2i2sg.html",
+                "https://ansembed.net/embed-01oon5t2i2sg.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-6jbw8xasjpaj.html",
+                "https://ansembed.net/embed-6jbw8xasjpaj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826211",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-6jbw8xasjpaj.html",
+                "https://ansembed.net/embed-6jbw8xasjpaj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826211",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 6 ",
         index=6,
@@ -148,23 +148,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-zniku6yv8eu9.html",
+                "https://ansembed.net/embed-zniku6yv8eu9.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833462",
                 "https://sendvid.com/embed/47c8dbbk",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-6cobbao8970s.html",
+                "https://ansembed.net/embed-6cobbao8970s.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-pibpk0a8zjiq.html",
+                "https://ansembed.net/embed-pibpk0a8zjiq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826212",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-pibpk0a8zjiq.html",
+                "https://ansembed.net/embed-pibpk0a8zjiq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826212",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 7 ",
         index=7,
@@ -172,23 +172,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-kxbc0u1n7wpk.html",
+                "https://ansembed.net/embed-kxbc0u1n7wpk.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833465",
                 "https://sendvid.com/embed/mljjos89",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-2248wdmonmbx.html",
+                "https://ansembed.net/embed-2248wdmonmbx.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-ig52x9yg2m7t.html",
+                "https://ansembed.net/embed-ig52x9yg2m7t.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826156",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-ig52x9yg2m7t.html",
+                "https://ansembed.net/embed-ig52x9yg2m7t.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826156",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 8 ",
         index=8,
@@ -196,23 +196,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-qzbr0oqy064s.html",
+                "https://ansembed.net/embed-qzbr0oqy064s.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833468",
                 "https://sendvid.com/embed/w83usa1d",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-j6slznlqqu03.html",
+                "https://ansembed.net/embed-j6slznlqqu03.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-ncrczehra65z.html",
+                "https://ansembed.net/embed-ncrczehra65z.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826157",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-ncrczehra65z.html",
+                "https://ansembed.net/embed-ncrczehra65z.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826157",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 9 ",
         index=9,
@@ -220,23 +220,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-9h6oe75n911i.html",
+                "https://ansembed.net/embed-9h6oe75n911i.html",
                 "https://video.sibnet.ru/shell.php?videoid=3871795",
                 "https://sendvid.com/embed/t5owrlnu",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-36uyklqjn4nk.html",
+                "https://ansembed.net/embed-36uyklqjn4nk.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-c0dg19tn3my5.html",
+                "https://ansembed.net/embed-c0dg19tn3my5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826158",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-c0dg19tn3my5.html",
+                "https://ansembed.net/embed-c0dg19tn3my5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826158",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 10",
         index=10,
@@ -244,23 +244,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-f3vzc1bxdgo4.html",
+                "https://ansembed.net/embed-f3vzc1bxdgo4.html",
                 "https://video.sibnet.ru/shell.php?videoid=3871796",
                 "https://sendvid.com/embed/99qa78bz",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-61vl0cuqo73m.html",
+                "https://ansembed.net/embed-61vl0cuqo73m.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-mmo8n73ybepk.html",
+                "https://ansembed.net/embed-mmo8n73ybepk.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826159",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-mmo8n73ybepk.html",
+                "https://ansembed.net/embed-mmo8n73ybepk.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826159",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 11",
         index=11,
@@ -268,23 +268,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-nr9c65hp2lvy.html",
+                "https://ansembed.net/embed-nr9c65hp2lvy.html",
                 "https://video.sibnet.ru/shell.php?videoid=3871797",
                 "https://sendvid.com/embed/p2ymjb87",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-6t2da1jrdk7e.html",
+                "https://ansembed.net/embed-6t2da1jrdk7e.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-h3wh0u7nvmkj.html",
+                "https://ansembed.net/embed-h3wh0u7nvmkj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826162",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-h3wh0u7nvmkj.html",
+                "https://ansembed.net/embed-h3wh0u7nvmkj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826162",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 12",
         index=12,
@@ -292,23 +292,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-3nk5jfse7swi.html",
+                "https://ansembed.net/embed-3nk5jfse7swi.html",
                 "https://video.sibnet.ru/shell.php?videoid=3871798",
                 "https://sendvid.com/embed/640luztb",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-7dc7i1s406nn.html",
+                "https://ansembed.net/embed-7dc7i1s406nn.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-jd8a4c0mnpho.html",
+                "https://ansembed.net/embed-jd8a4c0mnpho.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826167",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-jd8a4c0mnpho.html",
+                "https://ansembed.net/embed-jd8a4c0mnpho.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826167",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 13",
         index=13,
@@ -316,23 +316,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-h7t9l9s90wxs.html",
+                "https://ansembed.net/embed-h7t9l9s90wxs.html",
                 "https://video.sibnet.ru/shell.php?videoid=3871799",
                 "https://sendvid.com/embed/ictpd91c",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-h03v0waam3t1.html",
+                "https://ansembed.net/embed-h03v0waam3t1.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-9rha8vndbw92.html",
+                "https://ansembed.net/embed-9rha8vndbw92.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826168",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-9rha8vndbw92.html",
+                "https://ansembed.net/embed-9rha8vndbw92.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826168",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 14",
         index=14,
@@ -340,23 +340,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-5uts1yefl9jl.html",
+                "https://ansembed.net/embed-5uts1yefl9jl.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833472",
                 "https://sendvid.com/embed/ldhjayw7",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-ounujjcmqlae.html",
+                "https://ansembed.net/embed-ounujjcmqlae.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-5v2fjbb8ire3.html",
+                "https://ansembed.net/embed-5v2fjbb8ire3.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826169",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-5v2fjbb8ire3.html",
+                "https://ansembed.net/embed-5v2fjbb8ire3.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826169",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 15",
         index=15,
@@ -364,23 +364,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-osx522p0osbi.html",
+                "https://ansembed.net/embed-osx522p0osbi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833473",
                 "https://sendvid.com/embed/3bt46zno",
             ],
             "vf2": [
-                "https://vidmoly.net/embed-3ly3vteq63wf.html",
+                "https://ansembed.net/embed-3ly3vteq63wf.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-skc1b9m4xrp9.html",
+                "https://ansembed.net/embed-skc1b9m4xrp9.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826170",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-skc1b9m4xrp9.html",
+                "https://ansembed.net/embed-skc1b9m4xrp9.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826170",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 16",
         index=16,
@@ -388,23 +388,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-zya9spo1pwa0.html",
+                "https://ansembed.net/embed-zya9spo1pwa0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833475",
                 "https://sendvid.com/embed/2hdo87a9",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-csy0omlcpi0f.html",
+                "https://ansembed.net/embed-csy0omlcpi0f.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-gk7hii7zhej5.html",
+                "https://ansembed.net/embed-gk7hii7zhej5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826171",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-gk7hii7zhej5.html",
+                "https://ansembed.net/embed-gk7hii7zhej5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826171",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 17",
         index=17,
@@ -412,23 +412,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-09tfas8lu44d.html",
+                "https://ansembed.net/embed-09tfas8lu44d.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833476",
                 "https://sendvid.com/embed/yaiqq2a4",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-vs9v38yso5fq.html",
+                "https://ansembed.net/embed-vs9v38yso5fq.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-hd4ot35jx74b.html",
+                "https://ansembed.net/embed-hd4ot35jx74b.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826173",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-hd4ot35jx74b.html",
+                "https://ansembed.net/embed-hd4ot35jx74b.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826173",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 18",
         index=18,
@@ -436,23 +436,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-v6dkxs15i5u6.html",
+                "https://ansembed.net/embed-v6dkxs15i5u6.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833479",
                 "https://sendvid.com/embed/8tttfzn4",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-ikgy58afbdve.html",
+                "https://ansembed.net/embed-ikgy58afbdve.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-wyg38sy2jyem.html",
+                "https://ansembed.net/embed-wyg38sy2jyem.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826174",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-wyg38sy2jyem.html",
+                "https://ansembed.net/embed-wyg38sy2jyem.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826174",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 19",
         index=19,
@@ -460,23 +460,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-5hwzktebz820.html",
+                "https://ansembed.net/embed-5hwzktebz820.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833480",
                 "https://sendvid.com/embed/885pztjs",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-nly2qw7nrmzl.html",
+                "https://ansembed.net/embed-nly2qw7nrmzl.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-in2rfflkohvb.html",
+                "https://ansembed.net/embed-in2rfflkohvb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4702767",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-in2rfflkohvb.html",
+                "https://ansembed.net/embed-in2rfflkohvb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4702767",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 20",
         index=20,
@@ -484,23 +484,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-rxm558zedszx.html",
+                "https://ansembed.net/embed-rxm558zedszx.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833481",
                 "https://sendvid.com/embed/0iaf1uyd",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-60phmtfdkb1r.html",
+                "https://ansembed.net/embed-60phmtfdkb1r.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-uqjprtlalgqr.html",
+                "https://ansembed.net/embed-uqjprtlalgqr.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826213",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-uqjprtlalgqr.html",
+                "https://ansembed.net/embed-uqjprtlalgqr.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826213",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 21",
         index=21,
@@ -508,23 +508,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-qgk1f015f64p.html",
+                "https://ansembed.net/embed-qgk1f015f64p.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833483",
                 "https://sendvid.com/embed/emo4x0sp",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-xqgkz3b4atzp.html",
+                "https://ansembed.net/embed-xqgkz3b4atzp.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-c9kg4104y5b0.html",
+                "https://ansembed.net/embed-c9kg4104y5b0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826215",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-c9kg4104y5b0.html",
+                "https://ansembed.net/embed-c9kg4104y5b0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826215",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 22",
         index=22,
@@ -532,23 +532,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ca6bvzakk3j7.html",
+                "https://ansembed.net/embed-ca6bvzakk3j7.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729232",
                 "https://sendvid.com/embed/0ypokypf",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-gu4iher5hp5i.html",
+                "https://ansembed.net/embed-gu4iher5hp5i.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-f0qgty6adbe8.html",
+                "https://ansembed.net/embed-f0qgty6adbe8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826216",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-f0qgty6adbe8.html",
+                "https://ansembed.net/embed-f0qgty6adbe8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826216",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 23",
         index=23,
@@ -556,23 +556,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-hqz36c9ug8tn.html",
+                "https://ansembed.net/embed-hqz36c9ug8tn.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833487",
                 "https://sendvid.com/embed/v71365yw",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-h85dr9jzrbwf.html",
+                "https://ansembed.net/embed-h85dr9jzrbwf.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-s497934imdn3.html",
+                "https://ansembed.net/embed-s497934imdn3.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826217",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-s497934imdn3.html",
+                "https://ansembed.net/embed-s497934imdn3.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826217",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 24",
         index=24,
@@ -580,23 +580,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-vlhrfblrrew5.html",
+                "https://ansembed.net/embed-vlhrfblrrew5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729225",
                 "https://sendvid.com/embed/zaf2b2fv",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-8mjo1qzad8qi.html",
+                "https://ansembed.net/embed-8mjo1qzad8qi.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-4n3xctw38ck0.html",
+                "https://ansembed.net/embed-4n3xctw38ck0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826220",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-4n3xctw38ck0.html",
+                "https://ansembed.net/embed-4n3xctw38ck0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826220",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 25",
         index=25,
@@ -604,23 +604,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-dgkjj9z16sth.html",
+                "https://ansembed.net/embed-dgkjj9z16sth.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833489",
                 "https://sendvid.com/embed/41wgsycn",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-njx17mo3iqgy.html",
+                "https://ansembed.net/embed-njx17mo3iqgy.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-lmxbyxdas9t5.html",
+                "https://ansembed.net/embed-lmxbyxdas9t5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826222",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-lmxbyxdas9t5.html",
+                "https://ansembed.net/embed-lmxbyxdas9t5.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826222",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 26",
         index=26,
@@ -628,23 +628,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-v7f5jcnr8zzl.html",
+                "https://ansembed.net/embed-v7f5jcnr8zzl.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833490",
                 "https://sendvid.com/embed/exfarq2i",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-n85xv3cb2jgn.html",
+                "https://ansembed.net/embed-n85xv3cb2jgn.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-05emx3uufv66.html",
+                "https://ansembed.net/embed-05emx3uufv66.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826224",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-05emx3uufv66.html",
+                "https://ansembed.net/embed-05emx3uufv66.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826224",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 27",
         index=27,
@@ -652,23 +652,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-uiievugcktx0.html",
+                "https://ansembed.net/embed-uiievugcktx0.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833492",
                 "https://sendvid.com/embed/uk58f6h4",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-cbsvwjwyv26c.html",
+                "https://ansembed.net/embed-cbsvwjwyv26c.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-8s1tmnqtxt6t.html",
+                "https://ansembed.net/embed-8s1tmnqtxt6t.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826226",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-8s1tmnqtxt6t.html",
+                "https://ansembed.net/embed-8s1tmnqtxt6t.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826226",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 28",
         index=28,
@@ -676,23 +676,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-k1g74ovw5aze.html",
+                "https://ansembed.net/embed-k1g74ovw5aze.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833493",
                 "https://sendvid.com/embed/kxvya1cu",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-mv88wqbdpqpi.html",
+                "https://ansembed.net/embed-mv88wqbdpqpi.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-5skra2vqd1l6.html",
+                "https://ansembed.net/embed-5skra2vqd1l6.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826227",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-5skra2vqd1l6.html",
+                "https://ansembed.net/embed-5skra2vqd1l6.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826227",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 29",
         index=29,
@@ -700,23 +700,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-opbsa6o8xxyu.html",
+                "https://ansembed.net/embed-opbsa6o8xxyu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729234",
                 "https://sendvid.com/embed/rhoil31n",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-2ebmqr7e0lvi.html",
+                "https://ansembed.net/embed-2ebmqr7e0lvi.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-zyoxlt4ub0qm.html",
+                "https://ansembed.net/embed-zyoxlt4ub0qm.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826228",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-zyoxlt4ub0qm.html",
+                "https://ansembed.net/embed-zyoxlt4ub0qm.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826228",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 30",
         index=30,
@@ -724,23 +724,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-rmk99wj7uhjx.html",
+                "https://ansembed.net/embed-rmk99wj7uhjx.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833499",
                 "https://sendvid.com/embed/2mo1stx7",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-kqq45q2wcqpr.html",
+                "https://ansembed.net/embed-kqq45q2wcqpr.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-m9ufjqs91k3g.html",
+                "https://ansembed.net/embed-m9ufjqs91k3g.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826230",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-m9ufjqs91k3g.html",
+                "https://ansembed.net/embed-m9ufjqs91k3g.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826230",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 31",
         index=31,
@@ -748,23 +748,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-lbrufluzoqzt.html",
+                "https://ansembed.net/embed-lbrufluzoqzt.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729236",
                 "https://sendvid.com/embed/i104tvy3",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-rw4u8kl3c346.html",
+                "https://ansembed.net/embed-rw4u8kl3c346.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-nf5o72fi194m.html",
+                "https://ansembed.net/embed-nf5o72fi194m.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826231",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-nf5o72fi194m.html",
+                "https://ansembed.net/embed-nf5o72fi194m.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826231",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 32",
         index=32,
@@ -772,23 +772,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-hn0fh2lnl85k.html",
+                "https://ansembed.net/embed-hn0fh2lnl85k.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729238",
                 "https://sendvid.com/embed/p8o5huoa",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-g637wndyrgbb.html",
+                "https://ansembed.net/embed-g637wndyrgbb.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-7imnv2xf1qd8.html",
+                "https://ansembed.net/embed-7imnv2xf1qd8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826233",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-7imnv2xf1qd8.html",
+                "https://ansembed.net/embed-7imnv2xf1qd8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826233",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 33",
         index=33,
@@ -796,23 +796,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-n7bfg33xggt2.html",
+                "https://ansembed.net/embed-n7bfg33xggt2.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833500",
                 "https://sendvid.com/embed/glvp07ho",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-juxchyi2bgzn.html",
+                "https://ansembed.net/embed-juxchyi2bgzn.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-xq8jxq3m0kog.html",
+                "https://ansembed.net/embed-xq8jxq3m0kog.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826234",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-xq8jxq3m0kog.html",
+                "https://ansembed.net/embed-xq8jxq3m0kog.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826234",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 34",
         index=34,
@@ -820,23 +820,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ljk7oic0sdjt.html",
+                "https://ansembed.net/embed-ljk7oic0sdjt.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833501",
                 "https://sendvid.com/embed/1qb0nqyh",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-s2eujik4nc7r.html",
+                "https://ansembed.net/embed-s2eujik4nc7r.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-pa5f15oi6q7c.html",
+                "https://ansembed.net/embed-pa5f15oi6q7c.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826235",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-pa5f15oi6q7c.html",
+                "https://ansembed.net/embed-pa5f15oi6q7c.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826235",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 35",
         index=35,
@@ -844,23 +844,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-gppumy2yxqjt.html",
+                "https://ansembed.net/embed-gppumy2yxqjt.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833505",
                 "https://sendvid.com/embed/6kopv1rf",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-xkc1v37xf2cl.html",
+                "https://ansembed.net/embed-xkc1v37xf2cl.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-5lefsqh3w1me.html",
+                "https://ansembed.net/embed-5lefsqh3w1me.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826236",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-5lefsqh3w1me.html",
+                "https://ansembed.net/embed-5lefsqh3w1me.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826236",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 36",
         index=36,
@@ -868,23 +868,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-8dr2tv0t5eeu.html",
+                "https://ansembed.net/embed-8dr2tv0t5eeu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833507",
                 "https://sendvid.com/embed/zh71edel",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-pq5cik44w5ih.html",
+                "https://ansembed.net/embed-pq5cik44w5ih.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-rwc5u5hvsd4f.html",
+                "https://ansembed.net/embed-rwc5u5hvsd4f.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826237",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-rwc5u5hvsd4f.html",
+                "https://ansembed.net/embed-rwc5u5hvsd4f.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826237",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 37",
         index=37,
@@ -892,23 +892,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-zmdqtr7x6f8f.html",
+                "https://ansembed.net/embed-zmdqtr7x6f8f.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833512",
                 "https://sendvid.com/embed/03ocbi94",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-m3vkdyd2ffla.html",
+                "https://ansembed.net/embed-m3vkdyd2ffla.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-4dgk0ymjbtzb.html",
+                "https://ansembed.net/embed-4dgk0ymjbtzb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826239",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-4dgk0ymjbtzb.html",
+                "https://ansembed.net/embed-4dgk0ymjbtzb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826239",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 38",
         index=38,
@@ -916,23 +916,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-tbrd68m51m4d.html",
+                "https://ansembed.net/embed-tbrd68m51m4d.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833513",
                 "https://sendvid.com/embed/b8z7m5g2",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-rqo930gk5u2a.html",
+                "https://ansembed.net/embed-rqo930gk5u2a.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-l9e1hkvn5tdo.html",
+                "https://ansembed.net/embed-l9e1hkvn5tdo.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826240",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-l9e1hkvn5tdo.html",
+                "https://ansembed.net/embed-l9e1hkvn5tdo.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826240",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 39",
         index=39,
@@ -940,23 +940,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ne447r0wt7hu.html",
+                "https://ansembed.net/embed-ne447r0wt7hu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833515",
                 "https://sendvid.com/embed/rstvc4k9",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-enc6zer6loel.html",
+                "https://ansembed.net/embed-enc6zer6loel.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-s0xuswwvwchl.html",
+                "https://ansembed.net/embed-s0xuswwvwchl.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826243",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-s0xuswwvwchl.html",
+                "https://ansembed.net/embed-s0xuswwvwchl.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826243",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 40",
         index=40,
@@ -964,23 +964,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-f4ju03qjjiie.html",
+                "https://ansembed.net/embed-f4ju03qjjiie.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729239",
                 "https://sendvid.com/embed/8s3hc9vz",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-i0babcddn7ro.html",
+                "https://ansembed.net/embed-i0babcddn7ro.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-d0vemgbozlow.html",
+                "https://ansembed.net/embed-d0vemgbozlow.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826244",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-d0vemgbozlow.html",
+                "https://ansembed.net/embed-d0vemgbozlow.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826244",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 41",
         index=41,
@@ -988,23 +988,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-g1xbyca3bzpv.html",
+                "https://ansembed.net/embed-g1xbyca3bzpv.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729240",
                 "https://sendvid.com/embed/wtcr6dl8",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-tnpc6ah49wi1.html",
+                "https://ansembed.net/embed-tnpc6ah49wi1.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-avf0ovneivpe.html",
+                "https://ansembed.net/embed-avf0ovneivpe.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826245",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-avf0ovneivpe.html",
+                "https://ansembed.net/embed-avf0ovneivpe.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826245",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 42",
         index=42,
@@ -1012,23 +1012,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-uoxm0boq66ve.html",
+                "https://ansembed.net/embed-uoxm0boq66ve.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833520",
                 "https://sendvid.com/embed/92s9mrs4",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-tkeil28kjb6v.html",
+                "https://ansembed.net/embed-tkeil28kjb6v.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-btkp6x2rejhb.html",
+                "https://ansembed.net/embed-btkp6x2rejhb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826247",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-btkp6x2rejhb.html",
+                "https://ansembed.net/embed-btkp6x2rejhb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826247",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 43",
         index=43,
@@ -1036,23 +1036,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-7g3anb6vmx89.html",
+                "https://ansembed.net/embed-7g3anb6vmx89.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833522",
                 "https://sendvid.com/embed/u452gpyf",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-urowa8b58bfb.html",
+                "https://ansembed.net/embed-urowa8b58bfb.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-h4osgl1qg81r.html",
+                "https://ansembed.net/embed-h4osgl1qg81r.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826248",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-h4osgl1qg81r.html",
+                "https://ansembed.net/embed-h4osgl1qg81r.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826248",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 44",
         index=44,
@@ -1060,23 +1060,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-vopvd9q54d87.html",
+                "https://ansembed.net/embed-vopvd9q54d87.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833524",
                 "https://sendvid.com/embed/p6wx9s35",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-sgpmiop2vz11.html",
+                "https://ansembed.net/embed-sgpmiop2vz11.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-rdl0tphn32jj.html",
+                "https://ansembed.net/embed-rdl0tphn32jj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826249",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-rdl0tphn32jj.html",
+                "https://ansembed.net/embed-rdl0tphn32jj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826249",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 45",
         index=45,
@@ -1084,23 +1084,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-j1ocw86v9ceg.html",
+                "https://ansembed.net/embed-j1ocw86v9ceg.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833527",
                 "https://sendvid.com/embed/i54fh9tn",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-5bg07pgy5yk6.html",
+                "https://ansembed.net/embed-5bg07pgy5yk6.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-2z42fsojx42l.html",
+                "https://ansembed.net/embed-2z42fsojx42l.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826251",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-2z42fsojx42l.html",
+                "https://ansembed.net/embed-2z42fsojx42l.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826251",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 46",
         index=46,
@@ -1108,23 +1108,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-icflug1o3l2n.html",
+                "https://ansembed.net/embed-icflug1o3l2n.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833530",
                 "https://sendvid.com/embed/rrecz5cb",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-7lsdrhtxhz4g.html",
+                "https://ansembed.net/embed-7lsdrhtxhz4g.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-cwiruw6k8wnq.html",
+                "https://ansembed.net/embed-cwiruw6k8wnq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826252",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-cwiruw6k8wnq.html",
+                "https://ansembed.net/embed-cwiruw6k8wnq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826252",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 47",
         index=47,
@@ -1132,23 +1132,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ltrrrqm0juk2.html",
+                "https://ansembed.net/embed-ltrrrqm0juk2.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833531",
                 "https://sendvid.com/embed/1n3onwog",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-m0byevyd851u.html",
+                "https://ansembed.net/embed-m0byevyd851u.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-2o4y5gxj7jxi.html",
+                "https://ansembed.net/embed-2o4y5gxj7jxi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826253",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-2o4y5gxj7jxi.html",
+                "https://ansembed.net/embed-2o4y5gxj7jxi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826253",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 48",
         index=48,
@@ -1156,23 +1156,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-hpfzxhvwgwmy.html",
+                "https://ansembed.net/embed-hpfzxhvwgwmy.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833534",
                 "https://sendvid.com/embed/804d01b2",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-sozcpo2iv47i.html",
+                "https://ansembed.net/embed-sozcpo2iv47i.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-xaspn4aas0pi.html",
+                "https://ansembed.net/embed-xaspn4aas0pi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826255",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-xaspn4aas0pi.html",
+                "https://ansembed.net/embed-xaspn4aas0pi.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826255",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 49",
         index=49,
@@ -1180,23 +1180,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-03zoa4p2dgb8.html",
+                "https://ansembed.net/embed-03zoa4p2dgb8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729249",
                 "https://sendvid.com/embed/6v1ry9p8",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-1emmb2er5e6r.html",
+                "https://ansembed.net/embed-1emmb2er5e6r.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-spkzjno0yksg.html",
+                "https://ansembed.net/embed-spkzjno0yksg.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826256",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-spkzjno0yksg.html",
+                "https://ansembed.net/embed-spkzjno0yksg.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826256",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 50",
         index=50,
@@ -1204,23 +1204,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-tf2mabzhbarq.html",
+                "https://ansembed.net/embed-tf2mabzhbarq.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729250",
                 "https://sendvid.com/embed/w0msq1m0",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-rzn63iwwtnxf.html",
+                "https://ansembed.net/embed-rzn63iwwtnxf.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-ctvrlxsrtko7.html",
+                "https://ansembed.net/embed-ctvrlxsrtko7.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826257",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-ctvrlxsrtko7.html",
+                "https://ansembed.net/embed-ctvrlxsrtko7.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826257",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 51",
         index=51,
@@ -1228,23 +1228,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-tsnyoz3nhbi9.html",
+                "https://ansembed.net/embed-tsnyoz3nhbi9.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729241",
                 "https://sendvid.com/embed/l9r4137m",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-cfmi6odu5jqh.html",
+                "https://ansembed.net/embed-cfmi6odu5jqh.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-bew6mahdmzdc.html",
+                "https://ansembed.net/embed-bew6mahdmzdc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826258",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-bew6mahdmzdc.html",
+                "https://ansembed.net/embed-bew6mahdmzdc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826258",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 52",
         index=52,
@@ -1252,23 +1252,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-og46p38d19bs.html",
+                "https://ansembed.net/embed-og46p38d19bs.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833536",
                 "https://sendvid.com/embed/oqodtkxs",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-8ng0d94cc6cv.html",
+                "https://ansembed.net/embed-8ng0d94cc6cv.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-nwm1zet92uq8.html",
+                "https://ansembed.net/embed-nwm1zet92uq8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826260",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-nwm1zet92uq8.html",
+                "https://ansembed.net/embed-nwm1zet92uq8.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826260",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 53",
         index=53,
@@ -1276,23 +1276,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-2laqj4tagctf.html",
+                "https://ansembed.net/embed-2laqj4tagctf.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833538",
                 "https://sendvid.com/embed/0u5lmhj1",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-26sht37krf4f.html",
+                "https://ansembed.net/embed-26sht37krf4f.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-cf15tba8xy55.html",
+                "https://ansembed.net/embed-cf15tba8xy55.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826262",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-cf15tba8xy55.html",
+                "https://ansembed.net/embed-cf15tba8xy55.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826262",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 54",
         index=54,
@@ -1300,23 +1300,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-y0z23o3vrxnp.html",
+                "https://ansembed.net/embed-y0z23o3vrxnp.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833541",
                 "https://sendvid.com/embed/og0ad5yv",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-7j92cvfapyix.html",
+                "https://ansembed.net/embed-7j92cvfapyix.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-8ujzqoqn2dbj.html",
+                "https://ansembed.net/embed-8ujzqoqn2dbj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826264",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-8ujzqoqn2dbj.html",
+                "https://ansembed.net/embed-8ujzqoqn2dbj.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826264",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 55",
         index=55,
@@ -1324,23 +1324,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-wf4iu7i3ewmv.html",
+                "https://ansembed.net/embed-wf4iu7i3ewmv.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833544",
                 "https://sendvid.com/embed/9ffgxxcw",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-nucepvb77mq3.html",
+                "https://ansembed.net/embed-nucepvb77mq3.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-v70ohgq1t9k4.html",
+                "https://ansembed.net/embed-v70ohgq1t9k4.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826267",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-v70ohgq1t9k4.html",
+                "https://ansembed.net/embed-v70ohgq1t9k4.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826267",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 56",
         index=56,
@@ -1348,23 +1348,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ghto7fc9nriz.html",
+                "https://ansembed.net/embed-ghto7fc9nriz.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833545",
                 "https://sendvid.com/embed/awkbqzow",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-2fcln2a5fjna.html",
+                "https://ansembed.net/embed-2fcln2a5fjna.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-ghovbolbp5hu.html",
+                "https://ansembed.net/embed-ghovbolbp5hu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826268",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-ghovbolbp5hu.html",
+                "https://ansembed.net/embed-ghovbolbp5hu.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826268",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 57",
         index=57,
@@ -1372,23 +1372,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-wmy9xdvhcb0o.html",
+                "https://ansembed.net/embed-wmy9xdvhcb0o.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833548",
                 "https://sendvid.com/embed/h9feowts",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-35kdzb8kxst6.html",
+                "https://ansembed.net/embed-35kdzb8kxst6.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-m7ig1virv4ts.html",
+                "https://ansembed.net/embed-m7ig1virv4ts.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826270",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-m7ig1virv4ts.html",
+                "https://ansembed.net/embed-m7ig1virv4ts.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826270",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 58",
         index=58,
@@ -1396,23 +1396,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-mkimz1gaajpn.html",
+                "https://ansembed.net/embed-mkimz1gaajpn.html",
                 "https://video.sibnet.ru/shell.php?videoid=4833552",
                 "https://sendvid.com/embed/govsf4ul",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-mgwnv19f68y2.html",
+                "https://ansembed.net/embed-mgwnv19f68y2.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-13xmir23xyta.html",
+                "https://ansembed.net/embed-13xmir23xyta.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826273",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-13xmir23xyta.html",
+                "https://ansembed.net/embed-13xmir23xyta.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826273",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 59",
         index=59,
@@ -1420,23 +1420,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-o25h0i2asm5o.html",
+                "https://ansembed.net/embed-o25h0i2asm5o.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729242",
                 "https://sendvid.com/embed/xa32eiml",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-7o7d94hft9of.html",
+                "https://ansembed.net/embed-7o7d94hft9of.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-hjjr54khswdb.html",
+                "https://ansembed.net/embed-hjjr54khswdb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826276",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-hjjr54khswdb.html",
+                "https://ansembed.net/embed-hjjr54khswdb.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826276",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 60",
         index=60,
@@ -1444,23 +1444,23 @@ one_piece_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-bchb8trf2i62.html",
+                "https://ansembed.net/embed-bchb8trf2i62.html",
                 "https://video.sibnet.ru/shell.php?videoid=4729244",
                 "https://sendvid.com/embed/osyplnwx",
             ],
             "vf2": [
-                "https://vidmoly.biz/embed-at95leebow9n.html",
+                "https://ansembed.net/embed-at95leebow9n.html",
             ],
             "vj": [
-                "https://vidmoly.net/embed-cdcdc04uvjcc.html",
+                "https://ansembed.net/embed-cdcdc04uvjcc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826278",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-cdcdc04uvjcc.html",
+                "https://ansembed.net/embed-cdcdc04uvjcc.html",
                 "https://video.sibnet.ru/shell.php?videoid=4826278",
             ],
         },
-        serie_name="one-piece",
+        series_name="one-piece",
         season_name="saison1",
         _name="Episode 61",
         index=61,
@@ -1471,12 +1471,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-dxfb1mckva2m.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436604",
+                "https://ansembed.net/embed-dxfb1mckva2m.html",
                 "https://sendvid.com/embed/0iqu00cm",
+                "https://video.sibnet.ru/shell.php?videoid=5436604",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 1 ",
         index=1,
@@ -1484,12 +1484,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-301zkljyylr7.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436609",
+                "https://ansembed.net/embed-301zkljyylr7.html",
                 "https://sendvid.com/embed/50e62sz6",
+                "https://video.sibnet.ru/shell.php?videoid=5436609",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 2 ",
         index=2,
@@ -1497,12 +1497,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-yify3ess2nx4.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436613",
+                "https://ansembed.net/embed-yify3ess2nx4.html",
                 "https://sendvid.com/embed/sizktg2p",
+                "https://video.sibnet.ru/shell.php?videoid=5436613",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 3 ",
         index=3,
@@ -1510,12 +1510,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-bo3gvxq7kn02.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436615",
+                "https://ansembed.net/embed-bo3gvxq7kn02.html",
                 "https://sendvid.com/embed/uua0jhz7",
+                "https://video.sibnet.ru/shell.php?videoid=5436615",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 4 ",
         index=4,
@@ -1523,12 +1523,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-tpp8yvs37ur5.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436618",
+                "https://ansembed.net/embed-tpp8yvs37ur5.html",
                 "https://sendvid.com/embed/r7k4i5ze",
+                "https://video.sibnet.ru/shell.php?videoid=5436618",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 5 ",
         index=5,
@@ -1536,12 +1536,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-yzh1uyyp2vvf.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436620",
+                "https://ansembed.net/embed-yzh1uyyp2vvf.html",
                 "https://sendvid.com/embed/aki5nlof",
+                "https://video.sibnet.ru/shell.php?videoid=5436620",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 6 ",
         index=6,
@@ -1549,12 +1549,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-pde6fr4qr2y6.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436622",
+                "https://ansembed.net/embed-pde6fr4qr2y6.html",
                 "https://sendvid.com/embed/1v19mhyk",
+                "https://video.sibnet.ru/shell.php?videoid=5436622",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 7 ",
         index=7,
@@ -1562,12 +1562,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ucp00kkawf4g.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436624",
+                "https://ansembed.net/embed-ucp00kkawf4g.html",
                 "https://sendvid.com/embed/7dbhw5gc",
+                "https://video.sibnet.ru/shell.php?videoid=5436624",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 8 ",
         index=8,
@@ -1575,12 +1575,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ki2e45k67n4q.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436625",
+                "https://ansembed.net/embed-ki2e45k67n4q.html",
                 "https://sendvid.com/embed/1twkx1bh",
+                "https://video.sibnet.ru/shell.php?videoid=5436625",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 9 ",
         index=9,
@@ -1588,12 +1588,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-7j35ap2il2eq.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436628",
+                "https://ansembed.net/embed-7j35ap2il2eq.html",
                 "https://sendvid.com/embed/y2zk0glm",
+                "https://video.sibnet.ru/shell.php?videoid=5436628",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 10",
         index=10,
@@ -1601,12 +1601,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-9qtaxfagpzkb.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436631",
+                "https://ansembed.net/embed-9qtaxfagpzkb.html",
                 "https://sendvid.com/embed/fl941hg7",
+                "https://video.sibnet.ru/shell.php?videoid=5436631",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 11",
         index=11,
@@ -1614,12 +1614,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-2gmxjqccl68m.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436632",
+                "https://ansembed.net/embed-2gmxjqccl68m.html",
                 "https://sendvid.com/embed/veffnfpk",
+                "https://video.sibnet.ru/shell.php?videoid=5436632",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 12",
         index=12,
@@ -1627,12 +1627,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ag64o4cfsspo.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436634",
+                "https://ansembed.net/embed-ag64o4cfsspo.html",
                 "https://sendvid.com/embed/sydibgeg",
+                "https://video.sibnet.ru/shell.php?videoid=5436634",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 13",
         index=13,
@@ -1640,12 +1640,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-8438nrc14erg.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436636",
+                "https://ansembed.net/embed-8438nrc14erg.html",
                 "https://sendvid.com/embed/vw6jvtc8",
+                "https://video.sibnet.ru/shell.php?videoid=5436636",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 14",
         index=14,
@@ -1653,12 +1653,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-eixmkw1qnm1c.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436637",
+                "https://ansembed.net/embed-eixmkw1qnm1c.html",
                 "https://sendvid.com/embed/641u86ed",
+                "https://video.sibnet.ru/shell.php?videoid=5436637",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 15",
         index=15,
@@ -1666,12 +1666,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-6m346k4q5gpr.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436639",
+                "https://ansembed.net/embed-6m346k4q5gpr.html",
                 "https://sendvid.com/embed/9dq2xrkf",
+                "https://video.sibnet.ru/shell.php?videoid=5436639",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 16",
         index=16,
@@ -1679,12 +1679,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-5oba86mr5c6p.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436641",
+                "https://ansembed.net/embed-5oba86mr5c6p.html",
                 "https://sendvid.com/embed/cpeiigfn",
+                "https://video.sibnet.ru/shell.php?videoid=5436641",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 17",
         index=17,
@@ -1692,12 +1692,12 @@ gumball_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-3firzcpetse9.html",
-                "https://video.sibnet.ru/shell.php?videoid=5436642",
+                "https://ansembed.net/embed-3firzcpetse9.html",
                 "https://sendvid.com/embed/bajravv1",
+                "https://video.sibnet.ru/shell.php?videoid=5436642",
             ],
         },
-        serie_name="le-monde-incroyable-de-gumball",
+        series_name="le-monde-incroyable-de-gumball",
         season_name="saison1",
         _name="Episode 18",
         index=18,
@@ -1708,25 +1708,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-y6qylioz9qrg.html",
-                "https://Smoothpre.com/embed/vjmxc1jxhw8f",
-                "https://video.sibnet.ru/shell.php?videoid=4955114",
-                "https://sendvid.com/embed/x10lm9vt",
+                "https://ansembed.net/embed-hejryrs1bblw.html",
+                "https://uqload.vc/embed-hu8err6tjoy8.html",
+                "https://teresapoliticallearn.com/e/k3mzyqjiszxb",
             ],
             "vj": [
-                "https://vidmoly.net/embed-qwvo7wyduen5.html",
-                "https://Smoothpre.com/embed/j2ect4ptgep1",
-                "https://video.sibnet.ru/shell.php?videoid=4955465",
-                "https://sendvid.com/embed/up01jsqj",
+                "https://ansembed.net/embed-pdoyc0e999sk.html",
+                "https://uqload.vc/embed-mfxvnzzrpwte.html",
+                "https://teresapoliticallearn.com/e/gxw2ktqkkpfv",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-qwvo7wyduen5.html",
-                "https://Smoothpre.com/embed/j2ect4ptgep1",
-                "https://video.sibnet.ru/shell.php?videoid=4955465",
-                "https://sendvid.com/embed/up01jsqj",
+                "https://ansembed.net/embed-pdoyc0e999sk.html",
+                "https://uqload.vc/embed-mfxvnzzrpwte.html",
+                "https://teresapoliticallearn.com/e/gxw2ktqkkpfv",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 1 ",
         index=1,
@@ -1734,25 +1731,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-v9xxl3mok0ss.html",
-                "https://Smoothpre.com/embed/ldblmmjnsw72",
-                "https://video.sibnet.ru/shell.php?videoid=4955115",
-                "https://sendvid.com/embed/i3ceon0o",
+                "https://ansembed.net/embed-5v0z3ifd6m1s.html",
+                "https://uqload.vc/embed-ahfx3vtojec5.html",
+                "https://teresapoliticallearn.com/e/jqratb3hwf09",
             ],
             "vj": [
-                "https://vidmoly.net/embed-4hxjrfohe5la.html",
-                "https://Smoothpre.com/embed/sfw5knfq3jug",
-                "https://video.sibnet.ru/shell.php?videoid=4955467",
-                "https://sendvid.com/embed/udiuhfeq",
+                "https://ansembed.net/embed-2exmr6vop8b6.html",
+                "https://uqload.vc/embed-l38mie81nqj0.html",
+                "https://teresapoliticallearn.com/e/oxtnaalnwhxf",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-4hxjrfohe5la.html",
-                "https://Smoothpre.com/embed/sfw5knfq3jug",
-                "https://video.sibnet.ru/shell.php?videoid=4955467",
-                "https://sendvid.com/embed/udiuhfeq",
+                "https://ansembed.net/embed-2exmr6vop8b6.html",
+                "https://uqload.vc/embed-l38mie81nqj0.html",
+                "https://teresapoliticallearn.com/e/oxtnaalnwhxf",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 2 ",
         index=2,
@@ -1760,25 +1754,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-sa2kyijw8v99.html",
-                "https://Smoothpre.com/embed/jsw6q4b6wxn9",
-                "https://video.sibnet.ru/shell.php?videoid=4955118",
-                "https://sendvid.com/embed/d9hz2smo",
+                "https://ansembed.net/embed-v3u5cfzjezfu.html",
+                "https://uqload.vc/embed-9sajoi0bzsdb.html",
+                "https://teresapoliticallearn.com/e/cf1sy3pwe7cj",
             ],
             "vj": [
-                "https://vidmoly.net/embed-3gtcmhd435r9.html",
-                "https://Smoothpre.com/embed/x97muevku4xq",
-                "https://video.sibnet.ru/shell.php?videoid=4983121",
-                "https://sendvid.com/embed/a6h91fg0",
+                "https://ansembed.net/embed-2e701wsvud59.html",
+                "https://uqload.vc/embed-w2gguqw7grvm.html",
+                "https://teresapoliticallearn.com/e/k8zgcd4nxzk8",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-3gtcmhd435r9.html",
-                "https://Smoothpre.com/embed/x97muevku4xq",
-                "https://video.sibnet.ru/shell.php?videoid=4983121",
-                "https://sendvid.com/embed/a6h91fg0",
+                "https://ansembed.net/embed-2e701wsvud59.html",
+                "https://uqload.vc/embed-w2gguqw7grvm.html",
+                "https://teresapoliticallearn.com/e/k8zgcd4nxzk8",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 3 ",
         index=3,
@@ -1786,25 +1777,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-tf0j7x8105l2.html",
-                "https://Smoothpre.com/embed/r816jj5da18q",
-                "https://video.sibnet.ru/shell.php?videoid=4955119",
-                "https://sendvid.com/embed/d5hsnchn",
+                "https://ansembed.net/embed-6do1dfg786kv.html",
+                "https://uqload.vc/embed-i3zt9e5j0jon.html",
+                "https://teresapoliticallearn.com/e/mtau2dhrnker",
             ],
             "vj": [
-                "https://vidmoly.net/embed-ke3rw6m9rezv.html",
-                "https://Smoothpre.com/embed/84hvvchk6p7y",
-                "https://video.sibnet.ru/shell.php?videoid=4955469",
-                "https://sendvid.com/embed/qw36zs7t",
+                "https://ansembed.net/embed-trecxkaqv6qt.html",
+                "https://uqload.vc/embed-gdtp4yy8nm8z.html",
+                "https://teresapoliticallearn.com/e/o8wlihpia1a6",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-ke3rw6m9rezv.html",
-                "https://Smoothpre.com/embed/84hvvchk6p7y",
-                "https://video.sibnet.ru/shell.php?videoid=4955469",
-                "https://sendvid.com/embed/qw36zs7t",
+                "https://ansembed.net/embed-trecxkaqv6qt.html",
+                "https://uqload.vc/embed-gdtp4yy8nm8z.html",
+                "https://teresapoliticallearn.com/e/o8wlihpia1a6",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 4 ",
         index=4,
@@ -1812,25 +1800,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-j9y7h2s93yg9.html",
-                "https://Smoothpre.com/embed/e45bdtvf3wip",
-                "https://video.sibnet.ru/shell.php?videoid=4955121",
-                "https://sendvid.com/embed/zhivq4ac",
+                "https://ansembed.net/embed-t0v9earumls3.html",
+                "https://uqload.vc/embed-p6lshfwez2rg.html",
+                "https://teresapoliticallearn.com/e/hihb6bhxupa6",
             ],
             "vj": [
-                "https://vidmoly.net/embed-qkknejk62sra.html",
-                "https://Smoothpre.com/embed/kxn9gatukq5y",
-                "https://video.sibnet.ru/shell.php?videoid=4955470",
-                "https://sendvid.com/embed/zbzuulpk",
+                "https://ansembed.net/embed-tjflb39602cw.html",
+                "https://uqload.vc/embed-l7145faa7va9.html",
+                "https://teresapoliticallearn.com/e/zy1ihv7vinkh",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-qkknejk62sra.html",
-                "https://Smoothpre.com/embed/kxn9gatukq5y",
-                "https://video.sibnet.ru/shell.php?videoid=4955470",
-                "https://sendvid.com/embed/zbzuulpk",
+                "https://ansembed.net/embed-tjflb39602cw.html",
+                "https://uqload.vc/embed-l7145faa7va9.html",
+                "https://teresapoliticallearn.com/e/zy1ihv7vinkh",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 5 ",
         index=5,
@@ -1838,25 +1823,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-79w10nl4g7rt.html",
-                "https://Smoothpre.com/embed/i5qlrvn2ropp",
-                "https://video.sibnet.ru/shell.php?videoid=4955123",
-                "https://sendvid.com/embed/qdlpuvy3",
+                "https://ansembed.net/embed-kcunjkrdjyjg.html",
+                "https://uqload.vc/embed-l2qaid2z6d8x.html",
+                "https://teresapoliticallearn.com/e/fdgyrly3lsny",
             ],
             "vj": [
-                "https://vidmoly.net/embed-jq02pgtub7c8.html",
-                "https://Smoothpre.com/embed/4thxci3tp3cl",
-                "https://video.sibnet.ru/shell.php?videoid=4955472",
-                "https://sendvid.com/embed/inrimlir",
+                "https://ansembed.net/embed-ouphbtlczv2c.html",
+                "https://uqload.vc/embed-7m8tz603dyae.html",
+                "https://teresapoliticallearn.com/e/qjc7nvvcrvjk",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-jq02pgtub7c8.html",
-                "https://Smoothpre.com/embed/4thxci3tp3cl",
-                "https://video.sibnet.ru/shell.php?videoid=4955472",
-                "https://sendvid.com/embed/inrimlir",
+                "https://ansembed.net/embed-ouphbtlczv2c.html",
+                "https://uqload.vc/embed-7m8tz603dyae.html",
+                "https://teresapoliticallearn.com/e/qjc7nvvcrvjk",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 6 ",
         index=6,
@@ -1864,25 +1846,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-nbu92kox5z9o.html",
-                "https://Smoothpre.com/embed/0nw1vvh04epf",
-                "https://video.sibnet.ru/shell.php?videoid=4955125",
-                "https://sendvid.com/embed/nmcnuua8",
+                "https://ansembed.net/embed-5gj3yhzqjnjn.html",
+                "https://uqload.vc/embed-v9x9wy1vyiju.html",
+                "https://teresapoliticallearn.com/e/ul1arf0om1wl",
             ],
             "vj": [
-                "https://vidmoly.net/embed-695vulxlpq5w.html",
-                "https://Smoothpre.com/embed/1fuqxhehmylf",
-                "https://video.sibnet.ru/shell.php?videoid=4955473",
-                "https://sendvid.com/embed/s5649pjr",
+                "https://ansembed.net/embed-1779a2np2cba.html",
+                "https://uqload.vc/embed-xp352m9gmqx8.html",
+                "https://teresapoliticallearn.com/e/mxccggckpywo",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-695vulxlpq5w.html",
-                "https://Smoothpre.com/embed/1fuqxhehmylf",
-                "https://video.sibnet.ru/shell.php?videoid=4955473",
-                "https://sendvid.com/embed/s5649pjr",
+                "https://ansembed.net/embed-1779a2np2cba.html",
+                "https://uqload.vc/embed-xp352m9gmqx8.html",
+                "https://teresapoliticallearn.com/e/mxccggckpywo",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 7 ",
         index=7,
@@ -1890,25 +1869,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-u5t2o4au40na.html",
-                "https://Smoothpre.com/embed/9yl5nxecwe27",
-                "https://video.sibnet.ru/shell.php?videoid=4955127",
-                "https://sendvid.com/embed/o7fgb4xp",
+                "https://ansembed.net/embed-v3u19kbx97p7.html",
+                "https://uqload.vc/embed-wqfl94b4g03s.html",
+                "https://teresapoliticallearn.com/e/brdbaqbcm8ta",
             ],
             "vj": [
-                "https://vidmoly.net/embed-x0mzbu5ady8d.html",
-                "https://Smoothpre.com/embed/i2cukxcrgpkc",
-                "https://video.sibnet.ru/shell.php?videoid=4955474",
-                "https://sendvid.com/embed/pm4zmxal",
+                "https://ansembed.net/embed-0bkg161cbjx7.html",
+                "https://uqload.vc/embed-a6ed0vst6uaf.html",
+                "https://teresapoliticallearn.com/e/vzhdv8jkxbnb",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-x0mzbu5ady8d.html",
-                "https://Smoothpre.com/embed/i2cukxcrgpkc",
-                "https://video.sibnet.ru/shell.php?videoid=4955474",
-                "https://sendvid.com/embed/pm4zmxal",
+                "https://ansembed.net/embed-0bkg161cbjx7.html",
+                "https://uqload.vc/embed-a6ed0vst6uaf.html",
+                "https://teresapoliticallearn.com/e/vzhdv8jkxbnb",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 8 ",
         index=8,
@@ -1916,25 +1892,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-ir9b56qxpf85.html",
-                "https://Smoothpre.com/embed/0dli97qt33hg",
-                "https://video.sibnet.ru/shell.php?videoid=4955128",
-                "https://sendvid.com/embed/awlcjtbg",
+                "https://ansembed.net/embed-xba94zqc7iv4.html",
+                "https://uqload.vc/embed-fkpgj1hqgn6i.html",
+                "https://teresapoliticallearn.com/e/ayvcs7x6kqa4",
             ],
             "vj": [
-                "https://vidmoly.net/embed-tr9xorx0e59h.html",
-                "https://Smoothpre.com/embed/ugkhvo06i2vn",
-                "https://video.sibnet.ru/shell.php?videoid=4955475",
-                "https://sendvid.com/embed/r3s3bp6q",
+                "https://ansembed.net/embed-dxxlvdjvj20f.html",
+                "https://uqload.vc/embed-al70bkct9waw.html",
+                "https://teresapoliticallearn.com/e/nxfdi4m9m6nr",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-tr9xorx0e59h.html",
-                "https://Smoothpre.com/embed/ugkhvo06i2vn",
-                "https://video.sibnet.ru/shell.php?videoid=4955475",
-                "https://sendvid.com/embed/r3s3bp6q",
+                "https://ansembed.net/embed-dxxlvdjvj20f.html",
+                "https://uqload.vc/embed-al70bkct9waw.html",
+                "https://teresapoliticallearn.com/e/nxfdi4m9m6nr",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 9 ",
         index=9,
@@ -1942,25 +1915,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-016xfwpncoq3.html",
-                "https://Smoothpre.com/embed/m9znmh7s1gp4",
-                "https://video.sibnet.ru/shell.php?videoid=4955131",
-                "https://sendvid.com/embed/i9gtw42y",
+                "https://ansembed.net/embed-msi4wosjh2eo.html",
+                "https://uqload.vc/embed-hcaevrim6lv7.html",
+                "https://teresapoliticallearn.com/e/nqi4krz9oxiy",
             ],
             "vj": [
-                "https://vidmoly.net/embed-4kjoy226jfca.html",
-                "https://Smoothpre.com/embed/n45bggwmhr1f",
-                "https://video.sibnet.ru/shell.php?videoid=4955476",
-                "https://sendvid.com/embed/m1ex7won",
+                "https://ansembed.net/embed-j2bb86yv530g.html",
+                "https://uqload.vc/embed-zgioyhqtfrli.html",
+                "https://teresapoliticallearn.com/e/5ikjzru8jtxh",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-4kjoy226jfca.html",
-                "https://Smoothpre.com/embed/n45bggwmhr1f",
-                "https://video.sibnet.ru/shell.php?videoid=4955476",
-                "https://sendvid.com/embed/m1ex7won",
+                "https://ansembed.net/embed-j2bb86yv530g.html",
+                "https://uqload.vc/embed-zgioyhqtfrli.html",
+                "https://teresapoliticallearn.com/e/5ikjzru8jtxh",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 10",
         index=10,
@@ -1968,25 +1938,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-xixz77n6yysz.html",
-                "https://Smoothpre.com/embed/slulevt0l33s",
-                "https://video.sibnet.ru/shell.php?videoid=4955134",
-                "https://sendvid.com/embed/42a3vjbq",
+                "https://ansembed.net/embed-ws70svvtxe06.html",
+                "https://uqload.vc/embed-v3sc9tvuj7qy.html",
+                "https://teresapoliticallearn.com/e/kqilwif2izbo",
             ],
             "vj": [
-                "https://vidmoly.net/embed-06m8jxplr1nk.html",
-                "https://Smoothpre.com/embed/s5p9v910ys1t",
-                "https://video.sibnet.ru/shell.php?videoid=4955478",
-                "https://sendvid.com/embed/w1v549rv",
+                "https://ansembed.net/embed-2sa2ijr6r55w.html",
+                "https://uqload.vc/embed-9i57s7s3y188.html",
+                "https://teresapoliticallearn.com/e/5ujflqipousq",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-06m8jxplr1nk.html",
-                "https://Smoothpre.com/embed/s5p9v910ys1t",
-                "https://video.sibnet.ru/shell.php?videoid=4955478",
-                "https://sendvid.com/embed/w1v549rv",
+                "https://ansembed.net/embed-2sa2ijr6r55w.html",
+                "https://uqload.vc/embed-9i57s7s3y188.html",
+                "https://teresapoliticallearn.com/e/5ujflqipousq",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 11",
         index=11,
@@ -1994,25 +1961,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-kbxwf1nismm8.html",
-                "https://Smoothpre.com/embed/gnivulfpqxv4",
-                "https://video.sibnet.ru/shell.php?videoid=4955151",
-                "https://sendvid.com/embed/upqpkqdl",
+                "https://ansembed.net/embed-78wpavr2maat.html",
+                "https://uqload.vc/embed-x2bpwxxm8ixr.html",
+                "https://teresapoliticallearn.com/e/ftgapoyxp1kx",
             ],
             "vj": [
-                "https://vidmoly.net/embed-zt71sayn0arl.html",
-                "https://Smoothpre.com/embed/ft0kwiqkzkk2",
-                "https://video.sibnet.ru/shell.php?videoid=4955482",
-                "https://sendvid.com/embed/jvily06o",
+                "https://ansembed.net/embed-vq951wyn230y.html",
+                "https://uqload.vc/embed-oh2eqi2qm7ba.html",
+                "https://teresapoliticallearn.com/e/sc9dmbpl9ry7",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-zt71sayn0arl.html",
-                "https://Smoothpre.com/embed/ft0kwiqkzkk2",
-                "https://video.sibnet.ru/shell.php?videoid=4955482",
-                "https://sendvid.com/embed/jvily06o",
+                "https://ansembed.net/embed-vq951wyn230y.html",
+                "https://uqload.vc/embed-oh2eqi2qm7ba.html",
+                "https://teresapoliticallearn.com/e/sc9dmbpl9ry7",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 12",
         index=12,
@@ -2020,25 +1984,22 @@ mha_season1 = [
     Episode(
         languages={
             "vf": [
-                "https://vidmoly.net/embed-wbex8ukldqdw.html",
-                "https://Smoothpre.com/embed/58tbi4zl2m9p",
-                "https://video.sibnet.ru/shell.php?videoid=4955153",
-                "https://sendvid.com/embed/x1vjail6",
+                "https://ansembed.net/embed-hx3nlwlx0wu1.html",
+                "https://uqload.vc/embed-jnrl4cohguhg.html",
+                "https://teresapoliticallearn.com/e/ywprjcqlysld",
             ],
             "vj": [
-                "https://vidmoly.net/embed-2gu0b79b92or.html",
-                "https://Smoothpre.com/embed/kqyj7y67494g",
-                "https://video.sibnet.ru/shell.php?videoid=4955485",
-                "https://sendvid.com/embed/6le4ccbt",
+                "https://ansembed.net/embed-k1b10apvkdw8.html",
+                "https://uqload.vc/embed-psqlctic4i5b.html",
+                "https://teresapoliticallearn.com/e/xnx4dhhqjqmm",
             ],
             "vostfr": [
-                "https://vidmoly.net/embed-2gu0b79b92or.html",
-                "https://Smoothpre.com/embed/kqyj7y67494g",
-                "https://video.sibnet.ru/shell.php?videoid=4955485",
-                "https://sendvid.com/embed/6le4ccbt",
+                "https://ansembed.net/embed-k1b10apvkdw8.html",
+                "https://uqload.vc/embed-psqlctic4i5b.html",
+                "https://teresapoliticallearn.com/e/xnx4dhhqjqmm",
             ],
         },
-        serie_name="my-hero-academia",
+        series_name="my-hero-academia",
         season_name="saison1",
         _name="Episode 13",
         index=13,
