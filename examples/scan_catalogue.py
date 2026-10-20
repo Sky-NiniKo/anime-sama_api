@@ -1,11 +1,10 @@
 import asyncio
 
-from httpx import AsyncClient
+from niquests import AsyncSession
 
 from anime_sama_api import AnimeSama, find_site_url
 
-semaphore = asyncio.Semaphore(10)
-
+semaphore = asyncio.Semaphore(100)
 
 async def scan(catalogue):
     async with semaphore:
@@ -14,14 +13,14 @@ async def scan(catalogue):
 
 async def async_main() -> None:
 
-    client = AsyncClient()
+    client = AsyncSession()
     url = await find_site_url(client)
 
     if url is None:
         raise RuntimeError
 
     catalogues = await AnimeSama(url, client).all_catalogues()
-    await asyncio.gather(*(scan(catalogue) for catalogue in catalogues))
-
+    a = await asyncio.gather(*(scan(catalogue) for catalogue in catalogues))
+    print(a)
 
 asyncio.run(async_main())
