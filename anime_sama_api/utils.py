@@ -6,19 +6,27 @@ from itertools import zip_longest
 from typing import Any, TypeVar, cast, get_args
 
 T = TypeVar("T")
-
+NO_VALUE = sentinel("NO_VALUE")
 
 # By Mike Müller (https://stackoverflow.com/a/38059462)
-def zip_varlen(
-    *iterables: Iterable[T], sentinel: object = object()
+# def zip_varlen[T](
+#     *iterables: Iterable[T], sentinel: object = object()
+# ) -> list[list[T]]:
+#     return cast(
+#         list[list[T]],
+#         [
+#             [entry for entry in iterable if entry is not sentinel]
+#             for iterable in zip_longest(*iterables, fillvalue=sentinel)
+#         ],
+#     )
+    
+def zip_varlen[T](
+    *iterables: Iterable[T],
 ) -> list[list[T]]:
-    return cast(
-        list[list[T]],
-        [
-            [entry for entry in iterable if entry is not sentinel]
-            for iterable in zip_longest(*iterables, fillvalue=sentinel)
-        ],
-    )
+    return [
+        [entry for entry in iterable if entry is not NO_VALUE]
+        for iterable in zip_longest(*iterables, fillvalue=NO_VALUE)
+    ]
 
 
 def split_and_strip(string: str, delimiters: Iterable[str] | str) -> list[str]:
@@ -50,7 +58,7 @@ def is_Literal(
 #     return value in get_args(Lit)
 
 
-def filter_literal(
+def filter_literal[T](
     iterable: Iterable[Any],
     Lit: T,
     callback_when_false: Callable[[Any], None] = lambda _: None,

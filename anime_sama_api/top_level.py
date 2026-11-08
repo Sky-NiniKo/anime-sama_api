@@ -304,8 +304,18 @@ class AnimeSama:
             if response.is_error:
                 continue
 
-            catalogues += list(self._yield_catalogues_from(response.text))
-
+            #catalogues += list(self._yield_catalogues_from(response.text))
+            # catalogues = [
+            #      *catalogue
+            #      for response in response
+            #      if not response.is_error
+            #      for catalogue in self._yield_catalogues_from(response.text)
+            #  ]
+            
+            
+            
+            catalogues.extend(self._yield_catalogues_from(response.text))
+            
         return catalogues
 
     async def search_iter(self, query: str) -> AsyncIterator[Catalogue]:
