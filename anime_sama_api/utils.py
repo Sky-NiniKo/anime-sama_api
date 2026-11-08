@@ -3,7 +3,7 @@ import operator
 import re
 from collections.abc import Callable, Generator, Iterable
 from itertools import zip_longest
-from typing import Any, TypeVar, cast, get_args
+from typing import Any, TypeVar, get_args
 
 T = TypeVar("T")
 NO_VALUE = sentinel("NO_VALUE")

@@ -10,7 +10,7 @@ input_func = input
 T = TypeVar("T")
 
 
-def safe_input(
+def safe_input[T](
     text: str,
     transform: Callable[[str], T],
     exceptions: tuple[type[Exception], ...] = (ValueError, IndexError),
@@ -46,7 +46,7 @@ def print_selection(
         )
 
 
-def select_one(
+def select_one[T](
     choices: list[T], msg: str = "Choose a number", **_: dict[Any, Any]
 ) -> T:
     print_selection(choices)
@@ -58,7 +58,7 @@ def select_one(
     )
 
 
-def select_range(
+def select_range[T](
     choices: list[T], msg: str = "Choose a range", print_choices: bool = True
 ) -> list[T]:
     print_selection(choices, print_choices)
