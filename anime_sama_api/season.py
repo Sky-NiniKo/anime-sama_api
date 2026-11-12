@@ -53,23 +53,19 @@ class Season:
             html = response.text
             match_url = re.search(r"episodes\.js\?filever=\d+", html)
 
-            if match_url:
-                episodes_js_response = await self.client.get(
-                    page_url + match_url.group(0),
-                    headers={"Referer": page_url},
-                )
+            if not match_url:
+                return SeasonLangPage(lang_id=lang_id)
 
-                if episodes_js_response.is_error:
-                    return SeasonLangPage(lang_id=lang_id)
+            episodes_js = await self.client.get(
+                page_url + match_url.group(0),
+                headers={"Referer": page_url},
+            )
 
-                episodes_js = episodes_js_response.text
-            elif re.search(r"\beps\d+\s*=", html):
-                episodes_js = html
-            else:
+            if episodes_js.is_error:
                 return SeasonLangPage(lang_id=lang_id)
 
             return SeasonLangPage(
-                lang_id=lang_id, html=html, episodes_js=episodes_js
+                lang_id=lang_id, html=html, episodes_js=episodes_js.text
             )
 
         pages = await asyncio.gather(
@@ -106,7 +102,7 @@ class Season:
         )
         players_list = sorted(players_list, key=lambda tuple: tuple[0])
         players_list_links = (
-            re.findall(r"""['"](.+?)['"]""", player)
+            re.findall(r"'(.+?)'", player)
             for _, player in players_list
         )
 
@@ -216,19 +212,8 @@ class Season:
 
     async def episodes(self) -> list[Episode]:
         pages = await self.get_all_pages()
-        if not pages:
-            raise EpisodeDataUnavailableError(
-                f"Could not retrieve episode data for {self.series_name} - {self.name} "
-                f"({self.url}). The season may be unavailable or Anime-Sama's page "
-                "structure may have changed."
-            )
 
         players_list = [self._get_players_from(page) for page in pages]
-        if not any(players_list):
-            raise EpisodeDataUnavailableError(
-                f"Could not parse episode players for {self.series_name} - {self.name} "
-                f"({self.url}). Anime-Sama's page structure may have changed."
-            )
 
         number_of_episodes_max = max(
             len(episodes_page) for episodes_page in players_list
