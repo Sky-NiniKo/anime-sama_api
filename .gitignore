@@ -14,3 +14,9 @@ wheels/
 
 # IDE
 .vscode
+.portage_backups/apply_portage.py
+.portage_backups/cleanup-20261112-234308-167713.zip
+.portage_backups/Core_Update.rar
+.portage_backups/nettoyer_modules.py
+.portage_backups/portage-20261112-231947-080660.zip
+.portage_backups/PORTAGE.md
