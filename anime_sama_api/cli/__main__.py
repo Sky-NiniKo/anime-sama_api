@@ -82,7 +82,7 @@ async def async_main() -> None:
 def main() -> int:
     try:
         asyncio.run(async_main())
-    except KeyboardInterrupt, asyncio.exceptions.CancelledError, EOFError:
+    except (KeyboardInterrupt, asyncio.exceptions.CancelledError, EOFError):
         console.print("\n[red]Exiting...")
     except EpisodeDataUnavailableError as error:
         console.print(f"\n[red]{error}")

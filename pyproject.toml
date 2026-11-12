@@ -60,3 +60,6 @@ asyncio_default_fixture_loop_scope = "module"
 
 [tool.ty.src]
 exclude = ["tests/data"]
+
+[tool.ruff]
+target-version = "py311"

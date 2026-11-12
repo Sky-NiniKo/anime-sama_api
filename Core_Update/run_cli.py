@@ -84,7 +84,7 @@ def main():
         outcome = asyncio.run(async_main())
         if outcome is False:
             return 1
-    except KeyboardInterrupt, asyncio.CancelledError, EOFError:
+    except (KeyboardInterrupt, asyncio.CancelledError, EOFError):
         console.print("Arrêt demandé.")
         return 130
     except RateLimitedError as exc:

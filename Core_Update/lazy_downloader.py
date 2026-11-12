@@ -137,7 +137,7 @@ class LazyEpisode:
                 self._stopped.set()
                 raise
 
-            except LinkError, HTTPError:
+            except (LinkError, HTTPError):
                 logger.warning(
                     "%s : résolution API échouée ; passage au lecteur suivant",
                     self._episode.name,
