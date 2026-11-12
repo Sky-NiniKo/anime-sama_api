@@ -205,9 +205,12 @@ def multi_download(
     Not sure if you can use this function multiple times
     """
     total_progress.add_task("Downloaded", total=len(episodes))
-    with Live(progress, console=console), ThreadPoolExecutor(
-        max_workers=concurrent_downloads.get("video", 1)
-    ) as executor:
+    with (
+        Live(progress, console=console),
+        ThreadPoolExecutor(
+            max_workers=concurrent_downloads.get("video", 1)
+        ) as executor,
+    ):
         for episode, ep_year in zip(episodes, eps_years):
             executor.submit(
                 download,

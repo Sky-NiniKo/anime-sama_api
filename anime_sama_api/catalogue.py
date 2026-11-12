@@ -68,8 +68,7 @@ class Catalogue:
         page_without_comments = remove_some_js_comments(string=await self.page())
 
         seasons = re.findall(
-            r'panneauAnime\("(.+?)", *"(.+?)(?:vostfr|vf)"\);?',
-            page_without_comments
+            r'panneauAnime\("(.+?)", *"(.+?)(?:vostfr|vf)"\);?', page_without_comments
         )
 
         seasons = [

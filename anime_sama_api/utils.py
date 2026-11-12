@@ -19,7 +19,8 @@ NO_VALUE = sentinel("NO_VALUE")
 #             for iterable in zip_longest(*iterables, fillvalue=sentinel)
 #         ],
 #     )
-    
+
+
 def zip_varlen[T](
     *iterables: Iterable[T],
 ) -> list[list[T]]:
@@ -35,7 +36,9 @@ def split_and_strip(string: str, delimiters: Iterable[str] | str) -> list[str]:
 
     string_list = [string]
     for delimiter in delimiters:
-        string_list = functools.reduce(operator.iadd, (part.split(delimiter) for part in string_list), [])
+        string_list = functools.reduce(
+            operator.iadd, (part.split(delimiter) for part in string_list), []
+        )
     return [part.strip() for part in string_list]
 
 
