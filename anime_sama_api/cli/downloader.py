@@ -20,9 +20,9 @@ from rich.progress import (
     TotalFileSizeColumn,
     TransferSpeedColumn,
 )
-lazy from rich.table import Column
-lazy from yt_dlp import YoutubeDL
-lazy from yt_dlp.utils import DownloadError
+from rich.table import Column
+from yt_dlp import YoutubeDL
+from yt_dlp.utils import DownloadError
 
 from anime_sama_api.cli.config import PlayersConfig, config
 from anime_sama_api.cli.error_handling import YDL_log_filter, reaction_to

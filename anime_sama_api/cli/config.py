@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 # import platformdirs for config_dir and download_dir
-lazy from platformdirs import user_config_dir, user_downloads_dir
+from platformdirs import user_config_dir, user_downloads_dir
 
 from anime_sama_api.langs import Lang, lang2ids
 
