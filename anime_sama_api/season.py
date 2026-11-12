@@ -1,4 +1,3 @@
-import asyncio
 import logging
 import re
 from ast import literal_eval
@@ -8,9 +7,12 @@ from typing import get_args
 
 from httpx import AsyncClient
 
+from anime_sama_api.episode import DeferredPlayers
+
 from .episode import Episode, Languages, Players
 from .langs import LangId, flagid2lang, lang2ids
-from .utils import remove_some_js_comments, split_and_strip, zip_varlen
+from .link_resolver import LinkError, LinkResolver, RateLimitedError, parse_page
+from .utils import remove_some_js_comments, split_and_strip
 
 logger = logging.getLogger(__name__)
 
@@ -36,94 +38,73 @@ class Season:
     ) -> None:
         self.url = url
         self.site_url = "/".join(url.split("/")[:3]) + "/"
-
         self.name = name or url.split("/")[-2]
         self.series_name = series_name or url.split("/")[-3]
-
         self.client = client or AsyncClient()
 
-    async def get_all_pages(self) -> list[SeasonLangPage]:
-        async def process_page(lang_id: LangId) -> SeasonLangPage:
-            page_url = self.url + lang_id + "/"
-            response = await self.client.get(page_url)
-
-            if response.is_error:
-                return SeasonLangPage(lang_id=lang_id)
-
-            html = response.text
-            match_url = re.search(r"episodes\.js\?filever=\d+", html)
-
-            if match_url:
-                episodes_js_response = await self.client.get(
-                    page_url + match_url.group(0),
-                    headers={"Referer": page_url},
+    async def get_all_pages(self):
+        pages = []
+        self._api_rows = {}
+        for lang_id in get_args(LangId):
+            page_url = self.url.rstrip("/") + "/" + lang_id + "/"
+            response = await self.client.get(page_url, follow_redirects=True)
+            if response.status_code == 404:
+                continue
+            if response.status_code == 429:
+                delay = response.headers.get("Retry-After", "non fourni")
+                raise RateLimitedError(
+                    "Limitation lors du chargement HTML. Retry-After : " + delay
                 )
-
-                if episodes_js_response.is_error:
-                    return SeasonLangPage(lang_id=lang_id)
-
-                episodes_js = episodes_js_response.text
-            elif re.search(r"\beps\d+\s*=", html):
-                episodes_js = html
-            else:
-                return SeasonLangPage(lang_id=lang_id)
-
-            return SeasonLangPage(
-                lang_id=lang_id, html=html, episodes_js=episodes_js
-            )
-
-        pages = await asyncio.gather(
-            *(process_page(lang_id) for lang_id in get_args(LangId))
-        )
-        pages_dict = {page.lang_id: page for page in pages}
-
-        if pages_dict["vostfr"].html:
-            vostfr_html = remove_some_js_comments(pages_dict["vostfr"].html)
-
-            flag_matches = re.findall(
-                r"src=\"[^\"]*flag_([^\"]+?)\.png\".*?<span[^>]*>\s*VOSTFR\s*</span>",
-                vostfr_html,
+            response.raise_for_status()
+            try:
+                data = parse_page(response.text)
+            except LinkError as exc:
+                logger.warning("Page langue ignorée (%s) : %s", page_url, exc)
+                continue
+            resolver = LinkResolver(self.client, str(response.url))
+            resolver.data = data
+            arrays = [data.players[n] for n in sorted(data.players)]
+            rows = []
+            for index in range(max(map(len, arrays), default=0)):
+                refs = [a[index] if index < len(a) else "" for a in arrays]
+                if not data.final_order and len(refs) > 1:
+                    refs[0], refs[1] = (refs[1], refs[0])
+                rows.append(DeferredPlayers([r for r in refs if r], resolver))
+            self._api_rows[lang_id] = rows
+            pages.append(SeasonLangPage(lang_id=lang_id, html=response.text))
+        mapping = {p.lang_id: p for p in pages}
+        if "vostfr" in mapping:
+            matches = re.findall(
+                'src="[^"]*flag_([^"]+?)\\.png".*?<span[^>]*>\\s*VOSTFR\\s*</span>',
+                remove_some_js_comments(mapping["vostfr"].html),
                 re.DOTALL | re.IGNORECASE,
             )
-
-            if flag_matches:
-                flag_id_vo = flag_matches[0]
-
-                for lang_id in lang2ids[flagid2lang[flag_id_vo]]:
-                    if not pages_dict[lang_id].html:
-                        pages_dict[lang_id] = replace(
-                            pages_dict["vostfr"]
-                        )  # replace=copy
-                        pages_dict[lang_id].lang_id = lang_id
+            if matches and matches[0] in flagid2lang:
+                for target in lang2ids[flagid2lang[matches[0]]]:
+                    if target not in mapping:
+                        pages.append(replace(mapping["vostfr"], lang_id=target))
+                        self._api_rows[target] = self._api_rows["vostfr"]
                         break
+        if not pages:
+            raise EpisodeDataUnavailableError(
+                "Aucune page avec données bdd exploitable : " + self.url
+            )
+        return pages
 
-        return [value for value in pages_dict.values() if value.html]
-
-    # TODO: Refactor
-    def _get_players_from(self, page: SeasonLangPage) -> list[Players]:
-        players_list = re.findall(
-            r"eps(\d+) ?= ?\[([\W\w]+?)\]", remove_some_js_comments(page.episodes_js)
-        )
-        players_list = sorted(players_list, key=lambda tuple: tuple[0])
-        players_list_links = (
-            re.findall(r"""['"](.+?)['"]""", player)
-            for _, player in players_list
-        )
-
-        return [Players(players) for players in zip_varlen(*players_list_links)]
+    def _get_players_from(self, page):
+        return self._api_rows[page.lang_id]
 
     def _get_episodes_names(
         self, page: SeasonLangPage, number_of_episodes: int, number_of_episodes_max: int
     ) -> list[str]:
         functions = re.findall(
-            r"resetListe\(\); *[\n\r]+\t*(.*?)}",
+            "resetListe\\(\\); *[\\n\\r]+\\t*(.*?)}",
             remove_some_js_comments(page.html),
             re.DOTALL,
         )
         if not functions:
             raise EpisodeDataUnavailableError(
-                f"Could not find episode names for {self.series_name} - {self.name} "
-                f"({self.url + page.lang_id}/)."
+                f"Could not find episode names for {self.series_name} - {self.name} ({self.url + page.lang_id}/)."
             )
         functions = functions[-1]
         functions_list = split_and_strip(functions, (";", "\n"))[:-1]
@@ -138,32 +119,27 @@ class Season:
         for function in functions_list:
             if function.startswith("//"):
                 continue
-
             call_start = function.find("(")
-            function, args_sting = function[:call_start], function[call_start + 1 : -1]
+            function, args_sting = (
+                function[:call_start],
+                function[call_start + 1 : -1],
+            )
             if args_sting:
-                # Warning literal_eval: Can crash
                 args = literal_eval(node_or_string=args_sting + ",")
                 if type(args) is not tuple:
                     continue
             else:
                 args = ()
-
             match function:
                 case "":
                     continue
                 case "creerListe":
                     if len(args) < 2:
-                        # Only seen on Dragon Ball GT (Film), Junji Ito Collection (Saison 1) and Orange (Film)
-                        # Surely a small oversight in anime-sama
-                        # So it is undefined but do nothing is generally the good reaction
                         continue
-
                     episodes_name += episode_name_range(int(args[0]), int(args[1]) + 1)
                 case "finirListe" | "finirListeOP":
                     if not args:
                         break
-
                     episodes_name += episode_name_range(
                         int(args[0]),
                         int(args[0]) + number_of_episodes - len(episodes_name),
@@ -185,7 +161,6 @@ class Season:
                     raise NotImplementedError(
                         f"Error cannot parse '{name}'.\nPlease report this to the developer with URL: {self.url + page.lang_id}/"
                     )
-
         return episodes_name
 
     @staticmethod
@@ -198,8 +173,7 @@ class Season:
         to a language while preserving the relative order of names.
         This function is intended to be used with reduce.
         """
-        page, names, players_list = new  # Unpack args. This is due to reduce
-
+        page, names, players_list = new
         fusion = []
         curr_done = 0
         for name_new, players in zip(names, players_list):
@@ -218,39 +192,25 @@ class Season:
         pages = await self.get_all_pages()
         if not pages:
             raise EpisodeDataUnavailableError(
-                f"Could not retrieve episode data for {self.series_name} - {self.name} "
-                f"({self.url}). The season may be unavailable or Anime-Sama's page "
-                "structure may have changed."
+                f"Could not retrieve episode data for {self.series_name} - {self.name} ({self.url}). The season may be unavailable or Anime-Sama's page structure may have changed."
             )
-
         players_list = [self._get_players_from(page) for page in pages]
         if not any(players_list):
             raise EpisodeDataUnavailableError(
-                f"Could not parse episode players for {self.series_name} - {self.name} "
-                f"({self.url}). Anime-Sama's page structure may have changed."
+                f"Could not parse episode players for {self.series_name} - {self.name} ({self.url}). Anime-Sama's page structure may have changed."
             )
-
         number_of_episodes_max = max(
             len(episodes_page) for episodes_page in players_list
         )
-
         episodes_names = [
             self._get_episodes_names(page, len(episodes_page), number_of_episodes_max)
             for page, episodes_page in zip(pages, players_list)
         ]
-
         episodes: list[tuple[str, Languages]] = reduce(
             self._extend_episodes, zip(pages, episodes_names, players_list), []
         )
-
         return [
-            Episode(
-                languages,
-                self.series_name,
-                self.name,
-                name,
-                index,
-            )
+            Episode(languages, self.series_name, self.name, name, index)
             for index, (name, languages) in enumerate(episodes, start=1)
         ]
 

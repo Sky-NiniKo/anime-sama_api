@@ -4,10 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "anime-sama_api"
-version = "0.3.0-1"
+version = "0.4.0"
 description = "Api for anime-sama"
 authors = [
-    {name = "NiniKo", email = "pcninik@gmail.com"}
+    {name = "NiniKo", email = "pcninik@gmail.com"},
+    {name = "Mathieux83", email = "car.math@live.fr"}
 ]
 readme = "README.md"
 license = "GPL-3.0-or-later"
@@ -60,3 +61,6 @@ asyncio_default_fixture_loop_scope = "module"
 
 [tool.ty.src]
 exclude = ["tests/data"]
+
+[tool.ruff]
+target-version = "py311"

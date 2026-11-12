@@ -6,17 +6,15 @@ from itertools import zip_longest
 from typing import Any, TypeVar, cast, get_args
 
 T = TypeVar("T")
+NO_VALUE = object()
 
 
-# By Mike Müller (https://stackoverflow.com/a/38059462)
-def zip_varlen(
-    *iterables: Iterable[T], sentinel: object = object()
-) -> list[list[T]]:
+def zip_varlen(*iterables: Iterable[T]) -> list[list[T]]:
     return cast(
         list[list[T]],
         [
-            [entry for entry in iterable if entry is not sentinel]
-            for iterable in zip_longest(*iterables, fillvalue=sentinel)
+            [entry for entry in row if entry is not NO_VALUE]
+            for row in zip_longest(*iterables, fillvalue=NO_VALUE)
         ],
     )
 
@@ -24,21 +22,23 @@ def zip_varlen(
 def split_and_strip(string: str, delimiters: Iterable[str] | str) -> list[str]:
     if isinstance(delimiters, str):
         return [part.strip() for part in string.split(delimiters)]
-
     string_list = [string]
     for delimiter in delimiters:
-        string_list = functools.reduce(operator.iadd, (part.split(delimiter) for part in string_list), [])
+        string_list = functools.reduce(
+            operator.iadd, (part.split(delimiter) for part in string_list), []
+        )
     return [part.strip() for part in string_list]
 
 
 def remove_some_js_comments(string: str) -> str:
-    string = re.sub(r"\/\*[\W\w]*?\*\/", "", string)  # Remove /* ... */
-    return re.sub(r"<!--[\W\w]*?-->", "", string)  # Remove <!-- ... -->
+    string = re.sub(r"/\*[\W\w]*?\*/", "", string)
+    return re.sub(r"<!--[\W\w]*?-->", "", string)
 
 
-# TODO: this callback_when_false is curse, should be remove
 def is_Literal(
-    value: Any, Lit: Any, callback_when_false: Callable[[Any], None] = lambda _: None
+    value: Any,
+    Lit: Any,
+    callback_when_false: Callable[[Any], None] = lambda _: None,
 ) -> bool:
     if value in get_args(Lit):
         return True
@@ -46,17 +46,9 @@ def is_Literal(
     return False
 
 
-# def is_Literal(value: Any, Lit: Any) -> bool:
-#     return value in get_args(Lit)
-
-
 def filter_literal(
     iterable: Iterable[Any],
     Lit: T,
     callback_when_false: Callable[[Any], None] = lambda _: None,
-) -> Generator[T]:
+) -> Generator[T, None, None]:
     return (value for value in iterable if is_Literal(value, Lit, callback_when_false))
-
-
-# def filter_literal(iterable: Iterable[Any], Lit: T) -> Generator[T, None, None]:
-#     return (value for value in iterable if is_Literal(value, Lit))
