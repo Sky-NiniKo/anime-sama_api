@@ -35,6 +35,8 @@ You can customize the config at :
 - Windows: `%USER%/AppData/Local/anime-sama_cli/config.toml`
 - macOS: `~/Library/Application Support/anime-sama_api/config.toml`
 
+---
+
 # For developers
 
 ## Requirements
@@ -63,6 +65,8 @@ In the `anime_sama` folder:
 ```bash
 git pull
 ```
+
+---
 
 ## Contribution
 
