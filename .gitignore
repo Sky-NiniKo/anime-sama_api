@@ -31,3 +31,4 @@ Core_Update/*
 PORTAGE.md
 apply_portage.py
 Core_Update.rar
+nettoyer_modules.py

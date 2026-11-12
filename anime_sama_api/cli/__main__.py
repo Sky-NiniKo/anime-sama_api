@@ -8,14 +8,15 @@ from httpx import AsyncClient, HTTPError
 from rich import get_console
 from rich.logging import RichHandler
 
-from ..episode_sources import iter_resolved_players
+from anime_sama_api.cli.downloader import download_episodes
+from anime_sama_api.cli.utils import install_clean_prompts
+from anime_sama_api.episode import iter_resolved_players
+
 from ..link_resolver import LinkError, RateLimitedError
 from ..season import EpisodeDataUnavailableError
 from ..top_level import AnimeSama, find_site_url
 from . import utils as cli_utils
 from .config import config
-from .console_fix import install_clean_prompts
-from .lazy_downloader import download_episodes
 
 console = get_console()
 
@@ -23,11 +24,10 @@ console = get_console()
 async def play_episode(episode):
     from . import internal_player
 
-    # Pass one resolved URL at a time to the external-player integration.
     async for url in iter_resolved_players(
         episode, config.prefer_languages, config.players_config.bans
     ):
-        # Delegate all metadata to the original episode, but expose one resolved URL.
+
         class PlayerEpisode:
             def __getattr__(self, name):
                 return getattr(episode, name)

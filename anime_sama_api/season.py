@@ -7,8 +7,9 @@ from typing import get_args
 
 from httpx import AsyncClient
 
+from anime_sama_api.episode import DeferredPlayers
+
 from .episode import Episode, Languages, Players
-from .episode_sources import DeferredPlayers
 from .langs import LangId, flagid2lang, lang2ids
 from .link_resolver import LinkError, LinkResolver, RateLimitedError, parse_page
 from .utils import remove_some_js_comments, split_and_strip
@@ -37,10 +38,8 @@ class Season:
     ) -> None:
         self.url = url
         self.site_url = "/".join(url.split("/")[:3]) + "/"
-
         self.name = name or url.split("/")[-2]
         self.series_name = series_name or url.split("/")[-3]
-
         self.client = client or AsyncClient()
 
     async def get_all_pages(self):
@@ -92,7 +91,6 @@ class Season:
             )
         return pages
 
-    # TODO: Refactor
     def _get_players_from(self, page):
         return self._api_rows[page.lang_id]
 
@@ -100,14 +98,13 @@ class Season:
         self, page: SeasonLangPage, number_of_episodes: int, number_of_episodes_max: int
     ) -> list[str]:
         functions = re.findall(
-            r"resetListe\(\); *[\n\r]+\t*(.*?)}",
+            "resetListe\\(\\); *[\\n\\r]+\\t*(.*?)}",
             remove_some_js_comments(page.html),
             re.DOTALL,
         )
         if not functions:
             raise EpisodeDataUnavailableError(
-                f"Could not find episode names for {self.series_name} - {self.name} "
-                f"({self.url + page.lang_id}/)."
+                f"Could not find episode names for {self.series_name} - {self.name} ({self.url + page.lang_id}/)."
             )
         functions = functions[-1]
         functions_list = split_and_strip(functions, (";", "\n"))[:-1]
@@ -122,32 +119,27 @@ class Season:
         for function in functions_list:
             if function.startswith("//"):
                 continue
-
             call_start = function.find("(")
-            function, args_sting = function[:call_start], function[call_start + 1 : -1]
+            function, args_sting = (
+                function[:call_start],
+                function[call_start + 1 : -1],
+            )
             if args_sting:
-                # Warning literal_eval: Can crash
                 args = literal_eval(node_or_string=args_sting + ",")
                 if type(args) is not tuple:
                     continue
             else:
                 args = ()
-
             match function:
                 case "":
                     continue
                 case "creerListe":
                     if len(args) < 2:
-                        # Only seen on Dragon Ball GT (Film), Junji Ito Collection (Saison 1) and Orange (Film)
-                        # Surely a small oversight in anime-sama
-                        # So it is undefined but do nothing is generally the good reaction
                         continue
-
                     episodes_name += episode_name_range(int(args[0]), int(args[1]) + 1)
                 case "finirListe" | "finirListeOP":
                     if not args:
                         break
-
                     episodes_name += episode_name_range(
                         int(args[0]),
                         int(args[0]) + number_of_episodes - len(episodes_name),
@@ -169,7 +161,6 @@ class Season:
                     raise NotImplementedError(
                         f"Error cannot parse '{name}'.\nPlease report this to the developer with URL: {self.url + page.lang_id}/"
                     )
-
         return episodes_name
 
     @staticmethod
@@ -182,8 +173,7 @@ class Season:
         to a language while preserving the relative order of names.
         This function is intended to be used with reduce.
         """
-        page, names, players_list = new  # Unpack args. This is due to reduce
-
+        page, names, players_list = new
         fusion = []
         curr_done = 0
         for name_new, players in zip(names, players_list):
@@ -202,39 +192,25 @@ class Season:
         pages = await self.get_all_pages()
         if not pages:
             raise EpisodeDataUnavailableError(
-                f"Could not retrieve episode data for {self.series_name} - {self.name} "
-                f"({self.url}). The season may be unavailable or Anime-Sama's page "
-                "structure may have changed."
+                f"Could not retrieve episode data for {self.series_name} - {self.name} ({self.url}). The season may be unavailable or Anime-Sama's page structure may have changed."
             )
-
         players_list = [self._get_players_from(page) for page in pages]
         if not any(players_list):
             raise EpisodeDataUnavailableError(
-                f"Could not parse episode players for {self.series_name} - {self.name} "
-                f"({self.url}). Anime-Sama's page structure may have changed."
+                f"Could not parse episode players for {self.series_name} - {self.name} ({self.url}). Anime-Sama's page structure may have changed."
             )
-
         number_of_episodes_max = max(
             len(episodes_page) for episodes_page in players_list
         )
-
         episodes_names = [
             self._get_episodes_names(page, len(episodes_page), number_of_episodes_max)
             for page, episodes_page in zip(pages, players_list)
         ]
-
         episodes: list[tuple[str, Languages]] = reduce(
             self._extend_episodes, zip(pages, episodes_names, players_list), []
         )
-
         return [
-            Episode(
-                languages,
-                self.series_name,
-                self.name,
-                name,
-                index,
-            )
+            Episode(languages, self.series_name, self.name, name, index)
             for index, (name, languages) in enumerate(episodes, start=1)
         ]
 

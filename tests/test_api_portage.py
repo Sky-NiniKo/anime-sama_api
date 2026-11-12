@@ -9,9 +9,8 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from anime_sama_api.cli import downloader
-from anime_sama_api.cli.lazy_downloader import download_episodes
-from anime_sama_api.episode import Episode, Languages
-from anime_sama_api.episode_sources import DeferredPlayers
+from anime_sama_api.cli.downloader import download_episodes
+from anime_sama_api.episode import DeferredPlayers, Episode, Languages
 from anime_sama_api.link_resolver import LinkResolver, RateLimitedError, parse_page
 from anime_sama_api.season import Season
 
@@ -115,7 +114,7 @@ class PortTests(unittest.IsolatedAsyncioTestCase):
                 result = await download_episodes([episode], config, 2026)
             self.assertIs(downloader.download, original)
         ids = [kw["params"]["l"] for url, kw in client.calls if "/api/lien.php" in url]
-        return result, ids, attempts, options_seen
+        return (result, ids, attempts, options_seen)
 
     async def test_first_success_resolves_only_one(self):
         result, ids, attempts, options = await self.run_case()
@@ -151,7 +150,7 @@ class PortTests(unittest.IsolatedAsyncioTestCase):
             "https://example.test/saison1/", client=client
         ).get_all_pages()
         self.assertTrue(pages)
-        self.assertFalse(any("/api/lien.php" in url for url, _ in client.calls))
+        self.assertFalse(any(("/api/lien.php" in url for url, _ in client.calls)))
 
     async def test_public_async_api_is_lazy(self):
         client = Client()

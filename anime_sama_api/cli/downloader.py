@@ -1,7 +1,10 @@
+import asyncio
 import logging
 import random
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import suppress
 from pathlib import Path
 from typing import cast
 from urllib.parse import urlparse
@@ -25,17 +28,23 @@ from yt_dlp.utils import DownloadError
 
 from anime_sama_api.cli.config import PlayersConfig, config
 from anime_sama_api.cli.error_handling import YDL_log_filter, reaction_to
-from anime_sama_api.episode import Episode
+from anime_sama_api.episode import (
+    DeferredPlayers,
+    Episode,
+    iter_resolved_players,
+    resolve_reference,
+)
 from anime_sama_api.langs import Lang
+
+from ..link_resolver import RateLimitedError
 
 logger = logging.getLogger(__name__)
 logger.addFilter(YDL_log_filter)
-
 console = get_console()
 download_progress_list: list[str | ProgressColumn] = [
     "[bold blue]{task.fields[episode_name]}",
     BarColumn(bar_width=None),
-    "[progress.percentage]{task.percentage:>3.1f}%",  # TODO: should disappear if the console is not wide enough
+    "[progress.percentage]{task.percentage:>3.1f}%",
     TransferSpeedColumn(),
     TotalFileSizeColumn(),
     TimeRemainingColumn(compact=True, elapsed_when_finished=True),
@@ -49,9 +58,7 @@ if config.show_players:
             justify="right",
         ),
     )
-
 download_progress = Progress(*download_progress_list, console=console)
-
 total_progress = Progress(
     TextColumn("[bold cyan]{task.description}"),
     BarColumn(bar_width=None),
@@ -82,6 +89,8 @@ def download(
         players_config = PlayersConfig([], [])
     if not any(episode.languages.values()):
         logger.error("No player available")
+        if _total_task_id is not None:
+            total_progress.update(_total_task_id, advance=1)
         return False
     me = download_progress.add_task(
         "download", episode_name=episode.name, site="", total=None
@@ -217,5 +226,96 @@ def multi_download(
             )
             for episode, year in zip(episodes, years)
         ]
-        # Propagate worker exceptions and preserve episode ordering.
         return [future.result() for future in futures]
+
+
+class LazyEpisode:
+    def __init__(self, episode, loop, resolve, stopped):
+        self._episode = episode
+        self._loop = loop
+        self._resolve = resolve
+        self._stopped = stopped
+        self.streams = []
+
+    def __getattr__(self, name):
+        return getattr(self._episode, name)
+
+    def consume_player(self, prefer_languages, prefer_players=None, ban_players=None):
+        stream = iter_resolved_players(
+            self._episode, prefer_languages, ban_players or (), self._resolve
+        )
+        self.streams.append(stream)
+
+        async def next_url():
+            if self._stopped.is_set():
+                raise StopAsyncIteration
+            return await anext(stream)
+
+        while not self._stopped.is_set():
+            future = asyncio.run_coroutine_threadsafe(next_url(), self._loop)
+            try:
+                url = future.result()
+            except StopAsyncIteration:
+                return
+            except RateLimitedError:
+                self._stopped.set()
+                raise
+            if self._stopped.is_set():
+                return
+            yield url
+
+
+async def download_episodes(episodes, config, year=None):
+    episodes = list(episodes)
+    if not episodes:
+        return True
+    loop = asyncio.get_running_loop()
+    stopped = threading.Event()
+    api_slots = asyncio.Semaphore(3)
+    locks = {}
+
+    async def resolve(players, reference):
+        async with api_slots:
+            if stopped.is_set():
+                return ""
+            if not isinstance(players, DeferredPlayers):
+                return await resolve_reference(players, reference)
+            lock = locks.setdefault(id(players.resolver), asyncio.Lock())
+            async with lock:
+                if stopped.is_set():
+                    return ""
+                try:
+                    return await resolve_reference(players, reference)
+                except RateLimitedError:
+                    stopped.set()
+                    raise
+
+    proxies = [LazyEpisode(ep, loop, resolve, stopped) for ep in episodes]
+
+    def run():
+        return multi_download(
+            proxies,
+            config.download_path,
+            config.episode_path,
+            config.concurrent_downloads,
+            config.prefer_languages,
+            config.players_config,
+            config.max_retry_time,
+            config.format,
+            config.format_sort,
+            [year] * len(proxies),
+        )
+
+    worker = asyncio.create_task(asyncio.to_thread(run))
+    try:
+        results = await asyncio.shield(worker)
+        return all(results)
+    except asyncio.CancelledError:
+        stopped.set()
+        with suppress(Exception):
+            await asyncio.shield(worker)
+        raise
+    finally:
+        for proxy in proxies:
+            for stream in proxy.streams:
+                await stream.aclose()
