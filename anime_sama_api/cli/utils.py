@@ -6,11 +6,10 @@ from typing import Any, TypeVar
 from rich import print as print_func
 
 input_func = input
-
 T = TypeVar("T")
 
 
-def safe_input[T](
+def safe_input(
     text: str,
     transform: Callable[[str], T],
     exceptions: tuple[type[Exception], ...] = (ValueError, IndexError),
@@ -37,7 +36,6 @@ def print_selection(
         return
     if not print_choices:
         return
-
     for index, choice in enumerate(choices, start=1):
         line_colors = "yellow" if index % 2 == 0 else "white"
         print_func(
@@ -46,35 +44,31 @@ def print_selection(
         )
 
 
-def select_one[T](
+def select_one(
     choices: list[T], msg: str = "Choose a number", **_: dict[Any, Any]
 ) -> T:
     print_selection(choices)
     if len(choices) == 1:
         return choices[0]
-
     return safe_input(
-        f"[white]{msg}[/white]: \033[0;34m", lambda string: choices[int(string) - 1]
+        f"[white]{msg}[/white]: \033[0;34m",
+        lambda string: choices[int(string) - 1],
     )
 
 
-def select_range[T](
+def select_range(
     choices: list[T], msg: str = "Choose a range", print_choices: bool = True
 ) -> list[T]:
     print_selection(choices, print_choices)
-
     if len(choices) == 1:
         return [choices[0]]
 
     def transform(string: str) -> list[T]:
-        # Return all choices if the user enter '*' symbol or 'all'
         if string in ("*", "all"):
             return choices
-        # Else, detect the string and transform it into a list of choices
         ints_set: set[int] = set()
         for args in string.split(","):
             ints = [int(num) if num.strip() else None for num in args.split("-")]
-
             if len(ints) == 1 and ints[0] is not None:
                 ints_set.add(ints[0])
             elif len(ints) == 2:
@@ -85,7 +79,6 @@ def select_range[T](
                 ints_set.update(range(ints[0], ints[1] + 1))
             else:
                 raise ValueError
-
         return [choices[i - 1] for i in ints_set]
 
     return safe_input(

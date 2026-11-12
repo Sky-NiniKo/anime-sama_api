@@ -2,7 +2,12 @@ import ast
 import unittest
 from pathlib import Path
 
-from .resolver import LinkError, LinkResolver, RateLimitedError, parse_page
+from anime_sama_api.link_resolver import (
+    LinkError,
+    LinkResolver,
+    RateLimitedError,
+    parse_page,
+)
 
 HTML = """<script>var eps1 = ["wrong"];</script>
 <script data-source="bdd">var eps1 = ["lien:11", "lien:12", ""];
@@ -118,7 +123,11 @@ class Tests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(client.calls, [])
 
     def test_listing_contains_no_resolve_call(self):
-        tree = ast.parse(Path(__file__).with_name("season_api.py").read_text())
+        tree = ast.parse(
+            (
+                Path(__file__).resolve().parents[1] / "anime_sama_api" / "season.py"
+            ).read_text(encoding="utf-8")
+        )
         method = next(
             n
             for n in ast.walk(tree)

@@ -1,4 +1,3 @@
-import asyncio
 import logging
 import re
 from ast import literal_eval
@@ -9,8 +8,10 @@ from typing import get_args
 from httpx import AsyncClient
 
 from .episode import Episode, Languages, Players
+from .episode_sources import DeferredPlayers
 from .langs import LangId, flagid2lang, lang2ids
-from .utils import remove_some_js_comments, split_and_strip, zip_varlen
+from .link_resolver import LinkError, LinkResolver, RateLimitedError, parse_page
+from .utils import remove_some_js_comments, split_and_strip
 
 logger = logging.getLogger(__name__)
 
@@ -42,72 +43,58 @@ class Season:
 
         self.client = client or AsyncClient()
 
-    async def get_all_pages(self) -> list[SeasonLangPage]:
-        async def process_page(lang_id: LangId) -> SeasonLangPage:
-            page_url = self.url + lang_id + "/"
-            response = await self.client.get(page_url)
-
-            if response.is_error:
-                return SeasonLangPage(lang_id=lang_id)
-
-            html = response.text
-            match_url = re.search(r"episodes\.js\?filever=\d+", html)
-
-            if match_url:
-                episodes_js_response = await self.client.get(
-                    page_url + match_url.group(0),
-                    headers={"Referer": page_url},
+    async def get_all_pages(self):
+        pages = []
+        self._api_rows = {}
+        for lang_id in get_args(LangId):
+            page_url = self.url.rstrip("/") + "/" + lang_id + "/"
+            response = await self.client.get(page_url, follow_redirects=True)
+            if response.status_code == 404:
+                continue
+            if response.status_code == 429:
+                delay = response.headers.get("Retry-After", "non fourni")
+                raise RateLimitedError(
+                    "Limitation lors du chargement HTML. Retry-After : " + delay
                 )
-
-                if episodes_js_response.is_error:
-                    return SeasonLangPage(lang_id=lang_id)
-
-                episodes_js = episodes_js_response.text
-            elif re.search(r"\beps\d+\s*=", html):
-                episodes_js = html
-            else:
-                return SeasonLangPage(lang_id=lang_id)
-
-            return SeasonLangPage(lang_id=lang_id, html=html, episodes_js=episodes_js)
-
-        pages = await asyncio.gather(
-            *(process_page(lang_id) for lang_id in get_args(LangId))
-        )
-        pages_dict = {page.lang_id: page for page in pages}
-
-        if pages_dict["vostfr"].html:
-            vostfr_html = remove_some_js_comments(pages_dict["vostfr"].html)
-
-            flag_matches = re.findall(
-                r"src=\"[^\"]*flag_([^\"]+?)\.png\".*?<span[^>]*>\s*VOSTFR\s*</span>",
-                vostfr_html,
+            response.raise_for_status()
+            try:
+                data = parse_page(response.text)
+            except LinkError as exc:
+                logger.warning("Page langue ignorée (%s) : %s", page_url, exc)
+                continue
+            resolver = LinkResolver(self.client, str(response.url))
+            resolver.data = data
+            arrays = [data.players[n] for n in sorted(data.players)]
+            rows = []
+            for index in range(max(map(len, arrays), default=0)):
+                refs = [a[index] if index < len(a) else "" for a in arrays]
+                if not data.final_order and len(refs) > 1:
+                    refs[0], refs[1] = (refs[1], refs[0])
+                rows.append(DeferredPlayers([r for r in refs if r], resolver))
+            self._api_rows[lang_id] = rows
+            pages.append(SeasonLangPage(lang_id=lang_id, html=response.text))
+        mapping = {p.lang_id: p for p in pages}
+        if "vostfr" in mapping:
+            matches = re.findall(
+                'src="[^"]*flag_([^"]+?)\\.png".*?<span[^>]*>\\s*VOSTFR\\s*</span>',
+                remove_some_js_comments(mapping["vostfr"].html),
                 re.DOTALL | re.IGNORECASE,
             )
-
-            if flag_matches:
-                flag_id_vo = flag_matches[0]
-
-                for lang_id in lang2ids[flagid2lang[flag_id_vo]]:
-                    if not pages_dict[lang_id].html:
-                        pages_dict[lang_id] = replace(
-                            pages_dict["vostfr"]
-                        )  # replace=copy
-                        pages_dict[lang_id].lang_id = lang_id
+            if matches and matches[0] in flagid2lang:
+                for target in lang2ids[flagid2lang[matches[0]]]:
+                    if target not in mapping:
+                        pages.append(replace(mapping["vostfr"], lang_id=target))
+                        self._api_rows[target] = self._api_rows["vostfr"]
                         break
-
-        return [value for value in pages_dict.values() if value.html]
+        if not pages:
+            raise EpisodeDataUnavailableError(
+                "Aucune page avec données bdd exploitable : " + self.url
+            )
+        return pages
 
     # TODO: Refactor
-    def _get_players_from(self, page: SeasonLangPage) -> list[Players]:
-        players_list = re.findall(
-            r"eps(\d+) ?= ?\[([\W\w]+?)\]", remove_some_js_comments(page.episodes_js)
-        )
-        players_list = sorted(players_list, key=lambda tuple: tuple[0])
-        players_list_links = (
-            re.findall(r"""['"](.+?)['"]""", player) for _, player in players_list
-        )
-
-        return [Players(players) for players in zip_varlen(*players_list_links)]
+    def _get_players_from(self, page):
+        return self._api_rows[page.lang_id]
 
     def _get_episodes_names(
         self, page: SeasonLangPage, number_of_episodes: int, number_of_episodes_max: int

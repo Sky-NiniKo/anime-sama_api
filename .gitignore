@@ -22,3 +22,12 @@ wheels/
 #MyPy
 .mypy_cache
 
+
+.portage_backups/
+
+**/timings.log
+
+Core_Update/*
+PORTAGE.md
+apply_portage.py
+Core_Update.rar

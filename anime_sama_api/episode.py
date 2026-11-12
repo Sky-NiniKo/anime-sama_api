@@ -138,3 +138,14 @@ class Episode:
             return next(self.consume_player(prefer_languages))
         except StopIteration:
             return None
+
+    async def aconsume_player(self, prefer_languages=None, ban_players=None):
+        """Yield resolved URLs on demand, suitable for the current HTML/API backend."""
+        from .episode_sources import iter_resolved_players
+
+        async for url in iter_resolved_players(
+            self,
+            (["VOSTFR"] if prefer_languages is None else prefer_languages),
+            ban_players or [],
+        ):
+            yield url
