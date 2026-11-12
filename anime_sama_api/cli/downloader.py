@@ -111,6 +111,7 @@ def download(
             if data.get("status") != "downloading":
                 return
             task.total = data.get("total_bytes") or data.get("total_bytes_estimate")
+            download_progress.start_task(me)
             download_progress.update(me, completed=data.get("downloaded_bytes", 0))
 
         option = {
@@ -128,11 +129,12 @@ def download(
         ):
             download_progress.reset(
                 me,
-                total=0,
+                start=False,
                 completed=0,
                 episode_name=episode.name,
                 site=urlparse(player).hostname,
             )
+            task.total = None
             retry_time = 1
             success = False
             download_progress.update(me, site=urlparse(player).hostname)

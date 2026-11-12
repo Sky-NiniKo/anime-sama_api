@@ -1,4 +1,5 @@
 """Offline season tests for the HTML/API contract."""
+
 import json
 
 import httpx
@@ -60,7 +61,8 @@ async def test_episodes(series_name):
         assert [e.series_name for e in episodes] == [series_name, series_name]
         assert [e.season_name for e in episodes] == ["saison1", "saison1"]
         assert [set(e.languages) for e in episodes] == [
-            {"vf", "vostfr"}, {"vf", "vostfr"}
+            {"vf", "vostfr"},
+            {"vf", "vostfr"},
         ]
         assert list(episodes[0].languages["vostfr"]) == ["lien:101", "lien:201"]
         assert list(episodes[1].languages["vostfr"]) == ["lien:102"]
@@ -75,8 +77,7 @@ async def test_episodes(series_name):
     assert requests
     assert all(r.url.host == "example.test" for r in requests)
     assert not any(
-        "episodes.js" in r.url.path or r.url.path == "/api/lien.php"
-        for r in requests
+        "episodes.js" in r.url.path or r.url.path == "/api/lien.php" for r in requests
     )
 
 
@@ -99,7 +100,8 @@ async def test_episodes_with_inline_player_data():
         ).episodes()
     assert [e.name for e in episodes] == ["Episode 1", "Episode 2"]
     assert [list(e.languages["vostfr"]) for e in episodes] == [
-        [primary[0], secondary[0]], [primary[1], secondary[1]]
+        [primary[0], secondary[0]],
+        [primary[1], secondary[1]],
     ]
     assert not any(r.url.path == "/api/lien.php" for r in requests)
 
