@@ -8,16 +8,12 @@ resolution-markers = [
 ]
 
 [[package]]
-name = "anime-sama-api"
-version = "0.4.0"
+name = "anime-sama-cli-api"
+version = "0.4.1"
 source = { editable = "." }
 dependencies = [
     { name = "httpx" },
     { name = "httpx2" },
-]
-
-[package.optional-dependencies]
-cli = [
     { name = "platformdirs" },
     { name = "rich" },
     { name = "yt-dlp" },
@@ -38,9 +34,9 @@ dev = [
 requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "httpx2", specifier = ">=2.16.0" },
-    { name = "platformdirs", marker = "extra == 'cli'", specifier = ">=4.13.5" },
-    { name = "rich", marker = "extra == 'cli'", specifier = ">=15.0.0" },
-    { name = "yt-dlp", marker = "extra == 'cli'", specifier = ">=2026.8.19" },
+    { name = "platformdirs", specifier = ">=4.13.5" },
+    { name = "rich", specifier = ">=15.0.0" },
+    { name = "yt-dlp", specifier = ">=2026.8.19" },
 ]
 provides-extras = ["cli"]
 

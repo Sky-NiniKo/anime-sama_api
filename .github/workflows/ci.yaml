@@ -17,6 +17,9 @@ jobs:
           - "3.14"
           - "3.15"
           
+    pypi-publish:
+      needs: run-tests
+
     name: Test
     runs-on: ${{ matrix.os }}
     steps:

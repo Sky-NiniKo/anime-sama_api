@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "anime-sama_cli_api"
-version = "0.4.0"
+version = "0.4.1"
 description = "Api for anime-sama"
 authors = [
     {name = "NiniKo", email = "pcninik@gmail.com"},
@@ -34,6 +34,9 @@ requires-python = ">=3.11"
 dependencies = [
     "httpx>=0.28.1",
     "httpx2>=2.16.0",
+    "platformdirs>=4.13.5",
+    "rich>=15.0.0",
+    "yt-dlp>=2026.8.19",
 ]
 
 [project.scripts]
@@ -43,11 +46,7 @@ anime-sama = "anime_sama_api:main"
 Repository = "https://github.com/Mathieux83/anime-sama_api"
 
 [project.optional-dependencies]
-cli = [
-    "platformdirs>=4.13.5",
-    "rich>=15.0.0",
-    "yt-dlp>=2026.8.19",
-]
+cli = []
 
 [dependency-groups]
 dev = [
