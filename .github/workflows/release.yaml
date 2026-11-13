@@ -19,10 +19,10 @@ jobs:
     - name: Install uv
       uses: astral-sh/setup-uv@v5
       with:
-        version: "0.6.3"
-        python-version-file: "pyproject.toml"
         enable-cache: true
-        # cache-dependency-glob: "uv.lock"
+
+    - name: Install Python
+      run: uv python install
 
     - name: Build package
       run: uv build
