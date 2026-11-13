@@ -5,7 +5,6 @@ from .season import Season
 from .top_level import AnimeSama, find_site_url
 
 try:
-    from .cli.__main__ import main
     from .cli.downloader import download, multi_download
 except ImportError:
     import sys
@@ -20,6 +19,12 @@ except ImportError:
         sys.exit(1)
 
     download = multi_download = main
+else:
+
+    def main() -> int:
+        from .cli.__main__ import main as cli_main
+
+        return cli_main()
 
 
 # __package__ = "anime-sama_api"

@@ -139,7 +139,9 @@ class EpisodeRelease:
 
     @property
     def fancy_name(self) -> str:
-        return f"{self.series_name} - {self.episode_name} {flags.get(self.language, '')}"
+        return (
+            f"{self.series_name} - {self.episode_name} {flags.get(self.language, '')}"
+        )
 
 
 class AnimeSama:
@@ -304,7 +306,15 @@ class AnimeSama:
             if response.is_error:
                 continue
 
-            catalogues += list(self._yield_catalogues_from(response.text))
+            # catalogues += list(self._yield_catalogues_from(response.text))
+            # catalogues = [
+            #      *catalogue
+            #      for response in response
+            #      if not response.is_error
+            #      for catalogue in self._yield_catalogues_from(response.text)
+            #  ]
+
+            catalogues.extend(self._yield_catalogues_from(response.text))
 
         return catalogues
 

@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache
 
 # Virtual environments
 .venv
@@ -14,3 +15,15 @@ wheels/
 
 # IDE
 .vscode
+
+#Ruff
+.ruff_cache
+
+#MyPy
+.mypy_cache
+
+
+.portage_backups/
+
+**/timings.log
+

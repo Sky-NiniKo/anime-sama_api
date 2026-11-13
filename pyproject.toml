@@ -2,12 +2,15 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+
+
 [project]
-name = "anime-sama_api"
-version = "0.3.0-1"
+name = "anime-sama_cli_api"
+version = "0.4.1.1"
 description = "Api for anime-sama"
 authors = [
-    {name = "NiniKo", email = "pcninik@gmail.com"}
+    {name = "NiniKo", email = "pcninik@gmail.com"},
+    {name = "Mathieux83", email = "car.math@live.fr"}
 ]
 readme = "README.md"
 license = "GPL-3.0-or-later"
@@ -24,24 +27,26 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
 ]
 requires-python = ">=3.11"
 dependencies = [
     "httpx>=0.28.1",
+    "httpx2>=2.16.0",
+    "platformdirs>=4.13.5",
+    "rich>=15.0.0",
+    "yt-dlp>=2026.8.19",
 ]
 
 [project.scripts]
 anime-sama = "anime_sama_api:main"
 
 [project.urls]
-Repository = "https://github.com/Sky-NiniKo/anime-sama_api/"
+Repository = "https://github.com/Mathieux83/anime-sama_api"
 
 [project.optional-dependencies]
-cli = [
-    "platformdirs>=4.13.5",
-    "rich>=15.0.0",
-    "yt-dlp>=2026.8.19",
-]
+cli = []
 
 [dependency-groups]
 dev = [
@@ -60,3 +65,9 @@ asyncio_default_fixture_loop_scope = "module"
 
 [tool.ty.src]
 exclude = ["tests/data"]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.hatch.build.targets.wheel]
+packages = ["anime_sama_api"]

@@ -1,4 +1,8 @@
-from anime_sama_api.episode import Episode
+import asyncio
+
+from anime_sama_api.episode import Episode, iter_resolved_players
+
+from .config import config
 
 
 class EpisodesManager:
@@ -28,3 +32,30 @@ class EpisodesManager:
 class PlayMenu:
     def print_menu(self) -> None:
         pass
+
+
+async def play_episode(episode):
+    from . import internal_player
+
+    async for url in iter_resolved_players(
+        episode, config.prefer_languages, config.players_config.bans
+    ):
+
+        class PlayerEpisode:
+            def __getattr__(self, name):
+                return getattr(episode, name)
+
+            def best(self, prefer_languages, url=url):
+                return url
+
+            def consume_player(self, *args, url=url, **kwargs):
+                yield url
+
+        command = internal_player.play_episode(PlayerEpisode(), config.prefer_languages)
+        if command is not None and await asyncio.to_thread(command.wait) == 0:
+            return True
+    return False
+
+
+async def async_main(episodes: list[Episode]):
+    return await play_episode(episodes[0])
