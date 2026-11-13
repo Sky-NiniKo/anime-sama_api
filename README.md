@@ -1,5 +1,5 @@
 > [!WARNING]
-> This project is archive. I do not have the time to work on it anymore. I may make some small fixes if a breaking issue arises.
+> This project is an updated fork of the main repo of Niniko, with his authorization I only work in this fork no PR was send for now.
 
 ---
 
