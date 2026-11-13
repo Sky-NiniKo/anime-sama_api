@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "anime-sama_cli_api"
-version = "0.4.1"
+version = "0.4.1.1"
 description = "Api for anime-sama"
 authors = [
     {name = "NiniKo", email = "pcninik@gmail.com"},
