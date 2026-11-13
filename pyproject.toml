@@ -2,6 +2,8 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+
+
 [project]
 name = "anime-sama_cli_api"
 version = "0.4.0"
@@ -38,7 +40,7 @@ dependencies = [
 anime-sama = "anime_sama_api:main"
 
 [project.urls]
-Repository = "https://github.com/Sky-NiniKo/anime-sama_api/"
+Repository = "https://github.com/Mathieux83/anime-sama_api"
 
 [project.optional-dependencies]
 cli = [
@@ -67,3 +69,6 @@ exclude = ["tests/data"]
 
 [tool.ruff]
 target-version = "py311"
+
+[tool.hatch.build.targets.wheel]
+packages = ["anime_sama_api"]
